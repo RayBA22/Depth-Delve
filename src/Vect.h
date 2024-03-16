@@ -11,6 +11,11 @@ class Vect
 public:
     
     coord x, y;
+    
+    
+    
+  
+    
 };
 
 

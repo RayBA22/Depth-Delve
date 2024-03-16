@@ -11,6 +11,10 @@ public:
     Pioche pioche;
     Inventaire inventaire;
 
+    Joueur();
+    Joueur(entier x_init, entier y_init);
+    
+    
 };
 
 

@@ -1,18 +1,22 @@
 #ifndef _PERSONNAGE_
 #define _PERSONNAGE_
 
-#include "Vect.h"
+#include "Obj.h"
 
-class Personnage
+
+class Personnage: public Obj
 {
 
 public:
-    Vect pos, vitesse;
-    entier vie;
+    Vect vitesse;
     
+    Personnage();
+    Personnage(entier x_init, entier y_init);
+    void deplacement_gauche();
+    void deplacement_droite();
+    void deplacement_haut();
+    void deplacement_bas();
 
-
-    
 };
 
 

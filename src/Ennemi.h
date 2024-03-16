@@ -7,6 +7,9 @@ class Ennemi: public Personnage
 {
 public:
     
+    
+    Ennemi();
+    Ennemi(entier x_init, entier y_init);
 
 
     

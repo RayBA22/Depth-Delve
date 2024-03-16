@@ -1,0 +1,3 @@
+/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles/DepthDelve.dir
+/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles/edit_cache.dir
+/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles/rebuild_cache.dir
