@@ -4,6 +4,6 @@
 Pnj::Pnj(){
     id = pnj;
 }
-Pnj::Pnj(entier x_init, entier y_init):Personnage(x_init, y_init){
+Pnj::Pnj(entier vitessex, entier vitessy, entier posx, entier posy):Personnage(vitessex, vitessy, posx, posy){
     id = pnj;
 }

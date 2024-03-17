@@ -9,7 +9,7 @@ public:
     
     
     Ennemi();
-    Ennemi(entier x_init, entier y_init);
+    Ennemi(entier vitessex, entier vitessy, entier posx, entier posy);
 
 
     

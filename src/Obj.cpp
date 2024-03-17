@@ -11,9 +11,7 @@ Obj::Obj(entier x_init, entier y_init){
 }
 
 
-type_perso Obj::get_id()const{
-    return id;
-}
+
 
 Vect Obj::get_position()const{
 

@@ -12,17 +12,18 @@ class Etage
 
 public:
     type_Etage id;
-    entier xtaille, ytaille;
+    Vect tailleEtage;
     Minerai tabMinerai[5]; 
     unsigned int profondeur;
     
 
-    Etage(type_Etage type, entier xt, entier yt);
+    Etage(entier xt, entier yt, type_Etage type, unsigned int prof);
     void initEtage();
     type_Minerai get_idMinerai(int i)const;
     bool est_detruit(int i)const;
     type_Minerai randomiseurMinerai()const;
     Vect get_posMinerai(int i)const;
+    Vect get_tailleEtage()const;
     
     
 };

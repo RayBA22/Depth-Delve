@@ -177,6 +177,54 @@ src/Etage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Etage.cpp.s
 .PHONY : src/Etage.cpp.s
 
+src/IHMterminal.o: src/IHMterminal.cpp.o
+.PHONY : src/IHMterminal.o
+
+# target to build an object file
+src/IHMterminal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o
+.PHONY : src/IHMterminal.cpp.o
+
+src/IHMterminal.i: src/IHMterminal.cpp.i
+.PHONY : src/IHMterminal.i
+
+# target to preprocess a source file
+src/IHMterminal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.i
+.PHONY : src/IHMterminal.cpp.i
+
+src/IHMterminal.s: src/IHMterminal.cpp.s
+.PHONY : src/IHMterminal.s
+
+# target to generate assembly for a file
+src/IHMterminal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.s
+.PHONY : src/IHMterminal.cpp.s
+
+src/Jeu.o: src/Jeu.cpp.o
+.PHONY : src/Jeu.o
+
+# target to build an object file
+src/Jeu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o
+.PHONY : src/Jeu.cpp.o
+
+src/Jeu.i: src/Jeu.cpp.i
+.PHONY : src/Jeu.i
+
+# target to preprocess a source file
+src/Jeu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Jeu.cpp.i
+.PHONY : src/Jeu.cpp.i
+
+src/Jeu.s: src/Jeu.cpp.s
+.PHONY : src/Jeu.s
+
+# target to generate assembly for a file
+src/Jeu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Jeu.cpp.s
+.PHONY : src/Jeu.cpp.s
+
 src/Joueur.o: src/Joueur.cpp.o
 .PHONY : src/Joueur.o
 
@@ -384,6 +432,12 @@ help:
 	@echo "... src/Etage.o"
 	@echo "... src/Etage.i"
 	@echo "... src/Etage.s"
+	@echo "... src/IHMterminal.o"
+	@echo "... src/IHMterminal.i"
+	@echo "... src/IHMterminal.s"
+	@echo "... src/Jeu.o"
+	@echo "... src/Jeu.i"
+	@echo "... src/Jeu.s"
 	@echo "... src/Joueur.o"
 	@echo "... src/Joueur.i"
 	@echo "... src/Joueur.s"

@@ -7,7 +7,7 @@ class Pnj: public Personnage
 {
 public:
     Pnj();
-    Pnj(entier x_init, entier y_init);
+    Pnj(entier vitessex, entier vitessy, entier posx, entier posy);
 };
 
 

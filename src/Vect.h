@@ -2,7 +2,7 @@
 #define _VECT_
 
 typedef int coord;
-typedef short int entier;
+typedef int entier;
 
 
 class Vect

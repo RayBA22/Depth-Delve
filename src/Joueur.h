@@ -4,6 +4,8 @@
 #include "Personnage.h"
 #include "Pioche.h"
 #include "Inventaire.h"
+
+
 class Joueur: public Personnage
 {
 public:
@@ -12,7 +14,8 @@ public:
     Inventaire inventaire;
 
     Joueur();
-    Joueur(entier x_init, entier y_init);
+    Joueur(entier vitessex, entier vitessy, entier posx, entier posy);
+    
     
     
 };

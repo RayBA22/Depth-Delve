@@ -4,12 +4,13 @@
 #include <iostream>
 using namespace std;
 
-Etage::Etage(type_Etage type, entier xt, entier yt)
+Etage::Etage( entier xt, entier yt, type_Etage type, unsigned int prof)
 {
     id = type;
-    xtaille = xt;
-    ytaille = yt;
-    unsigned int profondeur;
+    tailleEtage.x = xt;
+    tailleEtage.y = yt;
+    unsigned int profondeur = prof;
+    initEtage();
 }
 type_Minerai Etage::randomiseurMinerai() const
 {
@@ -50,9 +51,10 @@ void Etage::initEtage()
     srand((unsigned)time(NULL));
     for (int i = 0; i < 5; i++)
     {
-        Minerai minerai(randomiseurMinerai(), rand()%xtaille, rand()%ytaille);
+        Minerai minerai(randomiseurMinerai(), rand()%tailleEtage.x, rand()%tailleEtage.y);
         tabMinerai[i] = minerai;
         cout << tabMinerai[i].pos.x << " " << tabMinerai[i].pos.y << endl;
+        // même processus pour les pnjs et les ennemis
     }
 }
 
@@ -71,4 +73,9 @@ Vect Etage::get_posMinerai(int i) const
 {
 
     return tabMinerai[i].get_position();
+}
+
+Vect Etage::get_tailleEtage()const{
+
+    return tailleEtage;
 }

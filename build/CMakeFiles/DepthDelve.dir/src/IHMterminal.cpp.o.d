@@ -1,6 +1,8 @@
-CMakeFiles/DepthDelve.dir/src/main.cpp.o: \
- /home/ray/DepthsDelve/depths-delve-project/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o: \
+ /home/ray/DepthsDelve/depths-delve-project/src/IHMterminal.cpp \
+ /usr/include/stdc-predef.h \
+ /home/ray/DepthsDelve/depths-delve-project/src/IHMterminal.h \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -146,7 +148,6 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/ray/DepthsDelve/depths-delve-project/src/IHMterminal.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Jeu.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Joueur.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Personnage.h \
