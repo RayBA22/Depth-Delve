@@ -53,8 +53,8 @@ void Etage::initEtage()
     {
         Minerai minerai(randomiseurMinerai(), rand()%tailleEtage.x, rand()%tailleEtage.y);
         tabMinerai[i] = minerai;
-        cout << tabMinerai[i].pos.x << " " << tabMinerai[i].pos.y << endl;
-        // même processus pour les pnjs et les ennemis
+        
+        // même processus pour les pnjs et les ennemis 
     }
 }
 
@@ -78,4 +78,8 @@ Vect Etage::get_posMinerai(int i) const
 Vect Etage::get_tailleEtage()const{
 
     return tailleEtage;
+}
+
+void Etage::se_detruit(entier deg, coord i){
+    tabMinerai[i].se_detruit(deg);
 }

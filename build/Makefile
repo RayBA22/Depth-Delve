@@ -177,6 +177,30 @@ src/Etage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Etage.cpp.s
 .PHONY : src/Etage.cpp.s
 
+src/IHM.o: src/IHM.cpp.o
+.PHONY : src/IHM.o
+
+# target to build an object file
+src/IHM.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/IHM.cpp.o
+.PHONY : src/IHM.cpp.o
+
+src/IHM.i: src/IHM.cpp.i
+.PHONY : src/IHM.i
+
+# target to preprocess a source file
+src/IHM.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/IHM.cpp.i
+.PHONY : src/IHM.cpp.i
+
+src/IHM.s: src/IHM.cpp.s
+.PHONY : src/IHM.s
+
+# target to generate assembly for a file
+src/IHM.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/IHM.cpp.s
+.PHONY : src/IHM.cpp.s
+
 src/IHMterminal.o: src/IHMterminal.cpp.o
 .PHONY : src/IHMterminal.o
 
@@ -200,6 +224,30 @@ src/IHMterminal.s: src/IHMterminal.cpp.s
 src/IHMterminal.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.s
 .PHONY : src/IHMterminal.cpp.s
+
+src/Inventaire.o: src/Inventaire.cpp.o
+.PHONY : src/Inventaire.o
+
+# target to build an object file
+src/Inventaire.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o
+.PHONY : src/Inventaire.cpp.o
+
+src/Inventaire.i: src/Inventaire.cpp.i
+.PHONY : src/Inventaire.i
+
+# target to preprocess a source file
+src/Inventaire.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.i
+.PHONY : src/Inventaire.cpp.i
+
+src/Inventaire.s: src/Inventaire.cpp.s
+.PHONY : src/Inventaire.s
+
+# target to generate assembly for a file
+src/Inventaire.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.s
+.PHONY : src/Inventaire.cpp.s
 
 src/Jeu.o: src/Jeu.cpp.o
 .PHONY : src/Jeu.o
@@ -432,9 +480,15 @@ help:
 	@echo "... src/Etage.o"
 	@echo "... src/Etage.i"
 	@echo "... src/Etage.s"
+	@echo "... src/IHM.o"
+	@echo "... src/IHM.i"
+	@echo "... src/IHM.s"
 	@echo "... src/IHMterminal.o"
 	@echo "... src/IHMterminal.i"
 	@echo "... src/IHMterminal.s"
+	@echo "... src/Inventaire.o"
+	@echo "... src/Inventaire.i"
+	@echo "... src/Inventaire.s"
 	@echo "... src/Jeu.o"
 	@echo "... src/Jeu.i"
 	@echo "... src/Jeu.s"

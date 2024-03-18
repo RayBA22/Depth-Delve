@@ -3,11 +3,11 @@
 using namespace std;
 
 #include "IHMterminal.h"
+#include "IHM.h"
 
 int main()
 {
-    IHMterminal terminal;
-    terminal.boucleJeu();
+    IHM ihm;
 
     return 0;
 }

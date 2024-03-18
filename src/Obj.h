@@ -12,7 +12,7 @@ class Obj
 public: //mettre en privé
     
     Vect pos;
-    entier HP;
+    entier HP=5;
 
     Obj();
     Obj(entier x_init, entier y_init);

@@ -12,6 +12,7 @@ public:
 
     Joueur joueur;
     Etage* tab_etage[15]; //peut etre un tableau dynamique
+    Inventaire inventaire;
     int hauteur;
     unsigned int etagact;
 
@@ -29,6 +30,9 @@ public:
     void Joueur_bas();
     void Joueur_posinit(); 
     void changerEtage(bool suivantetagact);
+    type_Minerai miner(coord i);
+    void ajouter_Minerai_Inventaire(type_Minerai type);
+    
 
         
 };

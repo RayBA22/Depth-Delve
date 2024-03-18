@@ -15,18 +15,23 @@ type_perso Personnage::get_id()const{
 }
 
 void Personnage::deplacement_haut(){
-
-    pos.x = pos.x - vitesse.x;
+    int temp = pos.x - vitesse.x;
+    if (temp>=0)
+        pos.x = temp;
 }
-void Personnage::deplacement_bas(){
-
-    pos.x = pos.x + vitesse.x;
+void Personnage::deplacement_bas(coord x){
+    int temp = pos.x + vitesse.x;
+    if (temp < x)
+        pos.x =  temp;
 }
 void Personnage::deplacement_gauche(){
-
-    pos.y = pos.y - vitesse.y;
+    int temp = pos.y - vitesse.y;
+        if (temp>=0)
+            pos.y = temp;
 }
-void Personnage::deplacement_droite(){
+void Personnage::deplacement_droite(coord y){
 
-    pos.y = pos.y + vitesse.y;
+    int temp = pos.y + vitesse.y;
+    if (temp < y)
+        pos.y =  temp;
 }

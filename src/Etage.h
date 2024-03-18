@@ -24,6 +24,7 @@ public:
     type_Minerai randomiseurMinerai()const;
     Vect get_posMinerai(int i)const;
     Vect get_tailleEtage()const;
+    void se_detruit(entier deg, coord i);
     
     
 };

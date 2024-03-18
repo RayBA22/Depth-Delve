@@ -16,6 +16,12 @@ type_Minerai Minerai:: get_idMinerai()const{
     return id;
 }
 
+void Minerai::se_detruit(entier deg){
+    HP -= deg;
+    if (HP <= 0) detruit=true;
+    
+}
+
 
 bool Minerai::est_detruit()const{
     return detruit;

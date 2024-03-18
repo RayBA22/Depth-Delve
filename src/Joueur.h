@@ -11,11 +11,13 @@ class Joueur: public Personnage
 public:
     entier faim;
     Pioche pioche;
-    Inventaire inventaire;
+    entier dmg=2;
+    //Inventaire inventaire;
 
     Joueur();
     Joueur(entier vitessex, entier vitessy, entier posx, entier posy);
     void set_posJoueur(entier posx, entier posy);
+    
     
     
 };

@@ -47,7 +47,7 @@ void IHMterminal::maj_grille_Etage()
     {
         v = jeu.get_posMinerai(i);
         if (jeu.est_detruit(i))
-            grille[v.x][v.y] = "🕳";
+            grille[v.x][v.y] = "🕳 ";
         else
             grille[v.x][v.y] = skin_caractere[jeu.get_idMinerai(i)];
     }
@@ -73,7 +73,7 @@ bool IHMterminal::action_Joueur()
 {
     char touche;
     bool re = false;
-    cout << "     ⇑ \n     z\n ⇐  qsd  ⇒\n\n     ⇓" << endl;
+    cout << "     ⇑ \n     z\n ⇐  qsd  ⇒    f pou miner et x pour sortir\n\n     ⇓" << endl;
     cout << "taper une des touches pour vous déplacer" << endl;
     do
     {
@@ -94,9 +94,11 @@ bool IHMterminal::action_Joueur()
         case 'd':
             jeu.Joueur_droite();
             return true;
-
+            
+        case 'f':
+            miner();
+            return true;
         case 'x':
-            jeu.Joueur_droite();
             return false;
             
 
@@ -120,11 +122,30 @@ void IHMterminal::changerEtage(){
         }
     }
 
-
-
 }
 
 
+int IHMterminal::collisionMinerai(){
+    Vect posJoueur = jeu.get_Joueurpos(), posMinerai;
+    for(int i=0; i<5; i++){
+        posMinerai = jeu.get_posMinerai(i);
+        if (posJoueur.x==posMinerai.x && posJoueur.y==posMinerai.y && !jeu.est_detruit(i)){
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+void IHMterminal::miner(){
+    int indice = collisionMinerai();
+    type_Minerai type;
+    if (indice != -1)
+        type = jeu.miner(indice);
+        if (jeu.est_detruit(indice))
+            jeu.ajouter_Minerai_Inventaire(type);
+ 
+}
 
 
 void IHMterminal::boucleJeu()

@@ -43,7 +43,7 @@ void Jeu::Joueur_gauche(){
 }
 
 void Jeu::Joueur_droite(){
-    joueur.deplacement_droite();
+    joueur.deplacement_droite(get_tailleEtagact().y);
 }
 
 void Jeu::Joueur_haut(){
@@ -51,7 +51,7 @@ void Jeu::Joueur_haut(){
 }
 
 void Jeu::Joueur_bas(){
-    joueur.deplacement_bas();
+    joueur.deplacement_bas(get_tailleEtagact().x);
 }
 
 void Jeu::Joueur_posinit(){
@@ -78,3 +78,16 @@ void Jeu::changerEtage(bool suivant ){
         }
     }
 }
+
+
+
+type_Minerai Jeu::miner(coord i){
+
+    tab_etage[etagact]->se_detruit(joueur.dmg, i);//a changer qd on fait la pioche
+    return tab_etage[etagact]->get_idMinerai(i);
+}
+
+void Jeu::ajouter_Minerai_Inventaire(type_Minerai type){
+    inventaire.ajouter_Minerai(type);
+}
+

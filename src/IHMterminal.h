@@ -27,8 +27,12 @@ public:
     void maj_grille();
     bool action_Joueur();
 
+
     void changerEtage();
-     
+    
+    //renvoie l'indice du minerai dans l'étage actuel
+    int collisionMinerai();
+    void miner();
 
     void boucleJeu();
     

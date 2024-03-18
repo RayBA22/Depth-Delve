@@ -15,7 +15,10 @@ public:
     Minerai();
     Minerai(type_Minerai idm,  entier x_init, entier y_init);
     type_Minerai get_idMinerai()const;
+
+    void se_detruit(entier deg);
     bool est_detruit()const;
+
 };
 
 
