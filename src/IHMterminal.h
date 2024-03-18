@@ -26,8 +26,12 @@ public:
     void maj_grille_Joueur();
     void maj_grille();
     bool action_Joueur();
-    void boucleJeu();
 
+    void changerEtage();
+     
+
+    void boucleJeu();
+    
 
     
     

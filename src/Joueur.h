@@ -15,7 +15,7 @@ public:
 
     Joueur();
     Joueur(entier vitessex, entier vitessy, entier posx, entier posy);
-    
+    void set_posJoueur(entier posx, entier posy);
     
     
 };

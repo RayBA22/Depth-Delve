@@ -14,3 +14,8 @@ Joueur::Joueur(entier vitessex, entier vitessy, entier posx, entier posy):Person
 
 
 
+void Joueur::set_posJoueur(entier posx, entier posy){ //faudrait la changer ou utiliser friend avec Jeu 
+
+    pos.x = posx; 
+    pos.y = posy;
+}

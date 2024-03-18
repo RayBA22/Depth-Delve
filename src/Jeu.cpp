@@ -53,3 +53,28 @@ void Jeu::Joueur_haut(){
 void Jeu::Joueur_bas(){
     joueur.deplacement_bas();
 }
+
+void Jeu::Joueur_posinit(){
+    Vect v = get_tailleEtagact();
+    joueur.set_posJoueur(v.x/2, v.y+1);
+}
+
+//si on veut passer à l'étage suivant on met 1 sinon(à l'etage preced) 0;
+void Jeu::changerEtage(bool suivant ){
+    Vect v = get_tailleEtagact();
+    if (suivant){
+        etagact ++;
+        joueur.set_posJoueur(v.x/2, 1);
+        if (etagact == hauteur+1)
+
+            creer_etage();
+        
+    }
+
+    else {
+        if (etagact > 0){
+            etagact --;
+            joueur.set_posJoueur(v.x/2, v.y-2);
+        }
+    }
+}

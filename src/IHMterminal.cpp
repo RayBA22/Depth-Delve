@@ -71,7 +71,7 @@ void IHMterminal::maj_grille()
 
 bool IHMterminal::action_Joueur()
 {
-    char touches[4] = {'z', 'q', 's', 'd'}, touche;
+    char touche;
     bool re = false;
     cout << "     ⇑ \n     z\n ⇐  qsd  ⇒\n\n     ⇓" << endl;
     cout << "taper une des touches pour vous déplacer" << endl;
@@ -108,14 +108,34 @@ bool IHMterminal::action_Joueur()
     return true;
 }
 
+
+void IHMterminal::changerEtage(){
+    Vect v = jeu.get_tailleEtagact(), pos = jeu.get_Joueurpos();
+    grille[v.x/2][v.y-1]= "🪜";
+    grille[v.x/2][0] = "🪜";
+    if (pos.x == v.x/2){
+        if (pos.y==v.y-1) jeu.changerEtage(1);
+        else{
+            if (pos.y==0) jeu.changerEtage(0);
+        }
+    }
+
+
+
+}
+
+
+
+
 void IHMterminal::boucleJeu()
 {
-
+    
     bool rester = true;
     
     while (rester)
     {   
         effacer_grille();
+        changerEtage();
         maj_grille();
         afficher_terminal();
         rester = action_Joueur();

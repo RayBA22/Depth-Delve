@@ -27,11 +27,10 @@ public:
     void Joueur_droite();
     void Joueur_haut();
     void Joueur_bas();
+    void Joueur_posinit(); 
+    void changerEtage(bool suivantetagact);
 
-    
-    
-    
-    
+        
 };
 
 
