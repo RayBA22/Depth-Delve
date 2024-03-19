@@ -7,7 +7,7 @@ using namespace std;
 
 #include "Jeu.h"
 
-const int xMax=50,  yMax=50;
+const int xMax=100,  yMax=100;
 
 class IHMterminal
 {

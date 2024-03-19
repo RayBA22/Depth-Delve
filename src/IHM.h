@@ -12,7 +12,9 @@ public:
     IHM();
     ~IHM();
     bool action_Joueur();
-
+    void dessiner_Joueur();
+    void dessiner_Etage();
+    void boucleJeu();
     
 };
 

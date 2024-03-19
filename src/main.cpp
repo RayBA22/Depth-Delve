@@ -7,7 +7,19 @@ using namespace std;
 
 int main()
 {
-    IHM ihm;
+    
+    
+    bool graphique;
+    cout << "tapez 0 pour afficher la version terminal:" << endl;
 
+    cin >> graphique;
+    if (graphique){
+        IHM ihm;
+        ihm.boucleJeu();
+    }
+    else{ 
+        IHMterminal terminal;
+        terminal.boucleJeu();
+    }
     return 0;
 }

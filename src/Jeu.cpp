@@ -11,7 +11,7 @@ Jeu::Jeu(): joueur(1, 1, 0, 0){
 
 void Jeu::creer_etage(){
     hauteur++;
-    tab_etage[hauteur] = new Etage(20, 25, grotte, hauteur);//identifiant a changer
+    tab_etage[hauteur] = new Etage(40, 40, grotte, hauteur);//identifiant a changer
 
 }
 
