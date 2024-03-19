@@ -13,7 +13,7 @@ public:
     Ennemi();
     Ennemi(entier vitessex, entier vitessy, entier posx, entier posy);
 
-
+    
     
 };
 
