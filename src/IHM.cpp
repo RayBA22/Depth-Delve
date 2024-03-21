@@ -1,93 +1,70 @@
 #include "IHM.h"
 
+IHM::IHM() : window(VideoMode(640, 400), "DepthDelve", Style::Default)
+{
 
-IHM::IHM(){
-    SDL_Init(SDL_INIT_EVERYTHING);
-    SDL_CreateWindowAndRenderer(450, 450, 0, &window, &renderer);
+    window.setFramerateLimit(60);
 
+    Texture jr;
+
+    if (!texJoueur.loadFromFile("./../assets/Joueur.png"))
+        cout << "erreur de chargement " << endl;
 }
 
+unsigned int IHM::incrementer(unsigned int i, unsigned int n)
+{
 
-IHM::~IHM(){
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-}
+    i += 1;
 
-bool IHM::action_Joueur()
-{   
+    if (i >= n)
+        i = 0;
+    return i;
     
-    SDL_Event event;
-    
-    while (SDL_PollEvent(&event) != 0)
+}
+
+void IHM::afficherJoueur(direction direc, unsigned int i)
+{
+    Sprite spriteJoueur;
+
+    spriteJoueur.setTexture(texJoueur);
+
+    spriteJoueur.setTextureRect(IntRect(i * 64, direc * 64, 64, 64));
+
+    spriteJoueur.setPosition(coef * jeu.get_Joueurpos().x, coef * jeu.get_Joueurpos().y);
+
+    window.draw(spriteJoueur);
+}
+
+void IHM::boucleJeu()
+{
+    Event event;
+    unsigned int i = 0;
+    direction direc=autre;
+
+    while (window.isOpen())
     {
-        if (event.type == SDL_QUIT) {
-                return false;
+        while (window.pollEvent(event))
+        {
+            if (event.type == Event::Closed)
+                window.close();
+            else
+            {   
+                if (event.type == Event::KeyPressed)
+                {
+
+                    direc = jeu.mouvement_Joueur(event.key.code);
+                    i = incrementer(i, 7);
+                    
+                }
             }
-        switch (event.key.keysym.sym)
-            {
-            case SDLK_z:
-                jeu.Joueur_haut();
-                break;
-            case SDLK_q:
-                jeu.Joueur_gauche();
-                break;
-
-            case SDLK_s:
-                jeu.Joueur_bas();
-                break;
-
-            case SDLK_d:
-                jeu.Joueur_droite();
-                break;
-                
-            
-            case SDLK_ESCAPE:
-                return false;
-                
-                
-
-            default:
-                
-                break;
-            }
-    }
-    return true;
-}
-
-void IHM::dessiner_Joueur(){
-    Vect pos = jeu.get_Joueurpos();
-    SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
-    SDL_Rect rect = {10*pos.y, 10*pos.x, 8, 15};
-    SDL_RenderFillRect(renderer, &rect);
-   
-
-}
-
-
-void IHM::dessiner_Etage(){
-    Vect taille = jeu.get_tailleEtagact();
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-    SDL_Rect rect = {0, 0, 10*taille.y, 10*taille.x, };
-    SDL_RenderFillRect(renderer, &rect);
-
-}
-
-void IHM::boucleJeu(){
-
-    bool rester = true;
-    while (rester)
-    {
-        rester = action_Joueur();
-
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-        SDL_RenderClear(renderer);
-
-        dessiner_Etage();
-        dessiner_Joueur();
+        }
         
-        SDL_RenderPresent(renderer);
+        
+        window.clear(Color::Black);
+        
+        afficherJoueur(direc, i);
+        
 
+        window.display();
     }
-    
-
 }

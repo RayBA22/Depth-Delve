@@ -91,3 +91,33 @@ void Jeu::ajouter_Minerai_Inventaire(type_Minerai type){
     inventaire.ajouter_Minerai(type);
 }
 
+
+
+
+direction Jeu::mouvement_Joueur(int mouv){
+    
+    switch (mouv)
+    {
+    case 25: 
+        joueur.deplacement_haut();
+        return haut;
+
+    case 16 : 
+        joueur.deplacement_gauche();
+        return gauche;
+
+    case 18: 
+        joueur.deplacement_bas(get_tailleEtagact().x);
+        return bas;
+
+    case 3: 
+        joueur.deplacement_droite(get_tailleEtagact().y);
+        return droite;
+    
+    case 0:
+        return autre;
+
+    default:
+        return autre;
+    }
+}

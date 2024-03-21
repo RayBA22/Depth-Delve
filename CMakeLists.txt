@@ -1,18 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
 project(the_DepthDelve_Project)
 
-# Find SDL2 package
-find_package(SDL2 REQUIRED)
 
-# Set source files
-file(GLOB SOURCE_FILES ./src/*.cpp)
-file(GLOB HEADER_FILES ./src/*.h)
+find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
-# Include SDL2 headers
-include_directories(${SDL2_INCLUDE_DIRS})
 
-# Create executable
+file(GLOB SOURCE_FILES src/*.cpp)
+file(GLOB HEADER_FILES src/*.h)
+
+
 add_executable(DepthDelve ${SOURCE_FILES} ${HEADER_FILES})
+target_link_libraries(DepthDelve sfml-graphics sfml-window sfml-system)
 
-# Link SDL2 libraries
-target_link_libraries(DepthDelve ${SDL2_LIBRARIES})
+
+target_include_directories(DepthDelve PRIVATE src)
