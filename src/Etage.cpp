@@ -4,14 +4,24 @@
 #include <iostream>
 using namespace std;
 
-Etage::Etage( entier xt, entier yt, type_Etage type, unsigned int prof)
+Etage::Etage(unsigned int prof)
 {
-    id = type;
-    tailleEtage.x = xt;
-    tailleEtage.y = yt;
+    id = type_Etage(rand()%3) ;
+    tailleEtage.x = (rand()%(maxtaille-100))+100;
+    tailleEtage.y = (rand()%(maxtaille-100))+100;
     unsigned int profondeur = prof;
+    maxi = (rand()%(maxMinerai-5))+5;
     initEtage();
+    
 }
+
+
+type_Etage Etage::get_typeEtage() const{
+    return id;
+}
+
+
+
 type_Minerai Etage::randomiseurMinerai() const
 {
     
@@ -47,9 +57,11 @@ type_Minerai Etage::randomiseurMinerai() const
 }
 
 void Etage::initEtage()
-{
+{   
+    
     srand((unsigned)time(NULL));
-    for (int i = 0; i < 5; i++)
+
+    for (int i = 0; i < maxi; i++)
     {
         Minerai minerai(randomiseurMinerai(), rand()%tailleEtage.x, rand()%tailleEtage.y);
         tabMinerai[i] = minerai;
@@ -79,6 +91,13 @@ Vect Etage::get_tailleEtage()const{
 
     return tailleEtage;
 }
+
+
+unsigned int Etage::get_profondeur()const{
+
+    return profondeur;
+}
+
 
 void Etage::se_detruit(entier deg, coord i){
     tabMinerai[i].se_detruit(deg);

@@ -1,7 +1,7 @@
 #ifndef _JEU_
 #define _JEU_
 #include "Joueur.h"
-#include "Etage.h"
+#include "ArbreEtage.h"
 
 
 enum direction {haut=8, gauche, bas, droite, autre=19};
@@ -12,10 +12,9 @@ class Jeu
 public:
 
     Joueur joueur;
-    Etage* tab_etage[15]; //peut etre un arbre
+    ArbreEtage mine;
     Inventaire inventaire;
-    int hauteur;
-    unsigned int etagact;
+    
 
 
     Jeu();
@@ -34,7 +33,8 @@ public:
     direction mouvement_Joueur(int mouv);
 
 
-    void changerEtage(bool suivantetagact);
+    orientation detecterpassage()const;
+    void changerEtage();
     type_Minerai miner(coord i);
     void ajouter_Minerai_Inventaire(type_Minerai type);
     

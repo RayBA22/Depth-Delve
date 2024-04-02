@@ -116,9 +116,9 @@ void IHMterminal::changerEtage(){
     grille[v.x/2][v.y-1]= "🪜";
     grille[v.x/2][0] = "🪜";
     if (pos.x == v.x/2){
-        if (pos.y==v.y-1) jeu.changerEtage(1);
+        if (pos.y==v.y-1) jeu.changerEtage();
         else{
-            if (pos.y==0) jeu.changerEtage(0);
+            if (pos.y==0) jeu.changerEtage();
         }
     }
 

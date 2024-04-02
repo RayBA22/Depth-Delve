@@ -2,36 +2,37 @@
 
 
 
-Jeu::Jeu(): joueur(1, 1, 0, 0){
-    etagact = 0;
-    hauteur = -1;
+Jeu::Jeu():joueur(1, 1, 0, 0){
+   
     creer_etage();
 }
 
 
 void Jeu::creer_etage(){
-    hauteur++;
-    tab_etage[hauteur] = new Etage(30, 30, grotte, hauteur);//identifiant a changer
+    
 
 }
 
 type_Minerai Jeu::get_idMinerai(int i)const{
 
-    return tab_etage[etagact]->get_idMinerai(i);
+    return Or;
 }
 
 bool Jeu::est_detruit(int i)const{
-    return tab_etage[etagact]->est_detruit(i);
+    return 0;
 
 }
 Vect Jeu::get_posMinerai(int i)const{
-    return tab_etage[etagact]->get_posMinerai(i);
+    Vect j;
+    
+    return j;
 }
 
 Vect Jeu::get_tailleEtagact()const{
 
-    return tab_etage[etagact]->get_tailleEtage();
+    return mine.get_tailleEtage_actuel();
 }
+
 
 Vect Jeu::get_Joueurpos()const{
     return joueur.get_position();
@@ -59,39 +60,56 @@ void Jeu::Joueur_posinit(){
     joueur.set_posJoueur(v.x/2, v.y+1);
 }
 
-//si on veut passer à l'étage suivant on met 1 sinon(à l'etage preced) 0;
-void Jeu::changerEtage(bool suivant ){
-    Vect v = get_tailleEtagact();
-    if (suivant){
-        etagact ++;
-        joueur.set_posJoueur(v.x/2, 1);
-        if (etagact == hauteur+1)
-
-            creer_etage();
-        
-    }
-
-    else {
-        if (etagact > 0){
-            etagact --;
-            joueur.set_posJoueur(v.x/2, v.y-2);
-        }
-    }
-}
-
-
-
-type_Minerai Jeu::miner(coord i){
-
-    tab_etage[etagact]->se_detruit(joueur.dmg, i);//a changer qd on fait la pioche
-    return tab_etage[etagact]->get_idMinerai(i);
-}
-
 void Jeu::ajouter_Minerai_Inventaire(type_Minerai type){
     inventaire.ajouter_Minerai(type);
 }
 
+orientation Jeu::detecterpassage()const{
+    Vect posj = get_Joueurpos(), taille = get_tailleEtagact();
+    if ((posj.x < 10) && (posj.y > taille.y-10)){
+        return EST;
+    }
+    if ((posj.x > taille.x-10) && (posj.y > taille.y-10)){
+        return OUEST;
+    }
+    if (((posj.x - taille.x/2)*(posj.x - taille.x/2) < 100) && (posj.y<10)) {
+        return PRECED;
+    }
+    return NONE;
+}
 
+
+
+
+
+
+void Jeu::changerEtage(){
+    orientation ori = detecterpassage();
+    
+    switch (ori)
+    {
+    case EST:
+        mine.allerEst();
+        break;
+    case OUEST:
+        mine.allerOuest();
+        break;
+    
+    case PRECED:
+        mine.allerPrecedent();
+        break;
+    
+    default:
+        break;
+    }
+
+    
+}
+
+
+type_Minerai Jeu::miner(coord i){
+    return Or;
+}
 
 
 direction Jeu::mouvement_Joueur(int mouv){
@@ -116,6 +134,7 @@ direction Jeu::mouvement_Joueur(int mouv){
     
     case 0:
         return autre;
+
 
     default:
         return autre;

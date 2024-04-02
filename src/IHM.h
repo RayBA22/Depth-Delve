@@ -7,7 +7,7 @@
 using namespace sf;
 using namespace std;
 
-const int coef = 5;
+const int coef = 10;
 
 class IHM
 {
@@ -15,16 +15,16 @@ class IHM
 public:
     RenderWindow window;
     Jeu jeu;
-    Texture texJoueur;
-
+    Texture texJoueur, texBG[3];
+    Sprite sprJoueur, sprBG;
 
     IHM();
     void boucleJeu();
-    
+
     void afficherJoueur(direction direc, unsigned int i);
+    void afficherBG();
 
     unsigned int incrementer(unsigned int i, unsigned int n);
-
 };
 
 #endif
