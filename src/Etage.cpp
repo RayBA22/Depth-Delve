@@ -10,7 +10,7 @@ Etage::Etage(unsigned int prof)
     tailleEtage.x = (rand()%(maxtaille-100))+100;
     tailleEtage.y = (rand()%(maxtaille-100))+100;
     unsigned int profondeur = prof;
-    maxi = (rand()%(maxMinerai-5))+5;
+    nbMinerai = (rand()%(maxMinerai-5))+5;
     initEtage();
     
 }
@@ -61,7 +61,7 @@ void Etage::initEtage()
     
     srand((unsigned)time(NULL));
 
-    for (int i = 0; i < maxi; i++)
+    for (int i = 0; i < nbMinerai; i++)
     {
         Minerai minerai(randomiseurMinerai(), rand()%tailleEtage.x, rand()%tailleEtage.y);
         tabMinerai[i] = minerai;
@@ -90,6 +90,10 @@ Vect Etage::get_posMinerai(int i) const
 Vect Etage::get_tailleEtage()const{
 
     return tailleEtage;
+}
+
+unsigned int Etage::get_nbMinerai()const {
+    return nbMinerai;
 }
 
 

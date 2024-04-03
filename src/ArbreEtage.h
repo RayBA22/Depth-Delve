@@ -33,7 +33,8 @@ public:
     void allerOuest();
     void allerEst();
 
-    
+    unsigned int get_nbMinerai_actuel()const;
+    type_Minerai get_idMinerai_actuel(unsigned int i)const;
     Vect get_tailleEtage_actuel()const;
     type_Etage get_typeEtage_actuel()const;
     

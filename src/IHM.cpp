@@ -5,28 +5,60 @@ IHM::IHM() : window(VideoMode(1080, 720), "DepthDelve", Style::Default)
 
     window.setFramerateLimit(60);
 
-    if (!texJoueur.loadFromFile("./../assets/Joueur.png"))
-        cout << "erreur de chargement " << endl;
+    if (!texJoueur[0].loadFromFile("./../assets/Human/Walk.png"))
+        cout << "erreur de chargement 0 " << endl;
+    if (!texJoueur[1].loadFromFile("./../assets/Human/Idle.png"))
+        cout << "erreur de chargement 1" << endl;
+    if (!texJoueur[2].loadFromFile("./../assets/Human/Attack.png"))
+        cout << "erreur de chargement 2" << endl;
 
     if (!texBG[0].loadFromFile("./../assets/untitled.png"))
         cout << "lazagna mamia" << endl;
 
-    sprJoueur.setTexture(texJoueur);
+    sprJoueur.setScale(5.0f, 5.0f);
+
+    repos();
 }
 
-unsigned int IHM::incrementer(unsigned int i, unsigned int n)
-{
-    i += 1;
 
-    if (i >= n)
-        i = 0;
-    return i;
+void IHM::mouvement(direction dir)
+{
+
+    sprJoueur.setTexture(texJoueur[0]);
+
+    if (animJoueur.direc != dir)
+    {
+        animJoueur.frameActuelle = 0;
+        animJoueur.chrono.restart();
+    }
+    animJoueur.direc = dir;
+    animJoueur.interval = 0.1f;
+    animJoueur.nbframe = 4;
 }
 
-void IHM::afficherJoueur(direction direc, unsigned int i)
+void IHM::repos()
 {
 
-    sprJoueur.setTextureRect(IntRect(i * 64, direc * 64, 64, 64));
+    sprJoueur.setTexture(texJoueur[1]);
+    animJoueur.frameActuelle = 0;
+    animJoueur.chrono.restart();
+    animJoueur.direc = direction(animJoueur.direc % 2);
+    animJoueur.interval = 0.6f;
+    animJoueur.nbframe = 10;
+}
+
+void IHM::afficherJoueur()
+{
+
+    if (animJoueur.chrono.getElapsedTime().asSeconds() >= animJoueur.interval)
+    {
+
+        animJoueur.chrono.restart();
+
+        animJoueur.frameActuelle = (animJoueur.frameActuelle + 1) % animJoueur.nbframe;
+    }
+
+    sprJoueur.setTextureRect(IntRect(animJoueur.frameActuelle * 32, animJoueur.direc * 32, 32, 32));
 
     sprJoueur.setPosition(coef * jeu.get_Joueurpos().x, coef * jeu.get_Joueurpos().y);
 
@@ -41,10 +73,9 @@ void IHM::afficherBG()
 
 void IHM::boucleJeu()
 {
-    Event event;
-    unsigned int i = 0;
-    direction direc = autre;
 
+    // a ameliorer : demander au prof comment faire les deplacements !!
+    Event event;
     while (window.isOpen())
     {
         while (window.pollEvent(event))
@@ -56,16 +87,23 @@ void IHM::boucleJeu()
                 if (event.type == Event::KeyPressed)
                 {
 
-                    direc = jeu.mouvement_Joueur(event.key.code);
-                    i = incrementer(i, 7);
+                    mouvement(jeu.mouvement_Joueur(event.key.code));
+                }
+                else
+                {
+                    if (event.type == Event::KeyReleased)
+                    {
+
+                        repos();
+                    }
                 }
             }
         }
 
         window.clear(Color::Black);
         afficherBG();
-        afficherJoueur(direc, i);
-        
+
+        afficherJoueur();
 
         window.display();
     }

@@ -15,8 +15,7 @@ public:
     type_Etage id;
     Vect tailleEtage;
     Minerai tabMinerai[maxMinerai]; 
-    unsigned int maxi;
-    unsigned int profondeur;
+    unsigned int nbMinerai, profondeur;
     
 
     Etage(unsigned int prof);
@@ -29,7 +28,7 @@ public:
     unsigned int get_profondeur()const;
     type_Etage get_typeEtage()const;
     void se_detruit(entier deg, coord i);
-    
+    unsigned int get_nbMinerai()const;
     
 };
 

@@ -57,10 +57,23 @@ void ArbreEtage::allerEst(){
 
 
 
+unsigned int ArbreEtage::get_nbMinerai_actuel()const{
+    return noeudActuel->etage.get_nbMinerai();
+}
+
+type_Minerai ArbreEtage::get_idMinerai_actuel(unsigned int i) const{
+    return noeudActuel->etage.get_idMinerai(i);
+}
+
+
+
 Vect ArbreEtage::get_tailleEtage_actuel()const{
         return noeudActuel->etage.get_tailleEtage();
     }
 
+
+
 type_Etage ArbreEtage::get_typeEtage_actuel()const{
     return noeudActuel->etage.get_typeEtage();
 }
+

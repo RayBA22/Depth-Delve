@@ -4,7 +4,7 @@
 #include "ArbreEtage.h"
 
 
-enum direction {haut=8, gauche, bas, droite, autre=19};
+enum direction {haut=2, gauche=1, bas=0, droite=0, autre=3};
 
 class Jeu
 {
@@ -20,6 +20,9 @@ public:
     Jeu();
     void creer_etage();
     type_Minerai get_idMinerai(int i)const;
+
+
+
     bool est_detruit(int i)const;
     Vect get_posMinerai(int i)const;
     Vect get_tailleEtagact()const;
