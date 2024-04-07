@@ -45,7 +45,7 @@ void IHMterminal::maj_grille_Etage()
     Vect v;
     for (int i = 0; i < 5; i++)
     {
-        v = jeu.get_posMinerai(i);
+        v = jeu.get_posMinerai_actuel(i);
         if (jeu.est_detruit(i))
             grille[v.x][v.y] = "🕳 ";
         else
@@ -128,7 +128,7 @@ void IHMterminal::changerEtage(){
 int IHMterminal::collisionMinerai(){
     Vect posJoueur = jeu.get_Joueurpos(), posMinerai;
     for(int i=0; i<5; i++){
-        posMinerai = jeu.get_posMinerai(i);
+        posMinerai = jeu.get_posMinerai_actuel(i);
         if (posJoueur.x==posMinerai.x && posJoueur.y==posMinerai.y && !jeu.est_detruit(i)){
             return i;
         }

@@ -17,3 +17,7 @@ Vect Obj::get_position()const{
 
     return pos;
 }
+
+entier Obj::getHP()const{
+    return HP;
+}

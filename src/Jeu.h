@@ -20,24 +20,29 @@ public:
     Jeu();
     void creer_etage();
     type_Minerai get_idMinerai(int i)const;
-
-
+    entier get_MineraiHP_actuel(int i = 0)const;
+    unsigned int get_nbMinerai_actuel()const ;
 
     bool est_detruit(int i)const;
-    Vect get_posMinerai(int i)const;
+    Vect get_posMinerai_actuel(int i)const;
     Vect get_tailleEtagact()const;
-    Vect get_Joueurpos()const;   
+    Vect get_Joueurpos()const; 
+
+
+
+
+
     void Joueur_gauche();
     void Joueur_droite();
     void Joueur_haut();
     void Joueur_bas();
     void Joueur_posinit();
-    
     direction mouvement_Joueur(int mouv);
 
 
     orientation detecterpassage()const;
     void changerEtage();
+    
     type_Minerai miner(coord i);
     void ajouter_Minerai_Inventaire(type_Minerai type);
     

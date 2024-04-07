@@ -7,8 +7,8 @@ using namespace std;
 Etage::Etage(unsigned int prof)
 {
     id = type_Etage(rand()%3) ;
-    tailleEtage.x = (rand()%(maxtaille-100))+100;
-    tailleEtage.y = (rand()%(maxtaille-100))+100;
+    tailleEtage.x = (rand()%(maxtaille-500))+500;
+    tailleEtage.y = (rand()%(maxtaille-500))+500;
     unsigned int profondeur = prof;
     nbMinerai = (rand()%(maxMinerai-5))+5;
     initEtage();
@@ -27,25 +27,25 @@ type_Minerai Etage::randomiseurMinerai() const
     
     int r = rand() % 1000;
 
-    if (r >= 0 && r <= 5 + profondeur)
+    if (r >= 0 && r <= 5)
         return Diamant;
     else
     {
-        if (r >= 20 && r <= 40 + 2 * profondeur)
+        if (r >= 20 && r <= 40 )
             return Or;
 
         else
         {
-            if (r >= 70 && r <= 110 + profondeur)
+            if (r >= 70 && r <= 110)
                 return Argent;
 
             else
             {
-                if (r >= 200 && r <= 300 + profondeur)
+                if (r >= 200 && r <= 300)
                     return Fer;
                 else
                 {
-                    if (r >= 500 && r <= 600 + profondeur)
+                    if (r >= 500 && r <= 600)
                         return Cuivre;
 
                     else
@@ -100,6 +100,10 @@ unsigned int Etage::get_nbMinerai()const {
 unsigned int Etage::get_profondeur()const{
 
     return profondeur;
+}
+
+entier Etage::get_MineraiHP(int i)const{
+    return tabMinerai[i].getHP();
 }
 
 

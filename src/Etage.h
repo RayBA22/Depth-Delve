@@ -4,7 +4,7 @@
 #include "Vect.h"
 #include "Minerai.h"
 
-const int maxMinerai=7, maxtaille=200;
+const int maxMinerai=7, maxtaille=1000;
 
 enum type_Etage {grotte, mine_gelee, pronfondeur_volcanique};
 
@@ -24,6 +24,8 @@ public:
     bool est_detruit(int i)const;
     type_Minerai randomiseurMinerai()const;
     Vect get_posMinerai(int i)const;
+    entier get_MineraiHP(int i)const;
+    
     Vect get_tailleEtage()const;
     unsigned int get_profondeur()const;
     type_Etage get_typeEtage()const;

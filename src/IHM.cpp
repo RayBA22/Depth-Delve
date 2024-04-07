@@ -6,20 +6,24 @@ IHM::IHM() : window(VideoMode(1080, 720), "DepthDelve", Style::Default)
     window.setFramerateLimit(60);
 
     if (!texJoueur[0].loadFromFile("./../assets/Human/Walk.png"))
-        cout << "erreur de chargement 0 " << endl;
+        cout << "erreur de chargement des mouvements " << endl;
     if (!texJoueur[1].loadFromFile("./../assets/Human/Idle.png"))
-        cout << "erreur de chargement 1" << endl;
+        cout << "erreur de chargement de repos" << endl;
     if (!texJoueur[2].loadFromFile("./../assets/Human/Attack.png"))
-        cout << "erreur de chargement 2" << endl;
+        cout << "erreur de chargement de attack" << endl;
 
     if (!texBG[0].loadFromFile("./../assets/untitled.png"))
-        cout << "lazagna mamia" << endl;
+        cout << "erreur de chargement du BG 1" << endl;
+
+    if (!texMinerai.loadFromFile("./../assets/ore.png"))
+        cout << "erreur de chargement des minerais" << endl;
 
     sprJoueur.setScale(5.0f, 5.0f);
+    sprMinerai.setTexture(texMinerai);
+    sprMinerai.setScale(1.0f, 1.0f);
 
     repos();
 }
-
 
 void IHM::mouvement(direction dir)
 {
@@ -65,6 +69,25 @@ void IHM::afficherJoueur()
     window.draw(sprJoueur);
 }
 
+void IHM::afficherMinerai(type_Minerai typ, Vect pos)
+{
+    // jeu.get_MineraiHP_actuel(i) changer de sprite en fonction des hp
+    sprMinerai.setTextureRect(IntRect(typ*32, 7*32, 32, 32));
+    sprMinerai.setPosition(coef * pos.x, coef * pos.y);
+    window.draw(sprMinerai);
+}
+
+void IHM::afficherMinerais()
+{
+
+    int i, n = jeu.get_nbMinerai_actuel();
+    for (i = 0; i < n; i++)
+    {
+        afficherMinerai(jeu.get_idMinerai(i), jeu.get_posMinerai_actuel(i));
+        cout << jeu.get_idMinerai(i) << endl;
+    }
+}
+
 void IHM::afficherBG()
 {
     sprBG.setTexture(texBG[0]);
@@ -73,8 +96,9 @@ void IHM::afficherBG()
 
 void IHM::boucleJeu()
 {
+    
 
-    // a ameliorer : demander au prof comment faire les deplacements !!
+   
     Event event;
     while (window.isOpen())
     {
@@ -93,16 +117,15 @@ void IHM::boucleJeu()
                 {
                     if (event.type == Event::KeyReleased)
                     {
-
                         repos();
                     }
                 }
             }
         }
 
-        window.clear(Color::Black);
-        afficherBG();
-
+        window.clear(Color(128, 128, 128));
+        //afficherBG();
+        afficherMinerais();
         afficherJoueur();
 
         window.display();

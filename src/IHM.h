@@ -7,7 +7,7 @@
 using namespace sf;
 using namespace std;
 
-const int coef = 10;
+const int coef = 1;
 
 
 struct Animation
@@ -26,9 +26,10 @@ class IHM
 public:
     RenderWindow window;
     Jeu jeu;
-    Texture texJoueur[3], texBG[3];
-    Sprite sprJoueur, sprBG;
+    Texture texJoueur[3], texMinerai, texBG[3];
+    Sprite sprJoueur, sprMinerai, sprBG;
     Animation animJoueur;
+
 
 
     IHM();
@@ -41,6 +42,12 @@ public:
 
     void afficherJoueur();
     void afficherBG();
+    
+
+
+
+    void afficherMinerai(type_Minerai typ, Vect pos);
+    void afficherMinerais();
 
     unsigned int incrementer(unsigned int i, unsigned int n);
 };

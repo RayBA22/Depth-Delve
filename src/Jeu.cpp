@@ -2,7 +2,7 @@
 
 
 
-Jeu::Jeu():joueur(1, 1, 0, 0){
+Jeu::Jeu():joueur(10, 10, 0, 0){
    
     creer_etage();
 }
@@ -15,22 +15,34 @@ void Jeu::creer_etage(){
 
 type_Minerai Jeu::get_idMinerai(int i)const{
 
-    return Or;
+    return mine.get_idMinerai_actuel(i);
 }
 
 bool Jeu::est_detruit(int i)const{
     return 0;
 
 }
-Vect Jeu::get_posMinerai(int i)const{
-    Vect j;
+Vect Jeu::get_posMinerai_actuel(int i)const{
     
-    return j;
+    
+    return mine.get_posMinerai_actuel(i);
 }
+
+
+entier Jeu::get_MineraiHP_actuel(int i)const{
+
+    return mine.get_mineraiHP_actuel(i);
+}
+
+
 
 Vect Jeu::get_tailleEtagact()const{
 
     return mine.get_tailleEtage_actuel();
+}
+
+unsigned int Jeu::get_nbMinerai_actuel()const{
+    return mine.get_nbMinerai_actuel();
 }
 
 
@@ -65,14 +77,16 @@ void Jeu::ajouter_Minerai_Inventaire(type_Minerai type){
 }
 
 orientation Jeu::detecterpassage()const{
+
+    //corriger ce truc
     Vect posj = get_Joueurpos(), taille = get_tailleEtagact();
-    if ((posj.x < 10) && (posj.y > taille.y-10)){
+    if ((posj.x < 50) && (posj.y > taille.y-50)){
         return EST;
     }
-    if ((posj.x > taille.x-10) && (posj.y > taille.y-10)){
+    if ((posj.x > taille.x-50) && (posj.y > taille.y-50)){
         return OUEST;
     }
-    if (((posj.x - taille.x/2)*(posj.x - taille.x/2) < 100) && (posj.y<10)) {
+    if (((posj.x - taille.x/2)*(posj.x - taille.x/2) < 2500) && (posj.y<50)) {
         return PRECED;
     }
     return NONE;
@@ -132,9 +146,10 @@ direction Jeu::mouvement_Joueur(int mouv){
         joueur.deplacement_droite(get_tailleEtagact().y);
         return droite;
     
-    case 0:
-        return autre;
 
+    case 4:
+        changerEtage();
+        return autre;
 
     default:
         return autre;
