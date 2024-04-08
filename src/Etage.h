@@ -4,7 +4,7 @@
 #include "Vect.h"
 #include "Minerai.h"
 
-const int maxMinerai=7, maxtaille=1000;
+const int maxMinerai=7, maxtaille=1000  ;
 
 enum type_Etage {grotte, mine_gelee, pronfondeur_volcanique};
 

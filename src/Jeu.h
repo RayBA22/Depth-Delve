@@ -27,7 +27,7 @@ public:
     Vect get_posMinerai_actuel(int i)const;
     Vect get_tailleEtagact()const;
     Vect get_Joueurpos()const; 
-
+    type_Etage get_typeEtage_actuel()const;
 
 
 

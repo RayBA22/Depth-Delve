@@ -6,9 +6,11 @@ using namespace std;
 
 Etage::Etage(unsigned int prof)
 {
+    srand((unsigned)time(NULL));
     id = type_Etage(rand()%3) ;
     tailleEtage.x = (rand()%(maxtaille-500))+500;
     tailleEtage.y = (rand()%(maxtaille-500))+500;
+    cout << tailleEtage.x << " et  " << tailleEtage.y<< endl;
     unsigned int profondeur = prof;
     nbMinerai = (rand()%(maxMinerai-5))+5;
     initEtage();

@@ -1,5 +1,7 @@
 #include "Personnage.h"
 
+
+
 Personnage::Personnage(){
     
 }
@@ -21,8 +23,10 @@ void Personnage::deplacement_gauche(){
 }
 void Personnage::deplacement_droite(coord x){
     int temp = pos.x + vitesse.x;
-    if (temp < x)
+    if (temp < x){
         pos.x =  temp;
+       
+        }
 }
 void Personnage::deplacement_haut(){
     int temp = pos.y - vitesse.y;
@@ -32,6 +36,8 @@ void Personnage::deplacement_haut(){
 void Personnage::deplacement_bas(coord y){
 
     int temp = pos.y + vitesse.y;
-    if (temp < y)
+    if (temp < y){
         pos.y =  temp;
+     
+        }
 }

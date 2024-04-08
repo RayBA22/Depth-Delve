@@ -7,49 +7,43 @@
 using namespace sf;
 using namespace std;
 
-const int coef = 1;
-
-
 struct Animation
 {
     Clock chrono;
-    float interval; 
+    float interval;
     unsigned int frameActuelle;
-    unsigned int nbframe=1;
+    unsigned int nbframe = 1;
     direction direc;
 };
-
 
 class IHM
 {
 
 public:
     RenderWindow window;
+    Vect resolution;
     Jeu jeu;
-    Texture texJoueur[3], texMinerai, texBG[3];
-    Sprite sprJoueur, sprMinerai, sprBG;
+    Texture texJoueur[3], texMinerai, texBG[4], texdecoration[5];
+    Sprite sprJoueur, sprMinerai, sprBG, sprdeco;
     Animation animJoueur;
 
-
-
-    IHM();
+    IHM(int x, int y);
     void boucleJeu();
-
 
     void mouvement(direction dir);
     void attaque();
     void repos();
-
+   
     void afficherJoueur();
     void afficherBG();
-    
 
-
-
+    Vect centrer() const;
     void afficherMinerai(type_Minerai typ, Vect pos);
     void afficherMinerais();
+    void afficherechelle();
+    void afficherelement();
+    void afficherdeco();
 
-    unsigned int incrementer(unsigned int i, unsigned int n);
 };
 
 #endif

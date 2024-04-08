@@ -16,9 +16,9 @@ public:
     Personnage();
     Personnage(entier x_v, entier y_v, entier x_init, entier y_init);
     void deplacement_gauche();
-    void deplacement_droite(coord y);
+    void deplacement_droite(coord x);
     void deplacement_haut();
-    void deplacement_bas(coord x);
+    void deplacement_bas(coord y);
     type_perso get_id()const;
 
 };

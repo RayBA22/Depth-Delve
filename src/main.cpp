@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 
-   IHM ihm;
+   IHM ihm(1080, 1080);
    ihm.boucleJeu();
    
     
