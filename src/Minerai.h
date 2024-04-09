@@ -2,7 +2,7 @@
 #define _MINERAI_
 
 #include "Obj.h"
-enum type_Minerai {Pierre=0 ,Cuivre=1, Fer=4, Argent=2, Or=3, Diamant=8};
+enum type_Minerai {Pierre=0 ,Cuivre=2, Fer=1, Argent=3, Or=4, Diamant=5};
 
 class Minerai: public Obj
 {

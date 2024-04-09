@@ -5,7 +5,7 @@
 
 
 enum direction {haut=2, gauche=1, bas=0, droite=0, autre=3};
-
+enum action{marcher=0, piocher=2};
 class Jeu
 {
 
@@ -22,6 +22,7 @@ public:
     type_Minerai get_idMinerai(int i)const;
     entier get_MineraiHP_actuel(int i = 0)const;
     unsigned int get_nbMinerai_actuel()const ;
+    type_Minerai miner(int indice);
 
     bool est_detruit(int i)const;
     Vect get_posMinerai_actuel(int i)const;
@@ -43,7 +44,7 @@ public:
     orientation detecterpassage()const;
     void changerEtage();
     
-    type_Minerai miner(coord i);
+    type_Minerai piocher(coord i);
     void ajouter_Minerai_Inventaire(type_Minerai type);
     
 

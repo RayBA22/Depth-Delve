@@ -8,9 +8,10 @@ Minerai::Minerai(){
 Minerai::Minerai(type_Minerai idm, entier x_init, entier y_init): Obj(x_init, y_init){
     detruit = false;
     id = idm;
-    // pv du min depend de son type
-
+    HP = 2*(id+1); //changer en parabole ou une autre fonction
+    
 }
+
 
 
 type_Minerai Minerai:: get_idMinerai()const{

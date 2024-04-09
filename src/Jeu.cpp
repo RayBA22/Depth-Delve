@@ -73,6 +73,10 @@ void Jeu::Joueur_bas()
     joueur.deplacement_bas(1);
 }
 
+type_Minerai  Jeu::miner(int indice){
+    return Or;
+}
+
 void Jeu::Joueur_posinit()
 {
     Vect v = get_tailleEtagact();
@@ -144,7 +148,7 @@ void Jeu::changerEtage()
     }
 }
 
-type_Minerai Jeu::miner(coord i)
+type_Minerai Jeu::piocher(coord i)
 {
     return Or;
 }

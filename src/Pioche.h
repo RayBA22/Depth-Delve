@@ -9,8 +9,17 @@ class Pioche
 public:
     
     idPioche id;
-    entier degat; 
+    float dmg; 
+    
+    Pioche();
+    Pioche(idPioche idp);
+    
+
+    idPioche get_idPioche()const;
+    float get_dmgPioche()const;
 };
+
+
 
 
 

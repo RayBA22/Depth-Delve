@@ -7,6 +7,8 @@
 using namespace sf;
 using namespace std;
 
+
+
 struct Animation
 {
     Clock chrono;
@@ -14,6 +16,7 @@ struct Animation
     unsigned int frameActuelle;
     unsigned int nbframe = 1;
     direction direc;
+    action act;
 };
 
 class IHM
@@ -26,12 +29,13 @@ public:
     Texture texJoueur[3], texMinerai, texBG[4], texdecoration[5];
     Sprite sprJoueur, sprMinerai, sprBG, sprdeco;
     Animation animJoueur;
+    RectangleShape hitboxj;
 
     IHM(int x, int y);
     void boucleJeu();
 
     void mouvement(direction dir);
-    void attaque();
+    void piocher();
     void repos();
    
     void afficherJoueur();
@@ -43,6 +47,7 @@ public:
     void afficherechelle();
     void afficherelement();
     void afficherdeco();
+
 
 };
 

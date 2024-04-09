@@ -21,7 +21,7 @@ IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
         cout << "erreur de chargement du BG 2" << endl;
     if (!texBG[2].loadFromFile("./../assets/mine_gelée.png"))
         cout << "erreur de chargement du BG 3" << endl;
-    if (!texBG[3].loadFromFile("./../assets/mine_stone.png"))
+    if (!texBG[3].loadFromFile("./../assets/map.png"))
         cout << "erreur de chargement du BG 4" << endl;
 
     if (!texMinerai.loadFromFile("./../assets/minerai/minerai.png"))
@@ -64,7 +64,7 @@ Vect IHM::centrer()const{
 void IHM::mouvement(direction dir)
 {
 
-    sprJoueur.setTexture(texJoueur[0]);
+    sprJoueur.setTexture(texJoueur[animJoueur.act]);
 
     if (animJoueur.direc != dir)
     {
@@ -76,15 +76,33 @@ void IHM::mouvement(direction dir)
     animJoueur.nbframe = 4;
 }
 
+
+
 void IHM::repos()
 {
 
     sprJoueur.setTexture(texJoueur[1]);
+
     animJoueur.frameActuelle = 0;
     animJoueur.chrono.restart();
-    animJoueur.direc = direction(animJoueur.direc % 2);
+    //animJoueur.direc = direction(animJoueur.direc % 2);
     animJoueur.interval = 0.6f;
     animJoueur.nbframe = 10;
+}
+
+void IHM::piocher(){
+
+    hitboxj.setFillColor(Color::Black);
+    hitboxj.setPosition(jeu.get_Joueurpos().x, jeu.get_Joueurpos().y);
+    sprJoueur.setTexture(texJoueur[2]);
+    
+
+    animJoueur.frameActuelle = 0;
+    animJoueur.chrono.restart();
+    animJoueur.interval = 0.6f;
+    animJoueur.nbframe = 4;
+
+
 }
 
 void IHM::afficherJoueur()
