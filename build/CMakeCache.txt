@@ -209,20 +209,11 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Value Computed by CMake
-Echec_BINARY_DIR:STATIC=/home/ray/DepthsDelve/depths-delve-project/build
-
-//Value Computed by CMake
-Echec_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Echec_SOURCE_DIR:STATIC=/home/ray/DepthsDelve/depths-delve-project
-
-//The directory containing a CMake configuration file for SDL2.
-SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
-
 //The directory containing a CMake configuration file for SFML.
-SFML_DIR:PATH=SFML_DIR-NOTFOUND
+SFML_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
 
 //Value Computed by CMake
 the_DepthDelve_Project_BINARY_DIR:STATIC=/home/ray/DepthsDelve/depths-delve-project/build

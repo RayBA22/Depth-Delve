@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/DepthDelve.dir/src/Animation.cpp.o"
+  "CMakeFiles/DepthDelve.dir/src/Animation.cpp.o.d"
+  "CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o"
+  "CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o.d"
   "CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o"
   "CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o.d"
   "CMakeFiles/DepthDelve.dir/src/Etage.cpp.o"

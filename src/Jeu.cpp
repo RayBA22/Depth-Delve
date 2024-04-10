@@ -1,14 +1,11 @@
 #include "Jeu.h"
 
-Jeu::Jeu() : joueur(10, 10, 0, 0)
+Jeu::Jeu() : joueur(500, 500)
 {
-
-    creer_etage();
+    
+    
 }
 
-void Jeu::creer_etage()
-{
-}
 
 type_Minerai Jeu::get_idMinerai(int i) const
 {
@@ -16,9 +13,9 @@ type_Minerai Jeu::get_idMinerai(int i) const
     return mine.get_idMinerai_actuel(i);
 }
 
-bool Jeu::est_detruit(int i) const
+bool Jeu::est_detruit_Minerai(int i) const
 {
-    return 0;
+    return mine.est_detruit_Minerai(i);
 }
 Vect Jeu::get_posMinerai_actuel(int i) const
 {
@@ -30,6 +27,11 @@ entier Jeu::get_MineraiHP_actuel(int i) const
 {
 
     return mine.get_mineraiHP_actuel(i);
+}
+
+void Jeu::se_detruit_Minerai(entier deg, coord i){
+
+    mine.se_detruit_Minerai(deg,  i);
 }
 
 Vect Jeu::get_tailleEtagact() const
@@ -148,37 +150,133 @@ void Jeu::changerEtage()
     }
 }
 
+
+
 type_Minerai Jeu::piocher(coord i)
 {
     return Or;
 }
 
-direction Jeu::mouvement_Joueur(int mouv)
+unsigned int Jeu::get_frame_Joueur()const{
+    return animJoueur.get_frame_actuelle();
+}
+
+direction Jeu::get_direction_Joueur()const{
+    return animJoueur.get_direction_actuelle();
+}
+
+action Jeu::get_action_Joueur()const{
+
+    return joueur.get_action();
+}
+
+void Jeu::repos_joueur(){
+        
+        animJoueur.repos_joueur();
+        
+    }
+
+
+
+void Jeu::piocher_gauche(){
+    Vect posj = get_Joueurpos();
+    int i, n = get_nbMinerai_actuel();
+    for (i = 0; i < n; i++){
+        Vect posm = get_posMinerai_actuel(i);
+        if (posm.x < posj.x-32 && posm.x > posj.x - 50 && (unsigned int)(posm.y-posj.y) < 10 ){
+            mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
+            
+
+        }
+    }
+}
+
+void Jeu::piocher_droite() {
+    Vect posj = get_Joueurpos();
+    int i, n = get_nbMinerai_actuel();
+    for (i = 0; i < n; i++) {
+        Vect posm = get_posMinerai_actuel(i);
+        if (posm.x > posj.x+32 && posm.x < posj.x + 50 && (unsigned int)(posm.y - posj.y) < 10) {
+            mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
+        }
+    }
+}
+
+void Jeu::piocher_haut() {
+    Vect posj = get_Joueurpos();
+    int i, n = get_nbMinerai_actuel();
+    for (i = 0; i < n; i++) {
+        Vect posm = get_posMinerai_actuel(i);
+        if (posm.y < posj.y-32 && posm.y > posj.y - 50 && (unsigned int)(posm.x - posj.x) < 10) {
+            mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
+        }
+    }
+}
+
+void Jeu::piocher_bas() {
+    Vect posj = get_Joueurpos();
+    int i, n = get_nbMinerai_actuel();
+    for (i = 0; i < n; i++) {
+        Vect posm = get_posMinerai_actuel(i);
+        if (posm.y > posj.y+32 && posm.y < posj.y + 50 && (unsigned int)(posm.x - posj.x) < 10) {
+            mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
+            
+        }
+    }
+}
+    
+
+
+void Jeu::mouvement_Joueur(int mouv)
 {
+    action actJoueur = get_action_Joueur();
 
     switch (mouv)
     {
+    
     case 25:
         joueur.deplacement_haut();
-        return haut;
+        animJoueur.animer_mouvement_joueur(haut, actJoueur);
+        if (actJoueur==Piocher) piocher_haut();
+        break;
+        
 
     case 16:
         joueur.deplacement_gauche();
-        return gauche;
+        animJoueur.animer_mouvement_joueur(gauche, actJoueur);
+        if (actJoueur==Piocher) piocher_gauche();
+        break;
 
     case 18:
         joueur.deplacement_bas(get_tailleEtagact().y);
-        return bas;
-
+        animJoueur.animer_mouvement_joueur(bas, actJoueur);
+        if (actJoueur==Piocher) piocher_bas();
+        break;
     case 3:
         joueur.deplacement_droite(get_tailleEtagact().x);
-        return droite;
+        animJoueur.animer_mouvement_joueur(droite, actJoueur);
+        if (actJoueur==Piocher) piocher_droite();
+        break;
+
+
+    case 57:
+        joueur.changer_action();
+        break;
+    
 
     case 4:
         changerEtage();
-        return autre;
 
+        break;
+
+     
     default:
-        return autre;
+        
+        
+        break;
+
+    
     }
 }
+
+

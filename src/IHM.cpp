@@ -2,16 +2,18 @@
 
 IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
 {
-
     resolution.x = x;
     resolution.y = y;
+
+    jeu.repos_joueur();
+
     window.setFramerateLimit(60);
 
-    if (!texJoueur[0].loadFromFile("./../assets/Human/Walk.png"))
+    if (!texJoueur[0].loadFromFile("./../assets/Marcher.png"))
         cout << "erreur de chargement des mouvements " << endl;
-    if (!texJoueur[1].loadFromFile("./../assets/Human/Idle.png"))
+    if (!texJoueur[1].loadFromFile("./../assets/Idle.png"))
         cout << "erreur de chargement de repos" << endl;
-    if (!texJoueur[2].loadFromFile("./../assets/Human/Attack.png"))
+    if (!texJoueur[2].loadFromFile("./../assets/Attack.png"))
         cout << "erreur de chargement de attack" << endl;
 
 
@@ -24,7 +26,7 @@ IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
     if (!texBG[3].loadFromFile("./../assets/map.png"))
         cout << "erreur de chargement du BG 4" << endl;
 
-    if (!texMinerai.loadFromFile("./../assets/minerai/minerai.png"))
+    if (!texMinerai.loadFromFile("./../assets/Ores.png"))
         cout << "erreur de chargement des minerais" << endl;
 
     if (!texdecoration[0].loadFromFile("./../assets/rocks.png"))
@@ -46,7 +48,7 @@ IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
 
     sprdeco.setOrigin(8, 8);
     sprdeco.setScale(5.0f, 5.0f);
-    repos();
+    
 }
 
 
@@ -61,72 +63,22 @@ Vect IHM::centrer()const{
 
 
 
-void IHM::mouvement(direction dir)
-{
-
-    sprJoueur.setTexture(texJoueur[animJoueur.act]);
-
-    if (animJoueur.direc != dir)
-    {
-        animJoueur.frameActuelle = 0;
-        animJoueur.chrono.restart();
-    }
-    animJoueur.direc = dir;
-    animJoueur.interval = 0.1f;
-    animJoueur.nbframe = 4;
-}
-
-
-
-void IHM::repos()
-{
-
-    sprJoueur.setTexture(texJoueur[1]);
-
-    animJoueur.frameActuelle = 0;
-    animJoueur.chrono.restart();
-    //animJoueur.direc = direction(animJoueur.direc % 2);
-    animJoueur.interval = 0.6f;
-    animJoueur.nbframe = 10;
-}
-
-void IHM::piocher(){
-
-    hitboxj.setFillColor(Color::Black);
-    hitboxj.setPosition(jeu.get_Joueurpos().x, jeu.get_Joueurpos().y);
-    sprJoueur.setTexture(texJoueur[2]);
-    
-
-    animJoueur.frameActuelle = 0;
-    animJoueur.chrono.restart();
-    animJoueur.interval = 0.6f;
-    animJoueur.nbframe = 4;
-
-
-}
 
 void IHM::afficherJoueur()
 {
 
-    if (animJoueur.chrono.getElapsedTime().asSeconds() >= animJoueur.interval)
-    {
-
-        animJoueur.chrono.restart();
-
-        animJoueur.frameActuelle = (animJoueur.frameActuelle + 1) % animJoueur.nbframe;
-    }
-
-    sprJoueur.setTextureRect(IntRect(animJoueur.frameActuelle * 32, animJoueur.direc * 32, 32, 32));
+    sprJoueur.setTexture(texJoueur[jeu.get_action_Joueur()]);
+    sprJoueur.setTextureRect(IntRect(jeu.get_frame_Joueur() * 32, jeu.get_direction_Joueur() * 32, 32, 32));
 
     sprJoueur.setPosition(centrer().x + jeu.get_Joueurpos().x, centrer().y + jeu.get_Joueurpos().y);
-    cout << jeu.get_Joueurpos().x << "  " <<  jeu.get_Joueurpos().y << "  |  " << jeu.get_tailleEtagact().x << "   " << jeu.get_tailleEtagact().y <<  endl;
+    //cout << jeu.get_frame_Joueur() << "  " <<  jeu.get_direction_Joueur() << "  |  " << jeu.get_tailleEtagact().x << "   " << jeu.get_tailleEtagact().y <<  endl;
     window.draw(sprJoueur);
 }
 
-void IHM::afficherMinerai(type_Minerai typ, Vect pos)   
+void IHM::afficherMinerai(type_Minerai typ, Vect pos, bool detruit)   
 {
     // jeu.get_MineraiHP_actuel(i) changer de sprite en fonction des hp
-    sprMinerai.setTextureRect(IntRect(typ*8, 0, 8, 8));
+    sprMinerai.setTextureRect(IntRect(typ*8, 8*detruit, 8, 8));
     sprMinerai.setPosition(centrer().x +  pos.x, centrer().y + pos.y);
     window.draw(sprMinerai);
 }
@@ -136,8 +88,8 @@ void IHM::afficherMinerais()
 
     int i, n = jeu.get_nbMinerai_actuel();
     for (i = 0; i < n; i++)
-    {
-        afficherMinerai(jeu.get_idMinerai(i), jeu.get_posMinerai_actuel(i));
+    {   
+        afficherMinerai(jeu.get_idMinerai(i), jeu.get_posMinerai_actuel(i), jeu.est_detruit_Minerai(i));
         
     }
 }
@@ -198,14 +150,15 @@ void IHM::boucleJeu()
                 if (event.type == Event::KeyPressed)
                 {
 
-                    mouvement(jeu.mouvement_Joueur(event.key.code));
+                    jeu.mouvement_Joueur(event.key.code);
+                    
                 }
                 else
                 {
                     if (event.type == Event::KeyReleased)
-                    {
-                        repos();
-                    }
+                        {
+                            jeu.repos_joueur();
+                        }
                 }
             }
         }

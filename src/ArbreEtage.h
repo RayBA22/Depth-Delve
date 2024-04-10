@@ -44,6 +44,9 @@ public:
     
     Vect get_posMinerai_actuel(int i)const;
     
+
+    void se_detruit_Minerai(entier deg, coord i);
+    bool est_detruit_Minerai(int i)const;
 };
 
 

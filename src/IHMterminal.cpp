@@ -46,7 +46,7 @@ void IHMterminal::maj_grille_Etage()
     for (int i = 0; i < 5; i++)
     {
         v = jeu.get_posMinerai_actuel(i);
-        if (jeu.est_detruit(i))
+        if (jeu.est_detruit_Minerai(i))
             grille[v.x][v.y] = "🕳 ";
         else
             grille[v.x][v.y] = skin_caractere[jeu.get_idMinerai(i)];
@@ -129,7 +129,7 @@ int IHMterminal::collisionMinerai(){
     Vect posJoueur = jeu.get_Joueurpos(), posMinerai;
     for(int i=0; i<5; i++){
         posMinerai = jeu.get_posMinerai_actuel(i);
-        if (posJoueur.x==posMinerai.x && posJoueur.y==posMinerai.y && !jeu.est_detruit(i)){
+        if (posJoueur.x==posMinerai.x && posJoueur.y==posMinerai.y && !jeu.est_detruit_Minerai(i)){
             return i;
         }
     }
@@ -142,7 +142,7 @@ void IHMterminal::miner(){
     type_Minerai type;
     if (indice != -1)
         type = jeu.miner(indice);
-        if (jeu.est_detruit(indice))
+        if (jeu.est_detruit_Minerai(indice))
             jeu.ajouter_Minerai_Inventaire(type);
  
 }

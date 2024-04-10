@@ -3,9 +3,10 @@
 #include "Joueur.h"
 #include "ArbreEtage.h"
 
+#include <iostream>
+using namespace std;
+#include "Animation.h"
 
-enum direction {haut=2, gauche=1, bas=0, droite=0, autre=3};
-enum action{marcher=0, piocher=2};
 class Jeu
 {
 
@@ -14,6 +15,8 @@ public:
     Joueur joueur;
     ArbreEtage mine;
     Inventaire inventaire;
+    Animation animJoueur;
+    
     
 
 
@@ -24,13 +27,21 @@ public:
     unsigned int get_nbMinerai_actuel()const ;
     type_Minerai miner(int indice);
 
-    bool est_detruit(int i)const;
+    
     Vect get_posMinerai_actuel(int i)const;
+    void se_detruit_Minerai(entier deg, coord i);
+    bool est_detruit_Minerai(int i)const;
+
     Vect get_tailleEtagact()const;
     Vect get_Joueurpos()const; 
     type_Etage get_typeEtage_actuel()const;
 
+    unsigned int get_frame_Joueur()const;
+    direction get_direction_Joueur()const;
+    action get_action_Joueur()const;
 
+
+    void repos_joueur();
 
 
     void Joueur_gauche();
@@ -38,7 +49,7 @@ public:
     void Joueur_haut();
     void Joueur_bas();
     void Joueur_posinit();
-    direction mouvement_Joueur(int mouv);
+    void mouvement_Joueur(int mouv);
 
 
     orientation detecterpassage()const;
@@ -46,6 +57,16 @@ public:
     
     type_Minerai piocher(coord i);
     void ajouter_Minerai_Inventaire(type_Minerai type);
+
+
+    
+    void piocher_gauche();
+    void piocher_droite();
+    void piocher_haut();
+    void piocher_bas();
+
+
+    
     
 
         

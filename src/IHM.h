@@ -9,15 +9,7 @@ using namespace std;
 
 
 
-struct Animation
-{
-    Clock chrono;
-    float interval;
-    unsigned int frameActuelle;
-    unsigned int nbframe = 1;
-    direction direc;
-    action act;
-};
+
 
 class IHM
 {
@@ -28,21 +20,19 @@ public:
     Jeu jeu;
     Texture texJoueur[3], texMinerai, texBG[4], texdecoration[5];
     Sprite sprJoueur, sprMinerai, sprBG, sprdeco;
-    Animation animJoueur;
-    RectangleShape hitboxj;
+    
+    
 
     IHM(int x, int y);
     void boucleJeu();
 
-    void mouvement(direction dir);
-    void piocher();
-    void repos();
+   
    
     void afficherJoueur();
     void afficherBG();
 
     Vect centrer() const;
-    void afficherMinerai(type_Minerai typ, Vect pos);
+    void afficherMinerai(type_Minerai typ, Vect pos, bool detruit);
     void afficherMinerais();
     void afficherechelle();
     void afficherelement();

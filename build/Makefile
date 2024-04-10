@@ -129,6 +129,54 @@ DepthDelve/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/build
 .PHONY : DepthDelve/fast
 
+src/Animation.o: src/Animation.cpp.o
+.PHONY : src/Animation.o
+
+# target to build an object file
+src/Animation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Animation.cpp.o
+.PHONY : src/Animation.cpp.o
+
+src/Animation.i: src/Animation.cpp.i
+.PHONY : src/Animation.i
+
+# target to preprocess a source file
+src/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Animation.cpp.i
+.PHONY : src/Animation.cpp.i
+
+src/Animation.s: src/Animation.cpp.s
+.PHONY : src/Animation.s
+
+# target to generate assembly for a file
+src/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/Animation.cpp.s
+.PHONY : src/Animation.cpp.s
+
+src/ArbreEtage.o: src/ArbreEtage.cpp.o
+.PHONY : src/ArbreEtage.o
+
+# target to build an object file
+src/ArbreEtage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o
+.PHONY : src/ArbreEtage.cpp.o
+
+src/ArbreEtage.i: src/ArbreEtage.cpp.i
+.PHONY : src/ArbreEtage.i
+
+# target to preprocess a source file
+src/ArbreEtage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.i
+.PHONY : src/ArbreEtage.cpp.i
+
+src/ArbreEtage.s: src/ArbreEtage.cpp.s
+.PHONY : src/ArbreEtage.s
+
+# target to generate assembly for a file
+src/ArbreEtage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DepthDelve.dir/build.make CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.s
+.PHONY : src/ArbreEtage.cpp.s
+
 src/Ennemi.o: src/Ennemi.cpp.o
 .PHONY : src/Ennemi.o
 
@@ -474,6 +522,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DepthDelve"
+	@echo "... src/Animation.o"
+	@echo "... src/Animation.i"
+	@echo "... src/Animation.s"
+	@echo "... src/ArbreEtage.o"
+	@echo "... src/ArbreEtage.i"
+	@echo "... src/ArbreEtage.s"
 	@echo "... src/Ennemi.o"
 	@echo "... src/Ennemi.i"
 	@echo "... src/Ennemi.s"

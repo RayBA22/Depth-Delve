@@ -88,3 +88,12 @@ unsigned int ArbreEtage::get_nbMinerai_actuel()const{
 Vect ArbreEtage::get_posMinerai_actuel(int i)const{
     return noeudActuel->etage.get_posMinerai(i);
 }
+
+
+void ArbreEtage::se_detruit_Minerai(entier deg, coord i){
+    noeudActuel->etage.se_detruit(deg, i);
+}
+
+bool ArbreEtage::est_detruit_Minerai(int i)const{
+    return noeudActuel->etage.est_detruit(i);
+}

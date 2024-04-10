@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2
+CXX_INCLUDES = -I/home/ray/DepthsDelve/depths-delve-project/src
 
 CXX_FLAGS = 
 

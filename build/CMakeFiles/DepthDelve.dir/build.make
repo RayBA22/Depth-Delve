@@ -69,10 +69,38 @@ include CMakeFiles/DepthDelve.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DepthDelve.dir/flags.make
 
+CMakeFiles/DepthDelve.dir/src/Animation.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
+CMakeFiles/DepthDelve.dir/src/Animation.cpp.o: ../src/Animation.cpp
+CMakeFiles/DepthDelve.dir/src/Animation.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DepthDelve.dir/src/Animation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Animation.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Animation.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Animation.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Animation.cpp
+
+CMakeFiles/DepthDelve.dir/src/Animation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DepthDelve.dir/src/Animation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ray/DepthsDelve/depths-delve-project/src/Animation.cpp > CMakeFiles/DepthDelve.dir/src/Animation.cpp.i
+
+CMakeFiles/DepthDelve.dir/src/Animation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DepthDelve.dir/src/Animation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ray/DepthsDelve/depths-delve-project/src/Animation.cpp -o CMakeFiles/DepthDelve.dir/src/Animation.cpp.s
+
+CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
+CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o: ../src/ArbreEtage.cpp
+CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o -MF CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/ArbreEtage.cpp
+
+CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ray/DepthsDelve/depths-delve-project/src/ArbreEtage.cpp > CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.i
+
+CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ray/DepthsDelve/depths-delve-project/src/ArbreEtage.cpp -o CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.s
+
 CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o: ../src/Ennemi.cpp
 CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Ennemi.cpp
 
 CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.i: cmake_force
@@ -86,7 +114,7 @@ CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Etage.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Etage.cpp.o: ../src/Etage.cpp
 CMakeFiles/DepthDelve.dir/src/Etage.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DepthDelve.dir/src/Etage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DepthDelve.dir/src/Etage.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Etage.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Etage.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Etage.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Etage.cpp
 
 CMakeFiles/DepthDelve.dir/src/Etage.cpp.i: cmake_force
@@ -100,7 +128,7 @@ CMakeFiles/DepthDelve.dir/src/Etage.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/IHM.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/IHM.cpp.o: ../src/IHM.cpp
 CMakeFiles/DepthDelve.dir/src/IHM.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DepthDelve.dir/src/IHM.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DepthDelve.dir/src/IHM.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/IHM.cpp.o -MF CMakeFiles/DepthDelve.dir/src/IHM.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/IHM.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/IHM.cpp
 
 CMakeFiles/DepthDelve.dir/src/IHM.cpp.i: cmake_force
@@ -114,7 +142,7 @@ CMakeFiles/DepthDelve.dir/src/IHM.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o: ../src/IHMterminal.cpp
 CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o -MF CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/IHMterminal.cpp
 
 CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.i: cmake_force
@@ -128,7 +156,7 @@ CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o: ../src/Inventaire.cpp
 CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Inventaire.cpp
 
 CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.i: cmake_force
@@ -142,7 +170,7 @@ CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o: ../src/Jeu.cpp
 CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Jeu.cpp
 
 CMakeFiles/DepthDelve.dir/src/Jeu.cpp.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/DepthDelve.dir/src/Jeu.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o: ../src/Joueur.cpp
 CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Joueur.cpp
 
 CMakeFiles/DepthDelve.dir/src/Joueur.cpp.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/DepthDelve.dir/src/Joueur.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o: ../src/Minerai.cpp
 CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Minerai.cpp
 
 CMakeFiles/DepthDelve.dir/src/Minerai.cpp.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/DepthDelve.dir/src/Minerai.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Obj.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Obj.cpp.o: ../src/Obj.cpp
 CMakeFiles/DepthDelve.dir/src/Obj.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/DepthDelve.dir/src/Obj.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DepthDelve.dir/src/Obj.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Obj.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Obj.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Obj.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Obj.cpp
 
 CMakeFiles/DepthDelve.dir/src/Obj.cpp.i: cmake_force
@@ -198,7 +226,7 @@ CMakeFiles/DepthDelve.dir/src/Obj.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o: ../src/Personnage.cpp
 CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Personnage.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Personnage.cpp
 
 CMakeFiles/DepthDelve.dir/src/Personnage.cpp.i: cmake_force
@@ -212,7 +240,7 @@ CMakeFiles/DepthDelve.dir/src/Personnage.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o: ../src/Pioche.cpp
 CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Pioche.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Pioche.cpp
 
 CMakeFiles/DepthDelve.dir/src/Pioche.cpp.i: cmake_force
@@ -226,7 +254,7 @@ CMakeFiles/DepthDelve.dir/src/Pioche.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o: ../src/Pnj.cpp
 CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Pnj.cpp
 
 CMakeFiles/DepthDelve.dir/src/Pnj.cpp.i: cmake_force
@@ -240,7 +268,7 @@ CMakeFiles/DepthDelve.dir/src/Pnj.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/Vect.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/Vect.cpp.o: ../src/Vect.cpp
 CMakeFiles/DepthDelve.dir/src/Vect.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/DepthDelve.dir/src/Vect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/DepthDelve.dir/src/Vect.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/Vect.cpp.o -MF CMakeFiles/DepthDelve.dir/src/Vect.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/Vect.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/Vect.cpp
 
 CMakeFiles/DepthDelve.dir/src/Vect.cpp.i: cmake_force
@@ -254,7 +282,7 @@ CMakeFiles/DepthDelve.dir/src/Vect.cpp.s: cmake_force
 CMakeFiles/DepthDelve.dir/src/main.cpp.o: CMakeFiles/DepthDelve.dir/flags.make
 CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/DepthDelve.dir/src/main.cpp.o: CMakeFiles/DepthDelve.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/DepthDelve.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/DepthDelve.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DepthDelve.dir/src/main.cpp.o -MF CMakeFiles/DepthDelve.dir/src/main.cpp.o.d -o CMakeFiles/DepthDelve.dir/src/main.cpp.o -c /home/ray/DepthsDelve/depths-delve-project/src/main.cpp
 
 CMakeFiles/DepthDelve.dir/src/main.cpp.i: cmake_force
@@ -267,6 +295,8 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.s: cmake_force
 
 # Object files for target DepthDelve
 DepthDelve_OBJECTS = \
+"CMakeFiles/DepthDelve.dir/src/Animation.cpp.o" \
+"CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o" \
 "CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o" \
 "CMakeFiles/DepthDelve.dir/src/Etage.cpp.o" \
 "CMakeFiles/DepthDelve.dir/src/IHM.cpp.o" \
@@ -285,6 +315,8 @@ DepthDelve_OBJECTS = \
 # External object files for target DepthDelve
 DepthDelve_EXTERNAL_OBJECTS =
 
+DepthDelve: CMakeFiles/DepthDelve.dir/src/Animation.cpp.o
+DepthDelve: CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o
 DepthDelve: CMakeFiles/DepthDelve.dir/src/Ennemi.cpp.o
 DepthDelve: CMakeFiles/DepthDelve.dir/src/Etage.cpp.o
 DepthDelve: CMakeFiles/DepthDelve.dir/src/IHM.cpp.o
@@ -300,8 +332,11 @@ DepthDelve: CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o
 DepthDelve: CMakeFiles/DepthDelve.dir/src/Vect.cpp.o
 DepthDelve: CMakeFiles/DepthDelve.dir/src/main.cpp.o
 DepthDelve: CMakeFiles/DepthDelve.dir/build.make
+DepthDelve: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
+DepthDelve: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
+DepthDelve: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 DepthDelve: CMakeFiles/DepthDelve.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable DepthDelve"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ray/DepthsDelve/depths-delve-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable DepthDelve"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DepthDelve.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
