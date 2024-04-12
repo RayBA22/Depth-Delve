@@ -2,26 +2,27 @@
 
 Joueur::Joueur()
 {
-    id = joueur;
+    
     pos.x = 0;
     pos.y = 0;
     
 }
 
-Joueur::Joueur(entier posx, entier posy) : Personnage(15, 15,  posx, posy)
+Joueur::Joueur(entier posx, entier posy) : Personnage(15, 15,  posx, posy), pioche(pierre)
 {
-    id = joueur;
+    
     actJoueur = Marcher;
+    HP = 10;
 }
 
 void Joueur::changer_vitesse(){
     if (actJoueur == Marcher){
-        vitesse.x = 10;
-        vitesse.y = 10;
+        vitesse.x = 7;
+        vitesse.y = 7;
     }
     else{
-        vitesse.x = 1;
-        vitesse.y = 1;
+        vitesse.x = 4;
+        vitesse.y = 4;
     }
 }
 
@@ -34,13 +35,17 @@ void Joueur::set_posJoueur(entier posx, entier posy)
 }
 
 
-float Joueur::get_dmgJoueur()const{
-    return pioche.get_idPioche();
+int Joueur::get_dmgJoueur()const{
+    return  pioche.get_dmgPioche();
 }
+
+
 entier Joueur::get_faimJoueur()const{
     return HP;
 }
-idPioche Joueur::get_ifPioche()const{
+
+
+idPioche Joueur::get_idPioche()const{
     return pioche.get_idPioche();
 }
 
@@ -55,4 +60,13 @@ void Joueur::changer_action(){
     changer_vitesse();
 }
 
+
+void Joueur::prenddmg(int dmg){
+    HP = HP - dmg;
+}
+
+
+bool Joueur::joueur_mort()const{
+    return HP <= 0;
+}
 

@@ -4,6 +4,9 @@
 typedef int coord;
 typedef int entier;
 
+#include <iostream> 
+using namespace std;
+
 
 class Vect
 {

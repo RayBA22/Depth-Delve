@@ -3,22 +3,32 @@
 
 
 
-NoeudEtage::NoeudEtage(unsigned int prof):etage(prof){
+NoeudEtage::NoeudEtage(int prof):etage(prof){
 
     preced = nullptr;
     ouest = nullptr;
     est = nullptr;
+    
 }
 
-
+NoeudEtage::~NoeudEtage(){
+    //revenir pour la destruction !!!!!!!!!!!!!!!!!!!!!
+    
+ }
 
 ArbreEtage::ArbreEtage(){
     noeudActuel = new NoeudEtage(0);
 
 
+
 }
 
-void ArbreEtage::changerHauteur(unsigned int prof){
+
+ArbreEtage::~ArbreEtage(){
+    cout << "destruction Arbre" << endl;
+}
+
+void ArbreEtage::changerHauteur(int prof){
         if (hauteur < prof)
             hauteur = prof;
 }
@@ -32,9 +42,11 @@ void ArbreEtage::allerPrecedent(){
 
 void ArbreEtage::allerOuest(){
     if (noeudActuel->ouest == nullptr){
-        unsigned int prof = noeudActuel->etage.get_profondeur()+1;
-        changerHauteur(prof);
+        //cout << noeudActuel->etage.get_profondeur() << endl;
+        int prof = noeudActuel->etage.get_profondeur()+1;
         noeudActuel->ouest = new NoeudEtage(prof);
+        changerHauteur(prof);
+        
     }
     
     noeudActuel->ouest->preced = noeudActuel;
@@ -44,9 +56,9 @@ void ArbreEtage::allerOuest(){
 
 void ArbreEtage::allerEst(){
     if (noeudActuel->est == nullptr){
-        unsigned int prof = noeudActuel->etage.get_profondeur()+1;
+        int prof = noeudActuel->etage.get_profondeur() +1;
+        noeudActuel->est = new NoeudEtage(prof);
         changerHauteur(prof);
-        noeudActuel->est = new NoeudEtage(noeudActuel->etage.get_profondeur()+1);
     }
     
     noeudActuel->est->preced = noeudActuel;
@@ -59,7 +71,7 @@ void ArbreEtage::allerEst(){
 
 
 
-type_Minerai ArbreEtage::get_idMinerai_actuel(unsigned int i) const{
+type_Minerai ArbreEtage::get_idMinerai_actuel( int i) const{
     return noeudActuel->etage.get_idMinerai(i);
 }
 
@@ -80,7 +92,7 @@ type_Etage ArbreEtage::get_typeEtage_actuel()const{
 }
 
 
-unsigned int ArbreEtage::get_nbMinerai_actuel()const{
+ int ArbreEtage::get_nbMinerai_actuel()const{
     return noeudActuel->etage.get_nbMinerai();
 }
 
@@ -96,4 +108,39 @@ void ArbreEtage::se_detruit_Minerai(entier deg, coord i){
 
 bool ArbreEtage::est_detruit_Minerai(int i)const{
     return noeudActuel->etage.est_detruit(i);
+}
+
+
+
+ int ArbreEtage::get_nbEnnemi_actuel()const{
+    return noeudActuel->etage.get_nbEnnemi();
+}
+type_Ennemi ArbreEtage::get_idEnnemi_actuel( int i)const{
+    return noeudActuel->etage.get_idEnnemi(i);
+} 
+
+bool ArbreEtage::est_mort(int i)const{
+    return noeudActuel->etage.est_mort(i);
+}
+entier ArbreEtage::get_EnnemiHP_actuel(int i)const{
+    return noeudActuel->etage.get_EnnemiHP(i);
+}
+Vect ArbreEtage::get_posEnnemi_actuel(int i)const{
+    return noeudActuel->etage.get_posEnnemi(i);
+}
+
+
+void ArbreEtage::prenddmg( int dmg, int i){
+    noeudActuel->etage.prenddmg(dmg, i);
+}
+
+bool ArbreEtage::detecter(int i, Vect position){
+     return noeudActuel->etage.detecter(i, position);
+}
+
+void ArbreEtage::suivre(int i, Vect position){
+    noeudActuel->etage.suivre(i, position);
+}
+bool ArbreEtage::toucher(int i, Vect position){
+   return  noeudActuel->etage.toucher(i, position);
 }

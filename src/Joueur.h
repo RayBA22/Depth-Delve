@@ -19,11 +19,15 @@ public:
     Joueur(entier posx, entier posy);
     void changer_vitesse();
     void set_posJoueur(entier posx, entier posy);
-    float get_dmgJoueur()const;
+    int get_dmgJoueur()const;
+    int get_HPJoueur()const;
     entier get_faimJoueur()const;
-    idPioche get_ifPioche()const;
+    idPioche get_idPioche()const;
     action get_action()const;
+
     void changer_action();
+    void prenddmg(int dmg);
+    bool joueur_mort()const;
 
         
     

@@ -4,35 +4,35 @@
 #include <iostream>
 using namespace std;
 
-Etage::Etage(unsigned int prof)
+Etage::Etage( int prof)
 {
     srand((unsigned)time(NULL));
-    id = type_Etage(rand()%3) ;
+    id = type_Etage(rand() % 3);
     tailleEtage.x = 1000;
-    tailleEtage.y = (rand()%(maxtaille-500))+500;
-    unsigned int profondeur = prof;
-    nbMinerai = (rand()%(maxMinerai-5))+5;
+    tailleEtage.y = (rand() % (maxtaille - 500)) + 500;
+    profondeur = prof;
+    nbMinerai = (rand() % (maxMinerai - 5)) + 5;
+    nbEnnemi = profondeur;
     initEtage();
+    
     
 }
 
-
-type_Etage Etage::get_typeEtage() const{
+type_Etage Etage::get_typeEtage() const
+{
     return id;
 }
 
-
-
 type_Minerai Etage::randomiseurMinerai() const
 {
-    
+
     int r = rand() % 1000;
 
     if (r >= 0 && r <= 5)
         return Diamant;
     else
     {
-        if (r >= 20 && r <= 40 )
+        if (r >= 20 && r <= 40)
             return Or;
 
         else
@@ -58,16 +58,21 @@ type_Minerai Etage::randomiseurMinerai() const
 }
 
 void Etage::initEtage()
-{   
-    
+{
+
     srand((unsigned)time(NULL));
 
     for (int i = 0; i < nbMinerai; i++)
     {
-        Minerai minerai(randomiseurMinerai(), rand()%tailleEtage.x, rand()%tailleEtage.y);
+        Minerai minerai(randomiseurMinerai(), rand() % tailleEtage.x, rand() % tailleEtage.y);
         tabMinerai[i] = minerai;
-        
-        // même processus pour les pnjs et les ennemis 
+    }
+
+    for (int i = 0; i < nbEnnemi; i++)
+    {
+
+        Ennemi ennemi(green, rand() % tailleEtage.x, rand() % tailleEtage.y);
+        tabEnnemi[i] = ennemi;
     }
 }
 
@@ -88,26 +93,87 @@ Vect Etage::get_posMinerai(int i) const
     return tabMinerai[i].get_position();
 }
 
-Vect Etage::get_tailleEtage()const{
+Vect Etage::get_tailleEtage() const
+{
 
     return tailleEtage;
 }
 
-unsigned int Etage::get_nbMinerai()const {
+int Etage::get_nbMinerai() const
+{
     return nbMinerai;
 }
 
-
-unsigned int Etage::get_profondeur()const{
-
+int Etage::get_profondeur() const
+{
+   
     return profondeur;
 }
 
-entier Etage::get_MineraiHP(int i)const{
-    return tabMinerai[i].getHP();
+entier Etage::get_MineraiHP(int i) const
+{
+    return tabMinerai[i].get_HP();
 }
 
-
-void Etage::se_detruit(entier deg, coord i){
+void Etage::se_detruit(entier deg, coord i)
+{
     tabMinerai[i].se_detruit(deg);
 }
+
+type_Ennemi Etage::randomiseurEnnemi()
+{
+    int r = rand() % 10;
+
+    if (r >= 0 && r <= 5)
+        return red;
+    else
+    {
+        if (r >= 6 && r <= 9)
+            return blue;
+
+        else
+            return green;
+    }
+}
+
+type_Ennemi Etage::get_idEnnemi(int i) const
+{
+    return tabEnnemi[i].get_idEnnemi();
+}
+bool Etage::est_mort(int i) const
+{
+    return tabEnnemi[i].est_mort();
+}
+Vect Etage::get_posEnnemi(int i) const
+{
+    return tabEnnemi[i].get_position();
+}
+entier Etage::get_EnnemiHP(int i) const
+{
+    return tabEnnemi[i].get_HP();
+}
+
+ int Etage::get_nbEnnemi() const
+{
+    return nbEnnemi;
+}
+
+
+void Etage::prenddmg( int dmg, int i){
+    return tabEnnemi[i].prenddmg(dmg);
+}
+
+bool Etage::detecter(int i, Vect position){
+    return tabEnnemi[i].detecter(position);
+}
+
+void Etage::suivre(int i, Vect position)
+{
+    tabEnnemi[i].suivre(position, tailleEtage);
+}
+
+bool Etage::toucher(int i, Vect position)
+{
+    return tabEnnemi[i].toucher(position);
+}
+

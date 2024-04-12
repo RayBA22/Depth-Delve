@@ -3,15 +3,27 @@
 
 #include "Personnage.h"
 
+enum type_Ennemi{red, blue, green};
+
+
 class Ennemi: public Personnage
 {
 public:
-    /**
-    blabla
-    */
+    type_Ennemi id;
+    unsigned int dmg;
+    bool mort;
     
     Ennemi();
-    Ennemi(entier vitessex, entier vitessy, entier posx, entier posy);
+    Ennemi(type_Ennemi ide, entier posx, entier posy);
+    
+    type_Ennemi get_idEnnemi()const;
+    void prenddmg(unsigned int dmg);
+
+    bool est_mort()const;
+    
+    bool detecter(Vect position);
+    void suivre(Vect position, Vect tailleEtage);
+    bool toucher(Vect position);
 
     
     

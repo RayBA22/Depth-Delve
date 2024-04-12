@@ -8,7 +8,8 @@ Pioche::Pioche(){
 
 Pioche::Pioche(idPioche idp){
     id = idp;
-    dmg = 3*idp;
+    dmg = idp;
+    
 }
 
 
@@ -18,7 +19,7 @@ idPioche Pioche::get_idPioche()const{
 }
     
 
-float Pioche::get_dmgPioche()const{
+int Pioche::get_dmgPioche()const{
 
     return dmg;
 }

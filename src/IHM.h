@@ -18,8 +18,8 @@ public:
     RenderWindow window;
     Vect resolution;
     Jeu jeu;
-    Texture texJoueur[3], texMinerai, texBG[4], texdecoration[5];
-    Sprite sprJoueur, sprMinerai, sprBG, sprdeco;
+    Texture texJoueur[3], texMinerai, texEnnemi, texBG[4], texdecoration[5];
+    Sprite sprJoueur, sprMinerai, sprEnnemi, sprBG, sprdeco;
     
     
 
@@ -34,6 +34,8 @@ public:
     Vect centrer() const;
     void afficherMinerai(type_Minerai typ, Vect pos, bool detruit);
     void afficherMinerais();
+    void afficherEnnemi(Vect pos);
+    void afficherEnnemis();
     void afficherechelle();
     void afficherelement();
     void afficherdeco();

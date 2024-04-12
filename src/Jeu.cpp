@@ -152,9 +152,9 @@ void Jeu::changerEtage()
 
 
 
-type_Minerai Jeu::piocher(coord i)
+void Jeu::piocher()
 {
-    return Or;
+    
 }
 
 unsigned int Jeu::get_frame_Joueur()const{
@@ -183,10 +183,22 @@ void Jeu::piocher_gauche(){
     int i, n = get_nbMinerai_actuel();
     for (i = 0; i < n; i++){
         Vect posm = get_posMinerai_actuel(i);
-        if (posm.x < posj.x-32 && posm.x > posj.x - 50 && (unsigned int)(posm.y-posj.y) < 10 ){
+       
+        if ( joueur.detect_gauche(posm) && !mine.est_detruit_Minerai(i)){
             mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
-            
+            //cout << mine.get_mineraiHP_actuel(i) << "  |  " << "gauche" << endl;
 
+        }
+    }
+
+    n = get_nbEnnemi_actuel();
+    for (i = 0; i < n; i++) {
+        Vect pose = get_posEnnemi_actuel(i);
+        if (joueur.detect_haut(pose) && !mine.est_mort(i)) {
+            
+            mine.prenddmg(joueur.get_dmgJoueur(), i);
+            
+            
         }
     }
 }
@@ -196,8 +208,20 @@ void Jeu::piocher_droite() {
     int i, n = get_nbMinerai_actuel();
     for (i = 0; i < n; i++) {
         Vect posm = get_posMinerai_actuel(i);
-        if (posm.x > posj.x+32 && posm.x < posj.x + 50 && (unsigned int)(posm.y - posj.y) < 10) {
+        if ( joueur.detect_droite(posm) && !mine.est_detruit_Minerai(i)) {
             mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
+            //cout << mine.get_mineraiHP_actuel(i) << "  |  " << "droite" << endl;
+        }
+    }
+
+    n = get_nbEnnemi_actuel();
+    for (i = 0; i < n; i++) {
+        Vect pose = get_posEnnemi_actuel(i);
+        if (joueur.detect_droite(pose) && !mine.est_mort(i)) {
+            
+            mine.prenddmg(joueur.get_dmgJoueur(), i);
+            
+            
         }
     }
 }
@@ -207,8 +231,21 @@ void Jeu::piocher_haut() {
     int i, n = get_nbMinerai_actuel();
     for (i = 0; i < n; i++) {
         Vect posm = get_posMinerai_actuel(i);
-        if (posm.y < posj.y-32 && posm.y > posj.y - 50 && (unsigned int)(posm.x - posj.x) < 10) {
+        if (joueur.detect_haut(posm) && !mine.est_detruit_Minerai(i)) {
+            
             mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
+            //cout << mine.get_mineraiHP_actuel(i) << "  |  " << "haut" << endl;
+        }
+    }
+
+    n = get_nbEnnemi_actuel();
+    for (i = 0; i < n; i++) {
+        Vect pose = get_posEnnemi_actuel(i);
+        if (joueur.detect_haut(pose) && !mine.est_mort(i)) {
+            
+            mine.prenddmg(joueur.get_dmgJoueur(), i);
+            
+            
         }
     }
 }
@@ -218,11 +255,25 @@ void Jeu::piocher_bas() {
     int i, n = get_nbMinerai_actuel();
     for (i = 0; i < n; i++) {
         Vect posm = get_posMinerai_actuel(i);
-        if (posm.y > posj.y+32 && posm.y < posj.y + 50 && (unsigned int)(posm.x - posj.x) < 10) {
+        if (joueur.detect_bas(posm) && !mine.est_detruit_Minerai(i))  {
+            
             mine.se_detruit_Minerai(joueur.get_dmgJoueur(), i);
+            if (!mine.est_detruit_Minerai(i))
+                inventaire.ajouter_Minerai(mine.get_idMinerai_actuel(i));
             
         }
     }
+    n = get_nbEnnemi_actuel();
+    for (i = 0; i < n; i++) {
+        Vect pose = get_posEnnemi_actuel(i);
+        if (joueur.detect_bas(pose) && !mine.est_mort(i)) {
+            
+            mine.prenddmg(joueur.get_dmgJoueur(), i);
+            
+            
+        }
+    }
+
 }
     
 
@@ -230,7 +281,8 @@ void Jeu::piocher_bas() {
 void Jeu::mouvement_Joueur(int mouv)
 {
     action actJoueur = get_action_Joueur();
-
+    
+   
     switch (mouv)
     {
     
@@ -259,13 +311,14 @@ void Jeu::mouvement_Joueur(int mouv)
         break;
 
 
-    case 57:
+    case 37:
         joueur.changer_action();
         break;
     
 
     case 4:
         changerEtage();
+        //cout << mine.noeudActuel->etage.get_profondeur() << endl;
 
         break;
 
@@ -279,4 +332,33 @@ void Jeu::mouvement_Joueur(int mouv)
     }
 }
 
+ Vect Jeu::get_posEnnemi_actuel(int i)const{
+    return mine.get_posEnnemi_actuel(i);
+ }
+unsigned int Jeu::get_nbEnnemi_actuel()const{
+    return mine.get_nbEnnemi_actuel();
+}
 
+type_Ennemi Jeu::get_idEnnemi(int i)const{
+    return mine.get_idEnnemi_actuel(i);
+}
+
+bool Jeu::est_mort(int i)const{
+    return mine.est_mort(i);
+}
+
+
+void Jeu::mouvementEnnemi(){
+    Vect posj = get_Joueurpos();
+    int i, n = get_nbEnnemi_actuel();
+    for (i=0; i<n; i++){
+        mine.suivre(i, posj);
+        //cout << mine.detecter(1, posj) << " / "<< posj.x << "  " << posj.y << "  |  "   << mine.get_posEnnemi_actuel(i).x << "   " << mine.get_posEnnemi_actuel(i).y << endl;
+        /*if (mine.toucher(i, posj)){
+            joueur.prenddmg(1);
+            cout << joueur.get_HP() << endl;
+        }*/
+        //cout << mine.toucher(i, posj) << ", ";
+    }//cout << endl;
+    
+}

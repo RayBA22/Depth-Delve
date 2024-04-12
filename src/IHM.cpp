@@ -16,6 +16,9 @@ IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
     if (!texJoueur[2].loadFromFile("./../assets/Attack.png"))
         cout << "erreur de chargement de attack" << endl;
 
+    if (!texEnnemi.loadFromFile("./../assets/insect.png"))
+        cout << "erreur de chargement des Ennmis" << endl;
+
 
     if (!texBG[0].loadFromFile("./../assets/mine.png"))
         cout << "erreur de chargement du BG 1" << endl;
@@ -45,6 +48,10 @@ IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
     sprMinerai.setScale(4.5f, 4.5f);
     sprMinerai.setOrigin(4, 4);
 
+
+    sprEnnemi.setTexture(texEnnemi);
+    sprEnnemi.setScale(2.0f, 2.0f);
+    sprMinerai.setOrigin(8, 8);
 
     sprdeco.setOrigin(8, 8);
     sprdeco.setScale(5.0f, 5.0f);
@@ -90,9 +97,28 @@ void IHM::afficherMinerais()
     for (i = 0; i < n; i++)
     {   
         afficherMinerai(jeu.get_idMinerai(i), jeu.get_posMinerai_actuel(i), jeu.est_detruit_Minerai(i));
+    }
+}
+
+
+void IHM::afficherEnnemi(Vect pos){
+    sprEnnemi.setTextureRect(IntRect(0, 0, 16, 16));
+    sprEnnemi.setPosition(centrer().x +  pos.x, centrer().y + pos.y);
+    window.draw(sprEnnemi);
+}
+
+void IHM::afficherEnnemis(){
+
+    int i, n = jeu.get_nbEnnemi_actuel();
+    for (i = 0; i < n; i++)
+    {   
+        if (!jeu.est_mort(i))
+            afficherEnnemi(jeu.get_posEnnemi_actuel(i));
         
     }
 }
+
+
 
 void IHM::afficherBG()
 {   
@@ -162,11 +188,14 @@ void IHM::boucleJeu()
                 }
             }
         }
-
+        
+        jeu.mouvementEnnemi();
+        
         window.clear(Color::Black);
         afficherBG();
         afficherechelle();
         afficherMinerais();
+        afficherEnnemis();
         afficherJoueur();
         
 

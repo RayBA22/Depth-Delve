@@ -2,21 +2,21 @@
 #define _PIOCHE_
 #include "Vect.h"
 
-enum idPioche {pierre, fer, diamond};
+enum idPioche {nop, pierre, fer, diamond};
 
 class Pioche
 {
 public:
     
     idPioche id;
-    float dmg; 
+    int dmg; 
     
     Pioche();
     Pioche(idPioche idp);
     
 
     idPioche get_idPioche()const;
-    float get_dmgPioche()const;
+    int get_dmgPioche()const;
 };
 
 

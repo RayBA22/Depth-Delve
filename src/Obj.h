@@ -19,7 +19,7 @@ public: //mettre en privé
     
     Vect get_position()const;
 
-    entier getHP()const;
+    entier get_HP()const;
     
 };
 

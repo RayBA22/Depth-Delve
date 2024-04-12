@@ -3,14 +3,14 @@
 
 #include "Obj.h"
 
-enum type_perso{joueur, pnj, ennemi};
+
 
 
 class Personnage: public Obj
 {
 
 public:
-    type_perso id;
+    
     Vect vitesse;
     
     Personnage();
@@ -19,7 +19,11 @@ public:
     void deplacement_droite(coord x);
     void deplacement_haut();
     void deplacement_bas(coord y);
-    type_perso get_id()const;
+    
+    bool detect_gauche(Vect posm);
+    bool detect_droite(Vect posm);
+    bool detect_haut(Vect posm);
+    bool detect_bas(Vect posm);
 
 };
 

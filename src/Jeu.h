@@ -41,6 +41,8 @@ public:
     action get_action_Joueur()const;
 
 
+
+
     void repos_joueur();
 
 
@@ -55,10 +57,15 @@ public:
     orientation detecterpassage()const;
     void changerEtage();
     
-    type_Minerai piocher(coord i);
+    void piocher();
     void ajouter_Minerai_Inventaire(type_Minerai type);
 
 
+    Vect get_posEnnemi_actuel(int i)const;
+    bool est_mort(int i) const;
+    unsigned int get_nbEnnemi_actuel()const;
+    type_Ennemi get_idEnnemi(int i)const;
+    void mouvementEnnemi();
     
     void piocher_gauche();
     void piocher_droite();

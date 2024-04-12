@@ -12,9 +12,7 @@ Personnage::Personnage(entier x_v, entier y_v, entier x_init, entier y_init):Obj
 }
 
 
-type_perso Personnage::get_id()const{
-    return id;
-}
+
 
 void Personnage::deplacement_gauche(){
     int temp = pos.x - vitesse.x;
@@ -24,7 +22,7 @@ void Personnage::deplacement_gauche(){
 void Personnage::deplacement_droite(coord x){
     int temp = pos.x + vitesse.x;
     if (temp < x){
-        pos.x =  temp;
+        pos.x = temp;
        
         }
 }
@@ -40,4 +38,21 @@ void Personnage::deplacement_bas(coord y){
         pos.y =  temp;
      
         }
+}
+
+
+    
+bool Personnage::detect_gauche(Vect posm){
+    return (posm.x < pos.x-8 && posm.x > pos.x - 50 && (unsigned int)(posm.y-pos.y) < 100);
+}
+
+
+bool Personnage::detect_droite(Vect posm){
+    return (posm.x > pos.x+8 && posm.x < pos.x + 50 && (unsigned int)(posm.y - pos.y) < 100);
+}
+bool Personnage::detect_haut(Vect posm){
+    return (posm.y < pos.y-8 && posm.y > pos.y - 50 && (unsigned int)(posm.x - pos.x) < 100);
+}
+bool Personnage::detect_bas(Vect posm){
+    return (posm.y > pos.y+8 && posm.y < pos.y + 50 && (unsigned int)(posm.x - pos.x) < 100);
 }
