@@ -1,5 +1,37 @@
 # Depths Delve PROJECT
 
+## Description
+Ce projet est un jeu vidéo 2D en vue isonométrique dans lequel l'objectif est d'explorer des grottes afin de trouver et récolter des gisements de minerais, tout en combattant les ennemis qui peuplent les souterrains.
+
+
+### Utilisation
+---
+1. Depuis un terminal, clonez le git dans le répertoire de votre choix avec `git clone`
+```
+git clone https://forge.univ-lyon1.fr/p2210996/l2_cda_moduleimage.git
+```
+2.  Aller à la racine du git et tapez la commande 
+```
+make
+```
+
+### Comment jouer
+---
+Au lancement du jeu, le menu s'affiche. Appuyer sur entrée pour lancer une partie. Utilisez les touches ZQSD pour se déplacer respectivement en haut, à gauche, en bas et à droite. Équipez la pioche avec la touche ctrl gauche et empruntez les échelles avec la touche E.
+
+
+
+
+
+
+### Membres
+---
+[BEN AMMAR RAYEN - p2210996](https://forge.univ-lyon1.fr/p2210996)
+[BOUVIER LORIS - p2204514](https://forge.univ-lyon1.fr/p2204514)
+
+
+
+
 
 
 ## Getting started
