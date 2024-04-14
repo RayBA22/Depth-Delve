@@ -14,6 +14,8 @@ class Vect
 public:
     
     coord x, y;
+    Vect();
+    Vect(coord xi, coord yi);
     
     
     

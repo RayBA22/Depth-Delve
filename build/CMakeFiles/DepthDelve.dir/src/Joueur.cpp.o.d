@@ -153,4 +153,8 @@ CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /home/ray/DepthsDelve/depths-delve-project/src/Pioche.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Inventaire.h \
- /home/ray/DepthsDelve/depths-delve-project/src/Minerai.h
+ /home/ray/DepthsDelve/depths-delve-project/src/Minerai.h \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc

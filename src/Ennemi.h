@@ -3,7 +3,7 @@
 
 #include "Personnage.h"
 
-enum type_Ennemi{red, blue, green};
+enum type_Ennemi{pierro, ferro, argento=3};
 
 
 class Ennemi: public Personnage
@@ -17,7 +17,7 @@ public:
     Ennemi(type_Ennemi ide, entier posx, entier posy);
     
     type_Ennemi get_idEnnemi()const;
-    void prenddmg(unsigned int dmg);
+    void prenddmg( int dmg);
 
     bool est_mort()const;
     

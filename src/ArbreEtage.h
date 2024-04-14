@@ -19,7 +19,9 @@ public:
     Etage etage;
 
     NoeudEtage(int prof);
-    ~NoeudEtage();
+
+    void detruireArbre();
+    
 };
 
 class ArbreEtage
@@ -27,10 +29,11 @@ class ArbreEtage
 
 public:
     NoeudEtage *noeudActuel;
-    int hauteur, etagact;
+    int hauteur;
 
     ArbreEtage();
     ~ArbreEtage();
+    
     void changerHauteur(int prof);
     void allerPrecedent();
     void allerOuest();
@@ -47,6 +50,7 @@ public:
     entier get_EnnemiHP_actuel(int i) const;
     Vect get_posEnnemi_actuel(int i) const;
     bool est_mort(int i) const;
+    bool tous_mort();
 
     bool detecter(int i, Vect position);
     void suivre(int i, Vect position);
@@ -58,6 +62,9 @@ public:
     void prenddmg(int dmg, int i);
     void se_detruit_Minerai(entier deg, coord i);
     bool est_detruit_Minerai(int i) const;
+
+    void revenirRacine();
+    void resetArbre();
 };
 
 #endif

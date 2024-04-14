@@ -12,17 +12,17 @@ Joueur::Joueur(entier posx, entier posy) : Personnage(15, 15,  posx, posy), pioc
 {
     
     actJoueur = Marcher;
-    HP = 10;
+    HP = 299;
 }
 
 void Joueur::changer_vitesse(){
     if (actJoueur == Marcher){
-        vitesse.x = 7;
-        vitesse.y = 7;
+        vitesse.x = 8;
+        vitesse.y = 8;
     }
     else{
-        vitesse.x = 4;
-        vitesse.y = 4;
+        vitesse.x = 0;
+        vitesse.y = 0;
     }
 }
 
@@ -32,6 +32,11 @@ void Joueur::set_posJoueur(entier posx, entier posy)
 { // faudrait la changer ou utiliser friend avec Jeu
     pos.x = posx;
     pos.y = posy;
+}
+
+
+void Joueur::set_HPJoueur(int HPs){
+    HP = HPs;
 }
 
 
@@ -68,5 +73,13 @@ void Joueur::prenddmg(int dmg){
 
 bool Joueur::joueur_mort()const{
     return HP <= 0;
+}
+
+
+void Joueur::reset(){
+    HP = 299;
+    pos.x = 500;
+    pos.y = 500;
+
 }
 

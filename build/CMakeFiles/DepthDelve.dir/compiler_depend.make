@@ -938,6 +938,11 @@ CMakeFiles/DepthDelve.dir/src/IHM.cpp.o: ../src/IHM.cpp \
   ../src/Pioche.h \
   ../src/Inventaire.h \
   ../src/Minerai.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   ../src/ArbreEtage.h \
   ../src/Etage.h \
   ../src/Ennemi.h \
@@ -999,7 +1004,6 @@ CMakeFiles/DepthDelve.dir/src/IHM.cpp.o: ../src/IHM.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
   /usr/include/libintl.h \
-  /usr/include/c++/11/bits/codecvt.h \
   /usr/include/c++/11/bits/locale_facets_nonio.tcc \
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
@@ -1256,6 +1260,11 @@ CMakeFiles/DepthDelve.dir/src/IHMterminal.cpp.o: ../src/IHMterminal.cpp \
   ../src/Pioche.h \
   ../src/Inventaire.h \
   ../src/Minerai.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   ../src/ArbreEtage.h \
   ../src/Etage.h \
   ../src/Ennemi.h \
@@ -1449,7 +1458,12 @@ CMakeFiles/DepthDelve.dir/src/Inventaire.cpp.o: ../src/Inventaire.cpp \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc
 
 CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o: ../src/Jeu.cpp \
   /usr/include/stdc-predef.h \
@@ -1639,6 +1653,11 @@ CMakeFiles/DepthDelve.dir/src/Jeu.cpp.o: ../src/Jeu.cpp \
   ../src/Pioche.h \
   ../src/Inventaire.h \
   ../src/Minerai.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   ../src/ArbreEtage.h \
   ../src/Etage.h \
   ../src/Ennemi.h \
@@ -1835,7 +1854,12 @@ CMakeFiles/DepthDelve.dir/src/Joueur.cpp.o: ../src/Joueur.cpp \
   /usr/include/c++/11/bits/istream.tcc \
   ../src/Pioche.h \
   ../src/Inventaire.h \
-  ../src/Minerai.h
+  ../src/Minerai.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc
 
 CMakeFiles/DepthDelve.dir/src/Minerai.cpp.o: ../src/Minerai.cpp \
   /usr/include/stdc-predef.h \
@@ -3127,6 +3151,11 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
   ../src/Pioche.h \
   ../src/Inventaire.h \
   ../src/Minerai.h \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   ../src/ArbreEtage.h \
   ../src/Etage.h \
   ../src/Ennemi.h \
@@ -3189,7 +3218,6 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
   /usr/include/libintl.h \
-  /usr/include/c++/11/bits/codecvt.h \
   /usr/include/c++/11/bits/locale_facets_nonio.tcc \
   /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/c++/11/bits/unique_ptr.h \
@@ -3284,8 +3312,6 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/SFML/Graphics/Sprite.hpp:
 
-/usr/include/SFML/Graphics/Glsl.hpp:
-
 /usr/include/SFML/Graphics/Shader.hpp:
 
 /usr/include/SFML/Graphics/RenderTarget.hpp:
@@ -3362,6 +3388,12 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/unique_ptr.h:
 
+/usr/include/c++/11/bits/locale_conv.h:
+
+/usr/include/c++/11/bits/locale_facets_nonio.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
+
 /usr/include/SFML/Graphics/RenderTexture.hpp:
 
 /usr/include/c++/11/backward/binders.h:
@@ -3371,6 +3403,8 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/algorithm:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/include/c++/11/fstream:
 
 /usr/include/SFML/System/Vector2.inl:
 
@@ -3435,8 +3469,6 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
@@ -3862,6 +3894,14 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/erase_if.h:
 
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/SFML/Graphics/Glsl.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
+
+/usr/include/c++/11/bits/fstream.tcc:
+
 /usr/include/SFML/Config.hpp:
 
 /usr/include/c++/11/unordered_map:
@@ -3921,7 +3961,3 @@ CMakeFiles/DepthDelve.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
-
-/usr/include/c++/11/bits/locale_conv.h:

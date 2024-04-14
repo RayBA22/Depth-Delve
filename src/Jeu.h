@@ -16,21 +16,27 @@ public:
     ArbreEtage mine;
     Inventaire inventaire;
     Animation animJoueur;
+    bool start;
+    
     
     
 
 
     Jeu();
     void creer_etage();
+    bool get_start()const;
+
     type_Minerai get_idMinerai(int i)const;
     entier get_MineraiHP_actuel(int i = 0)const;
     unsigned int get_nbMinerai_actuel()const ;
     type_Minerai miner(int indice);
 
     
+    
     Vect get_posMinerai_actuel(int i)const;
     void se_detruit_Minerai(entier deg, coord i);
     bool est_detruit_Minerai(int i)const;
+    int get_nbMineraidispos()const;
 
     Vect get_tailleEtagact()const;
     Vect get_Joueurpos()const; 
@@ -52,12 +58,13 @@ public:
     void Joueur_bas();
     void Joueur_posinit();
     void mouvement_Joueur(int mouv);
+    int get_JoueurHP()const;
 
 
     orientation detecterpassage()const;
     void changerEtage();
     
-    void piocher();
+    
     void ajouter_Minerai_Inventaire(type_Minerai type);
 
 
@@ -65,18 +72,32 @@ public:
     bool est_mort(int i) const;
     unsigned int get_nbEnnemi_actuel()const;
     type_Ennemi get_idEnnemi(int i)const;
-    void mouvementEnnemi();
+    bool tous_mort();
     
+    void piocher(bool(Personnage::*fonc)(Vect));
+
+
+    void mouvementEnnemi();
     void piocher_gauche();
     void piocher_droite();
     void piocher_haut();
     void piocher_bas();
 
 
-    
-    
 
-        
+    bool get_statut_Inventaire()const;
+    int get_nbminerai_Inventaire(int i)const;
+    int nbmort_Inventaire()const;
+    int get_nbmission_accomplie()const;
+    string formuler_mission();
+    
+    void sauver();
+    void charger();
+    
+    void gestion_sauvegarde();
+    void reset();
+
+
 };
 
 

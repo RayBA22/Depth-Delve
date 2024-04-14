@@ -15,11 +15,11 @@ class Etage
 public:
     type_Etage id;
     Vect tailleEtage;
-    Minerai tabMinerai[maxMinerai]; 
-    Ennemi tabEnnemi[maxEnnemi];
+    Minerai tabMinerai[150]; 
+    Ennemi tabEnnemi[30];
     int nbMinerai, profondeur, nbEnnemi;
     
-
+    
     Etage(int prof);
     void initEtage();
     
@@ -50,7 +50,7 @@ public:
     type_Etage get_typeEtage()const;
     void se_detruit(entier deg, coord i);
     
-    
+    bool tous_mort();
 };
 
 

@@ -4,16 +4,25 @@
 #include <iostream>
 using namespace std;
 
-Etage::Etage( int prof)
+
+
+
+
+Etage::Etage(int prof)
 {
     srand((unsigned)time(NULL));
-    id = type_Etage(rand() % 3);
+    
+    id =  (type_Etage) (rand()%3);
     tailleEtage.x = 1000;
-    tailleEtage.y = (rand() % (maxtaille - 500)) + 500;
+    tailleEtage.y = (rand() % (850 - 500)) + 500;
     profondeur = prof;
-    nbMinerai = (rand() % (maxMinerai - 5)) + 5;
-    nbEnnemi = profondeur;
+    nbMinerai = (rand() % (100 - 20)) + 20;
+    //cout << profondeur << endl;
+    nbEnnemi =  (profondeur*2)%20;
+   
+    
     initEtage();
+    
     
     
 }
@@ -64,14 +73,14 @@ void Etage::initEtage()
 
     for (int i = 0; i < nbMinerai; i++)
     {
-        Minerai minerai(randomiseurMinerai(), rand() % tailleEtage.x, rand() % tailleEtage.y);
+        Minerai minerai(randomiseurMinerai(), rand() % (tailleEtage.x -100), rand() % (tailleEtage.y-100));
         tabMinerai[i] = minerai;
     }
 
     for (int i = 0; i < nbEnnemi; i++)
     {
 
-        Ennemi ennemi(green, rand() % tailleEtage.x, rand() % tailleEtage.y);
+        Ennemi ennemi(randomiseurEnnemi(), rand() % (tailleEtage.x-100), rand() % (tailleEtage.y-100));
         tabEnnemi[i] = ennemi;
     }
 }
@@ -125,14 +134,14 @@ type_Ennemi Etage::randomiseurEnnemi()
     int r = rand() % 10;
 
     if (r >= 0 && r <= 5)
-        return red;
+        return pierro;
     else
     {
         if (r >= 6 && r <= 9)
-            return blue;
+            return ferro;
 
         else
-            return green;
+            return argento;
     }
 }
 
@@ -177,3 +186,11 @@ bool Etage::toucher(int i, Vect position)
     return tabEnnemi[i].toucher(position);
 }
 
+
+bool Etage::tous_mort(){
+    for (int i=0; i < nbEnnemi; i++){
+        if (!tabEnnemi[i].est_mort())
+            return false;
+    }
+    return true;
+}

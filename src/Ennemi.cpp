@@ -3,7 +3,7 @@
 
 
 Ennemi::Ennemi(){
-    id = green;
+    
     
 }
 
@@ -20,7 +20,7 @@ type_Ennemi Ennemi::get_idEnnemi()const{
     return id;
 }
 
-void Ennemi::prenddmg(unsigned int dmg){
+void Ennemi::prenddmg( int dmg){
     HP -= dmg;
     if (HP <= 0) mort = true;
 }
@@ -32,7 +32,8 @@ bool Ennemi::est_mort()const{
 
 bool Ennemi::detecter(Vect position){
 
-    return (((position.x-pos.x)*(position.x-pos.x) + (position.y-pos.y)*(position.y-pos.y))  <= id*10000 );
+    return (((position.x-pos.x)*(position.x-pos.x) + (position.y-pos.y)*(position.y-pos.y))  <= (id+1)*10000 );
+    
 }
 
 void Ennemi::suivre(Vect position, Vect tailleEtage){
@@ -51,7 +52,7 @@ void Ennemi::suivre(Vect position, Vect tailleEtage){
 
 bool Ennemi::toucher(Vect position){
 
-    return (((position.x-pos.x)*(position.x-pos.x) + (position.y-pos.y)*(position.y-pos.y))  <= 10 );
+    return ((((position.x-pos.x)*(position.x-pos.x) + (position.y-pos.y)*(position.y-pos.y))  <= 10 ) && !mort);
 }
 
 

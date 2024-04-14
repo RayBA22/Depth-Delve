@@ -19,8 +19,9 @@ public:
     Joueur(entier posx, entier posy);
     void changer_vitesse();
     void set_posJoueur(entier posx, entier posy);
+    void set_HPJoueur(int HPs);
     int get_dmgJoueur()const;
-    int get_HPJoueur()const;
+    
     entier get_faimJoueur()const;
     idPioche get_idPioche()const;
     action get_action()const;
@@ -28,8 +29,14 @@ public:
     void changer_action();
     void prenddmg(int dmg);
     bool joueur_mort()const;
+    void reset();
 
-        
+
+
+
+
+    
+    
     
     
 };

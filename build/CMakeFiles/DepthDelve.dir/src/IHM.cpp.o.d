@@ -156,6 +156,10 @@ CMakeFiles/DepthDelve.dir/src/IHM.cpp.o: \
  /home/ray/DepthsDelve/depths-delve-project/src/Pioche.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Inventaire.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Minerai.h \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc \
  /home/ray/DepthsDelve/depths-delve-project/src/ArbreEtage.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Etage.h \
  /home/ray/DepthsDelve/depths-delve-project/src/Ennemi.h \
@@ -202,8 +206,7 @@ CMakeFiles/DepthDelve.dir/src/IHM.cpp.o: \
  /usr/include/c++/11/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
- /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
  /usr/include/c++/11/bits/locale_conv.h \
  /usr/include/c++/11/bits/unique_ptr.h /usr/include/SFML/System/Utf.inl \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \

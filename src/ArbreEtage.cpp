@@ -9,24 +9,40 @@ NoeudEtage::NoeudEtage(int prof):etage(prof){
     ouest = nullptr;
     est = nullptr;
     
+    
+    
 }
 
-NoeudEtage::~NoeudEtage(){
-    //revenir pour la destruction !!!!!!!!!!!!!!!!!!!!!
+void NoeudEtage::detruireArbre(){
+
+    cout <<  "that" << (ouest == nullptr) << endl;
+    if (ouest != nullptr) {
+        ouest->detruireArbre();
+        delete ouest;
+        ouest = nullptr; 
+        cout << "destruction ouest"<< endl;
+    }
+    if (est != nullptr) {
+        est->detruireArbre();
+        delete est;
+        est = nullptr;
+        cout << "destruction est"<< endl;
     
- }
+    }
+}
+
 
 ArbreEtage::ArbreEtage(){
+    hauteur = 0;
     noeudActuel = new NoeudEtage(0);
-
-
-
+    
 }
-
 
 ArbreEtage::~ArbreEtage(){
-    cout << "destruction Arbre" << endl;
+    noeudActuel->detruireArbre();
+    delete noeudActuel ;
 }
+
 
 void ArbreEtage::changerHauteur(int prof){
         if (hauteur < prof)
@@ -42,9 +58,9 @@ void ArbreEtage::allerPrecedent(){
 
 void ArbreEtage::allerOuest(){
     if (noeudActuel->ouest == nullptr){
-        //cout << noeudActuel->etage.get_profondeur() << endl;
-        int prof = noeudActuel->etage.get_profondeur()+1;
-        noeudActuel->ouest = new NoeudEtage(prof);
+        int prof =  noeudActuel->etage.get_profondeur();
+        noeudActuel->ouest = new NoeudEtage(prof + 1);
+        cout << prof << endl;
         changerHauteur(prof);
         
     }
@@ -56,8 +72,8 @@ void ArbreEtage::allerOuest(){
 
 void ArbreEtage::allerEst(){
     if (noeudActuel->est == nullptr){
-        int prof = noeudActuel->etage.get_profondeur() +1;
-        noeudActuel->est = new NoeudEtage(prof);
+        int prof = noeudActuel->etage.get_profondeur();
+        noeudActuel->est = new NoeudEtage(prof + 1);
         changerHauteur(prof);
     }
     
@@ -122,6 +138,11 @@ type_Ennemi ArbreEtage::get_idEnnemi_actuel( int i)const{
 bool ArbreEtage::est_mort(int i)const{
     return noeudActuel->etage.est_mort(i);
 }
+
+bool ArbreEtage::tous_mort(){
+    return noeudActuel->etage.tous_mort();
+}
+
 entier ArbreEtage::get_EnnemiHP_actuel(int i)const{
     return noeudActuel->etage.get_EnnemiHP(i);
 }
@@ -143,4 +164,23 @@ void ArbreEtage::suivre(int i, Vect position){
 }
 bool ArbreEtage::toucher(int i, Vect position){
    return  noeudActuel->etage.toucher(i, position);
+}
+
+
+void ArbreEtage::revenirRacine(){
+
+    while (noeudActuel->preced != nullptr){
+        allerPrecedent();
+    }
+}
+
+
+void ArbreEtage::resetArbre(){
+    revenirRacine();
+    noeudActuel->detruireArbre();
+    hauteur = 0;
+    delete noeudActuel;
+    noeudActuel = new NoeudEtage(0);
+
+
 }
