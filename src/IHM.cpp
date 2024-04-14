@@ -305,7 +305,7 @@ void IHM::boucleJeu()
     {
         while (window.pollEvent(event))
         {
-            if (event.type == Event::Closed)
+            if (jeu.Quitter())
                 window.close();
             else
             {

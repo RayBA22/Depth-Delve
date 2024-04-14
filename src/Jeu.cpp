@@ -3,6 +3,7 @@
 Jeu::Jeu() : joueur(500, 500)
 {
     start = false;
+    quitter = false;
 }
 
 bool Jeu::get_start() const
@@ -65,25 +66,7 @@ Vect Jeu::get_Joueurpos() const
     return joueur.get_position();
 }
 
-void Jeu::Joueur_gauche()
-{
-    joueur.deplacement_gauche();
-}
 
-void Jeu::Joueur_droite()
-{
-    joueur.deplacement_droite(1);
-}
-
-void Jeu::Joueur_haut()
-{
-    joueur.deplacement_haut();
-}
-
-void Jeu::Joueur_bas()
-{
-    joueur.deplacement_bas(1);
-}
 
 int Jeu::get_JoueurHP() const
 {
@@ -205,6 +188,11 @@ action Jeu::get_action_Joueur() const
     return joueur.get_action();
 }
 
+bool Jeu::joueur_estmort(){
+    return joueur.joueur_mort();
+}
+
+
 void Jeu::repos_joueur()
 {
 
@@ -296,6 +284,10 @@ void Jeu::mouvement_Joueur(int mouv)
     case 2:
         gestion_sauvegarde();
         break;
+    
+    case 10:
+        quitter = true;
+        break;
 
     default:
 
@@ -373,4 +365,9 @@ void Jeu::reset()
         inventaire.reset();
         inventaire.sauver(0);
     }
+}
+
+
+bool Jeu::Quitter()const{
+    return quitter;
 }

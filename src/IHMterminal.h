@@ -2,12 +2,13 @@
 #define _IHMTERMINAL_
 
 #include <iostream>
+
 #include <string>
 using namespace std;
 
 #include "Jeu.h"
 
-const int xMax=100,  yMax=100;
+const int xMax=200,  yMax=200;
 
 class IHMterminal
 {
@@ -21,18 +22,18 @@ public:
 
     void afficher_terminal();
     void effacer_grille();
-    void lignesep();
+    
     void maj_grille_Etage();
     void maj_grille_Joueur();
     void maj_grille();
-    bool action_Joueur();
+    void action_Joueur();
 
 
-    void changerEtage();
+    
     
     //renvoie l'indice du minerai dans l'étage actuel
-    int collisionMinerai();
-    void miner();
+   
+   
 
     void boucleJeu();
     

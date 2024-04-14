@@ -16,7 +16,7 @@ public:
     ArbreEtage mine;
     Inventaire inventaire;
     Animation animJoueur;
-    bool start;
+    bool start, quitter;
     
     
     
@@ -52,10 +52,7 @@ public:
     void repos_joueur();
 
 
-    void Joueur_gauche();
-    void Joueur_droite();
-    void Joueur_haut();
-    void Joueur_bas();
+    
     void Joueur_posinit();
     void mouvement_Joueur(int mouv);
     int get_JoueurHP()const;
@@ -78,11 +75,8 @@ public:
 
 
     void mouvementEnnemi();
-    void piocher_gauche();
-    void piocher_droite();
-    void piocher_haut();
-    void piocher_bas();
-
+    
+    bool joueur_estmort();
 
 
     bool get_statut_Inventaire()const;
@@ -96,6 +90,7 @@ public:
     
     void gestion_sauvegarde();
     void reset();
+    bool Quitter()const;
 
 
 };
