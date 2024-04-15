@@ -2,7 +2,7 @@
 
 ## Description
 Ce projet est un jeu vidéo 2D en vue isonométrique dans lequel l'objectif est d'explorer des grottes afin de trouver et récolter des gisements de minerais, tout en combattant les ennemis qui peuplent les souterrains.
-
+Ce projet utilise la bibliothèque SFML pour l'affichage.
 
 ### Utilisation
 ---
