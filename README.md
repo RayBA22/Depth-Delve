@@ -18,13 +18,13 @@ make
 ### Comment jouer
 ---
 Au lancement du jeu, le menu s'affiche.
-Dans le menu, vous pouvez appuyer sur C pour charger une partie sauvegardée. Appuyez sur entrée pour lancer une partie.
+Dans le menu, vous pouvez appuyer sur C pour charger une partie sauvegardée. Appuyez ensuite sur entrée pour lancer une partie.
 
 Utilisez les touches ZQSD pour vous déplacer respectivement en haut, à gauche, en bas et à droite. Équipez ou déséquipez la pioche avec la touche ctrl gauche et empruntez les échelles avec la touche E. La touche Echap permet d'ouvrir l'inventaire et C de sauvegarder l'état de la partie.
 
 ### Doxygen
 ---
-Depuis le dossier parent, entrer la commande suivante afin de lancer la documentation générée par Doxygen.
+Depuis le dossier parent, entrer la commande suivante afin de lancer la documentation générée par Doxygen :
 ```
 firefox doc/html/index.html
 ```
