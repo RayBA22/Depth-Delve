@@ -3,6 +3,20 @@
 ## Description
 Ce projet est un jeu vidéo 2D en vue isonométrique dans lequel l'objectif est d'explorer des grottes afin de trouver et récolter des gisements de minerais, tout en combattant les ennemis qui peuplent les souterrains.
 
+
+### Utilisation
+---
+1. Depuis un terminal, dirigez vous dans le dossier build et entrez la commande `cmake ..`
+```
+cd depths-delve-project
+cd build
+cmake ..
+```
+2. Pour exécuter, depuis le dossier build, entrez ensuite :
+```
+../bin/DepthDelve
+```
+
 ### Comment jouer
 ---
 Au lancement du jeu, le menu s'affiche.
