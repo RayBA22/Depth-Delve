@@ -15,7 +15,7 @@ using namespace std;
 class Inventaire
 {
 
-public:
+private:
 
     /**
      * @param tabnbMinerai, tabmission : tableaux d'entiers
@@ -42,24 +42,11 @@ public:
     */
     bool statut;
 
-    //peut etre l'argent 
-    //interface dans l'inventaire pour les échanges et les achats
 
     /**
-     * @brief Constructeur par défaut
+     * @brief Fonction qui remet à zéro la mission lorqu'une mission est réussie
     */
-    Inventaire();
-
-    /**
-     * @brief Fonction qui ajoute un minerai du type entré en paramètre à l'inventaire
-     * @param minerai : type_Minerai
-    */
-    void ajouter_Minerai(type_Minerai minerai);
-
-    /**
-     * @brief Fonction qui incrémente de 1 le nombre d'ennemis vaincus
-    */
-    void ajouter_Ennemi();
+    void valider_mission();
 
     /**
      * @brief Fonction qui remet le nombre de minerais de chaque type à 0
@@ -72,9 +59,34 @@ public:
     void reset_Mission();
 
     /**
-     * @brief Accesseur qui renvoie le nombre de minerais d'indice entré en paramètre présent dans l'inventaire
-     * @param indice : entier
-     * @return entier
+     * @brief Fonction booléenne qui renvoie vrai si tous les objectifs de la mission en cours sont remplis, faux sinon
+     * @return booléen
+    */
+    bool est_accomplie();
+
+public:
+    /**
+    * @brief Constructeur par défaut
+    */
+    Inventaire();
+
+    /**
+    * @brief Fonction qui ajoute un minerai du type entré en paramètre à l'inventaire
+    * @param minerai : type_Minerai
+    */
+    void ajouter_Minerai(type_Minerai minerai);
+
+    /**
+    * @brief Fonction qui incrémente de 1 le nombre d'ennemis vaincus
+    */
+    void ajouter_Ennemi();
+
+    
+
+    /**
+    * @brief Accesseur qui renvoie le nombre de minerais d'indice entré en paramètre présent dans l'inventaire
+    * @param indice : entier
+    * @return entier
     */
     int get_nbMinerai(int indice)const;
 
@@ -84,16 +96,6 @@ public:
     */
     int get_nbmort()const;
 
-    /**
-     * @brief Fonction booléenne qui renvoie vrai si tous les objectifs de la mission en cours sont remplis, faux sinon
-     * @return booléen
-    */
-    bool est_accomplie();
-
-    /**
-     * @brief Fonction qui remet à zéro certaines valeurs lorqu'une mission est réussie
-    */
-    void valider_mission();
 
     /**
      * @brief Fonction qui renvoie le texte affiché dans l'inventaire indiquant les objectifs de la mission
@@ -102,15 +104,41 @@ public:
     string formuler_mission();
 
     /**
-     * @brief
+    * @brief Fonction booléenne qui renvoie vrai si l'inventaire est ouvert, faux sinon
+    * @result booléen
     */
     bool get_statut()const;
-    void changer_statut();
-    int get_nbmission_accomplie()const;
     
+    
+    /**
+    * @brief Fonction qui ouvre l'inventaire s'il est fermé et qui le ferme s'il est ouvert
+    */
+    void changer_statut();
+
+
+    /**
+    * @brief Fonction qui renvoie le nombre de missions accomplies
+    * @return entier
+    */
+    int get_nbmission_accomplie()const;
+
+    
+    /**
+    * @brief Fonction qui permet de sauvegarder la partie en prenant en paramètre les points de vie du joueur
+    * @param HP entier
+    */
     void sauver(int HP);
+
+    /**
+    * @brief Fonction qui permet de charger une partie sauvegardée
+    */
     int charger();
+    
+    /**
+    * @brief Fonction qui réinitialise l'inventaire si le joueur meurt
+    */
     void reset();
+
 
     
 };

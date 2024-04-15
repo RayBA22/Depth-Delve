@@ -1,7 +1,7 @@
 CMakeFiles/DepthDelve.dir/src/Animation.cpp.o: \
- /home/ray/DepthsDelve/depths-delve-project/src/Animation.cpp \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Animation.cpp \
  /usr/include/stdc-predef.h \
- /home/ray/DepthsDelve/depths-delve-project/src/Animation.h \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Animation.h \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

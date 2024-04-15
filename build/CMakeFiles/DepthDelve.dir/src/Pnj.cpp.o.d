@@ -1,10 +1,10 @@
 CMakeFiles/DepthDelve.dir/src/Pnj.cpp.o: \
- /home/ray/DepthsDelve/depths-delve-project/src/Pnj.cpp \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Pnj.cpp \
  /usr/include/stdc-predef.h \
- /home/ray/DepthsDelve/depths-delve-project/src/Pnj.h \
- /home/ray/DepthsDelve/depths-delve-project/src/Personnage.h \
- /home/ray/DepthsDelve/depths-delve-project/src/Obj.h \
- /home/ray/DepthsDelve/depths-delve-project/src/Vect.h \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Pnj.h \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Personnage.h \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Obj.h \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Vect.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

@@ -73,27 +73,8 @@ int Jeu::get_JoueurHP() const
     return joueur.get_HP();
 }
 
-type_Minerai Jeu::miner(int indice)
-{
-    return Or;
-}
 
-void Jeu::Joueur_posinit()
-{
-    Vect v = get_tailleEtagact();
-    orientation ori = detecterpassage();
-    switch (ori)
-    {
-    case EST:
-        joueur.set_posJoueur(v.x / 2, v.y + 1);
-        joueur.set_posJoueur(v.x - 50, v.y - 50);
-        joueur.set_posJoueur(50, v.y - 50);
-        break;
 
-    default:
-        break;
-    }
-}
 
 void Jeu::ajouter_Minerai_Inventaire(type_Minerai type)
 {
@@ -326,7 +307,7 @@ void Jeu::mouvementEnnemi()
         {
             joueur.prenddmg(1);
             reset();
-            cout << joueur.get_HP() << endl;
+            //cout << joueur.get_HP() << endl;
         }
     }
 }

@@ -15,12 +15,12 @@ NoeudEtage::NoeudEtage(int prof):etage(prof){
 
 void NoeudEtage::detruireArbre(){
 
-    cout <<  "that" << (ouest == nullptr) << endl;
+    
     if (ouest != nullptr) {
         ouest->detruireArbre();
         delete ouest;
         ouest = nullptr; 
-        cout << "destruction ouest"<< endl;
+        
     }
     if (est != nullptr) {
         est->detruireArbre();

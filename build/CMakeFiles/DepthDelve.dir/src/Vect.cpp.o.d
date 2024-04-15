@@ -1,7 +1,7 @@
 CMakeFiles/DepthDelve.dir/src/Vect.cpp.o: \
- /home/ray/DepthsDelve/depths-delve-project/src/Vect.cpp \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Vect.cpp \
  /usr/include/stdc-predef.h \
- /home/ray/DepthsDelve/depths-delve-project/src/Vect.h \
+ /home/ray/DepthsDelve/delve/depths-delve-project/src/Vect.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

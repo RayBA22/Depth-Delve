@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "../bin/DepthDelve"
+  "../bin/DepthDelve.pdb"
   "CMakeFiles/DepthDelve.dir/src/Animation.cpp.o"
   "CMakeFiles/DepthDelve.dir/src/Animation.cpp.o.d"
   "CMakeFiles/DepthDelve.dir/src/ArbreEtage.cpp.o"
@@ -31,8 +33,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/DepthDelve.dir/src/Vect.cpp.o.d"
   "CMakeFiles/DepthDelve.dir/src/main.cpp.o"
   "CMakeFiles/DepthDelve.dir/src/main.cpp.o.d"
-  "DepthDelve"
-  "DepthDelve.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

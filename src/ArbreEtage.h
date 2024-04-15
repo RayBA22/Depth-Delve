@@ -27,10 +27,14 @@ public:
 class ArbreEtage
 {
 
-public:
+private:
     NoeudEtage *noeudActuel;
     int hauteur;
 
+    void revenirRacine();
+
+
+public:
     ArbreEtage();
     ~ArbreEtage();
     
@@ -63,7 +67,7 @@ public:
     void se_detruit_Minerai(int deg, int i);
     bool est_detruit_Minerai(int i) const;
 
-    void revenirRacine();
+    
     void resetArbre();
 };
 

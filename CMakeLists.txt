@@ -11,7 +11,7 @@ set(CMAKE_OBJECT_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../obj)
 
 set(SFML_DIR "${CMAKE_SOURCE_DIR}/SFML")
 
-#find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
+find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
 
 file(GLOB SOURCE_FILES src/*.cpp)

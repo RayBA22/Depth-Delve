@@ -90,7 +90,7 @@ int Inventaire::get_nbmission_accomplie()const{
 
 void Inventaire::sauver(int HP){
 
-    ofstream fichier("../sauvegarde/sauvegarde.txt", ios::trunc);
+    ofstream fichier("../assets/sauvegarde/sauvegarde.txt", ios::trunc);
 
     if (!fichier)
         cout << "pas chargé" << endl;
@@ -108,7 +108,7 @@ void Inventaire::sauver(int HP){
 
 int Inventaire::charger(){
 
-    ifstream fichier("../sauvegarde/sauvegarde.txt");
+    ifstream fichier("../assets/sauvegarde/sauvegarde.txt");
 
 
     for (int i=0; i < 6; i++){

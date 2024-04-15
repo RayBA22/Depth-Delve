@@ -1,4 +1,4 @@
-# Install script for directory: /home/ray/DepthsDelve/depths-delve-project
+# Install script for directory: /home/ray/DepthsDelve/delve/depths-delve-project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ray/DepthsDelve/depths-delve-project/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ray/DepthsDelve/delve/depths-delve-project/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

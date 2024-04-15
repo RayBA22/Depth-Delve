@@ -15,7 +15,7 @@ enum action{Marcher=0, Respirer, Piocher=2};
 
 class Joueur: public Personnage
 {
-public:
+private:
 
     /**
      * @param faim : entier
@@ -33,7 +33,8 @@ public:
     action actJoueur;
     
     //Inventaire inventaire;
-
+    
+public:
     /**
      * @brief Constructeur par défaut
     */

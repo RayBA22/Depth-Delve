@@ -14,7 +14,7 @@ enum type_Minerai {Pierre=0 ,Cuivre=2, Fer=1, Argent=3, Or=4, Diamant=5};
 class Minerai: public Obj
 {
 
-public:
+private:
     
     /**
      * @param id : type_Minerai
@@ -26,6 +26,8 @@ public:
     */
     bool detruit;
 
+
+public:
     /**
      * @brief Constructeur par défaut
     */

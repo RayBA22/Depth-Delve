@@ -31,8 +31,6 @@ IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
     if (!texMinerai.loadFromFile("./../assets/Ores.png"))
         cout << "erreur de chargement des minerais" << endl;
 
-    if (!texdecoration[0].loadFromFile("./../assets/rocks.png"))
-        cout << "erreur de chargement de la deco 1" << endl;
 
     if (!texdecoration[1].loadFromFile("./../assets/echelle.png"))
         cout << "erreur de chargement de la deco 2" << endl;
@@ -42,6 +40,9 @@ IHM::IHM(int x, int y) : window(VideoMode(x, y), "DepthDelve", Style::Default)
 
     if (!texdecoration[3].loadFromFile("./../assets/coeur.png"))
         cout << "erreur de chargement de la deco 4" << endl;
+    
+    if (!texdecoration[4].loadFromFile("./../assets/Logo.png"))
+        cout << "erreur de chargement de la deco 5 le logo" << endl;
 
     if (!font.loadFromFile("./../assets/font.ttf"))
         cout << "erreur de chargement de la police" << endl;
@@ -235,30 +236,14 @@ void IHM::afficherdemarrage()
     if (!jeu.get_start())
     {
 
-        window.clear(sf::Color(50, 50, 50));
+        window.clear(Color(30, 30, 30));
 
-        texte.setFillColor(sf::Color(0, 255, 255));
-        texte.setCharacterSize(100);
-        texte.setString("Depth Delve");
 
-        texte.setPosition(window.getSize().x / 2.0f - texte.getLocalBounds().width / 2.0f,
-                          100);
-
-        sf::RectangleShape borduretitre(sf::Vector2f(texte.getLocalBounds().width + 20, texte.getLocalBounds().height + 20));
-        borduretitre.setFillColor(sf::Color::Transparent);
-        borduretitre.setOutlineThickness(5);
-        borduretitre.setOutlineColor(sf::Color::White);
-        borduretitre.setPosition(texte.getPosition().x - 10, texte.getPosition().y - 10);
-
-        window.draw(borduretitre);
-        window.draw(texte);
-
-        texte.setFillColor(Color::Red);
+        texte.setFillColor(Color(0, 255, 255));
         texte.setCharacterSize(40);
         texte.setString("Appuyez sur la touche Entrée pour jouer");
 
-        texte.setPosition(window.getSize().x / 2.0f - texte.getLocalBounds().width / 2.0f,
-                          300);
+        texte.setPosition(resolution.x / 2.0f - texte.getLocalBounds().width / 2.0f, 100);
 
         RectangleShape bordure(Vector2f(texte.getLocalBounds().width + 20, texte.getLocalBounds().height + 20));
         bordure.setFillColor(Color::Transparent);
@@ -271,10 +256,9 @@ void IHM::afficherdemarrage()
 
         texte.setFillColor(Color::Green);
         texte.setCharacterSize(30);
-        texte.setString("Appuyez sur la touche C pour charger la dernière partie");
+        texte.setString("Appuyez sur la touche C pour charger la dernière partie et K pour quitter le jeu");
 
-        texte.setPosition(window.getSize().x / 2.0f - texte.getLocalBounds().width / 2.0f,
-                          400);
+        texte.setPosition(resolution.x / 2.0f - texte.getLocalBounds().width / 2.0f, 200);
 
         RectangleShape bordure2(Vector2f(texte.getLocalBounds().width + 20, texte.getLocalBounds().height + 20));
         bordure2.setFillColor(Color::Transparent);
@@ -285,7 +269,7 @@ void IHM::afficherdemarrage()
         window.draw(bordure2);
         window.draw(texte);
 
-        sf::RectangleShape line(sf::Vector2f(window.getSize().x - 100, 3));
+        RectangleShape line(Vector2f(resolution.x - 100, 3));
         line.setFillColor(Color::White);
         line.setPosition(50, 250);
         window.draw(line);
@@ -293,7 +277,19 @@ void IHM::afficherdemarrage()
         line.setPosition(50, 350);
         window.draw(line);
 
-        window.display();
+
+        sprdeco.setScale(20.0f, 20.0f);
+        sprdeco.setTexture(texdecoration[4]);
+        sprdeco.setTextureRect(IntRect(0, 0, 26, 19));
+        sprdeco.setOrigin(13, 9.5);
+
+
+        sprdeco.setPosition(resolution.x/2, 6*resolution.y/10);
+        window.draw(sprdeco);
+
+        sprdeco.setOrigin(8, 8);
+
+        
     }
 }
 

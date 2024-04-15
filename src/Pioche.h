@@ -11,7 +11,7 @@ enum idPioche {nop, pierre, fer, diamond};
 */
 class Pioche
 {
-public:
+private:
     
     /**
      * @param id : idPioche
@@ -27,6 +27,7 @@ public:
     /**
      * @brief Constructeur par défaut
     */
+public:
     Pioche();
 
     /**

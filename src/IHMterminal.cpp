@@ -62,7 +62,7 @@ void IHMterminal::action_Joueur()
 {
     char touche;
     bool re = false;
-    cout << "     ⇑ \n     z\n ⇐  qsd  ⇒    f pour miner et x pour sortir\n\n     ⇓" << endl;
+    cout << "     ⇑ \n     z\n ⇐  qsd  ⇒    k pour sortir\n\n     ⇓" << endl;
     cout << "taper une des touches pour vous déplacer" << endl;
     cin >> touche;
     int k = int(touche) - 97;

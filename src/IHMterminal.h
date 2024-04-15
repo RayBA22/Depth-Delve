@@ -8,15 +8,15 @@ using namespace std;
 
 #include "Jeu.h"
 
-const int xMax=200,  yMax=200;
+
 
 class IHMterminal
 {
     
-public:
+private:
 
     string skin_caractere[6] = {"🪨", "⬛", "🟧", "⬜", "🟨", "🔷"};
-    string grille[xMax][yMax];
+    string grille[300][300];
     Jeu jeu;
 
 
@@ -29,12 +29,8 @@ public:
     void action_Joueur();
 
 
-    
-    
-    //renvoie l'indice du minerai dans l'étage actuel
+public: 
    
-   
-
     void boucleJeu();
     
 

@@ -12,7 +12,7 @@
 class Obj
 {
 
-public: //mettre en privé
+protected: //mettre en privé
     
     /**
      * @param pos : Vect
@@ -23,7 +23,7 @@ public: //mettre en privé
      * @param HP : entier
     */
     int HP;
-
+public:
     /**
      * @brief Constructeur par défaut
     */

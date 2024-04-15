@@ -8,11 +8,12 @@ enum type_Ennemi{pierro, ferro, argento=3};
 
 class Ennemi: public Personnage
 {
-public:
+private:
     type_Ennemi id;
     unsigned int dmg;
     bool mort;
     
+public:
     Ennemi();
     Ennemi(type_Ennemi ide, int posx, int posy);
     

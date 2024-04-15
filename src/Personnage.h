@@ -12,13 +12,14 @@
 class Personnage: public Obj
 {
 
-public:
 
+protected:
     /**
      * @param vitesse : Vect
     */
     Vect vitesse;
 
+public:
     /**
      * @brief Constructeur par défaut 
     */
