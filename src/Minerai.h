@@ -4,6 +4,11 @@
 #include "Obj.h"
 enum type_Minerai {Pierre=0 ,Cuivre=2, Fer=1, Argent=3, Or=4, Diamant=5};
 
+
+/**
+ * @
+*/
+
 class Minerai: public Obj
 {
 
