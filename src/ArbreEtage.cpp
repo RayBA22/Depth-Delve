@@ -91,7 +91,7 @@ type_Minerai ArbreEtage::get_idMinerai_actuel( int i) const{
     return noeudActuel->etage.get_idMinerai(i);
 }
 
-entier ArbreEtage::get_mineraiHP_actuel(int i)const{
+int ArbreEtage::get_mineraiHP_actuel(int i)const{
 
     return noeudActuel->etage.get_MineraiHP(i);
 }
@@ -118,7 +118,7 @@ Vect ArbreEtage::get_posMinerai_actuel(int i)const{
 }
 
 
-void ArbreEtage::se_detruit_Minerai(entier deg, coord i){
+void ArbreEtage::se_detruit_Minerai(int deg, int i){
     noeudActuel->etage.se_detruit(deg, i);
 }
 
@@ -143,7 +143,7 @@ bool ArbreEtage::tous_mort(){
     return noeudActuel->etage.tous_mort();
 }
 
-entier ArbreEtage::get_EnnemiHP_actuel(int i)const{
+int ArbreEtage::get_EnnemiHP_actuel(int i)const{
     return noeudActuel->etage.get_EnnemiHP(i);
 }
 Vect ArbreEtage::get_posEnnemi_actuel(int i)const{

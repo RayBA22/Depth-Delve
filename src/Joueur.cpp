@@ -8,7 +8,7 @@ Joueur::Joueur()
     
 }
 
-Joueur::Joueur(entier posx, entier posy) : Personnage(15, 15,  posx, posy), pioche(pierre)
+Joueur::Joueur(int posx, int posy) : Personnage(15, 15,  posx, posy), pioche(pierre)
 {
     
     actJoueur = Marcher;
@@ -28,7 +28,7 @@ void Joueur::changer_vitesse(){
 
 
 
-void Joueur::set_posJoueur(entier posx, entier posy)
+void Joueur::set_posJoueur(int posx, int posy)
 { // faudrait la changer ou utiliser friend avec Jeu
     pos.x = posx;
     pos.y = posy;
@@ -45,7 +45,7 @@ int Joueur::get_dmgJoueur()const{
 }
 
 
-entier Joueur::get_faimJoueur()const{
+int Joueur::get_faimJoueur()const{
     return HP;
 }
 

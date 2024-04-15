@@ -28,14 +28,14 @@ public:
     bool est_detruit(int i)const;
     type_Minerai randomiseurMinerai()const;
     Vect get_posMinerai(int i)const;
-    entier get_MineraiHP(int i)const;
+    int get_MineraiHP(int i)const;
      int get_nbMinerai()const;
 
     type_Ennemi randomiseurEnnemi();
     type_Ennemi get_idEnnemi(int i)const;
     bool est_mort(int i)const;
     Vect get_posEnnemi(int i)const;
-    entier get_EnnemiHP(int i)const;
+    int get_EnnemiHP(int i)const;
      int get_nbEnnemi()const;
     
     void prenddmg( int dmg, int i);
@@ -48,7 +48,7 @@ public:
     Vect get_tailleEtage()const;    
      int get_profondeur()const;
     type_Etage get_typeEtage()const;
-    void se_detruit(entier deg, coord i);
+    void se_detruit(int deg, int i);
     
     bool tous_mort();
 };

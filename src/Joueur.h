@@ -9,20 +9,20 @@ enum action{Marcher=0, Respirer, Piocher=2};
 class Joueur: public Personnage
 {
 public:
-    entier faim;
+    int faim;
     Pioche pioche;
     action actJoueur;
     
     //Inventaire inventaire;
 
     Joueur();
-    Joueur(entier posx, entier posy);
+    Joueur(int posx, int posy);
     void changer_vitesse();
-    void set_posJoueur(entier posx, entier posy);
+    void set_posJoueur(int posx, int posy);
     void set_HPJoueur(int HPs);
     int get_dmgJoueur()const;
     
-    entier get_faimJoueur()const;
+    int get_faimJoueur()const;
     idPioche get_idPioche()const;
     action get_action()const;
 

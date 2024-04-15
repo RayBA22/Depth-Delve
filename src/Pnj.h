@@ -7,7 +7,7 @@ class Pnj: public Personnage
 {
 public:
     Pnj();
-    Pnj(entier vitessex, entier vitessy, entier posx, entier posy);
+    Pnj(int vitessex, int vitessy, int posx, int posy);
 };
 
 

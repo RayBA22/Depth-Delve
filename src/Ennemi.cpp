@@ -8,7 +8,7 @@ Ennemi::Ennemi(){
 }
 
 
-Ennemi::Ennemi( type_Ennemi ide, entier posx, entier posy):Personnage(1, 1, posx, posy) {
+Ennemi::Ennemi( type_Ennemi ide, int posx, int posy):Personnage(1, 1, posx, posy) {
     id = ide;
     HP = 1;
     mort = false;

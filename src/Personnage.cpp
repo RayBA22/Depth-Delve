@@ -5,7 +5,7 @@
 Personnage::Personnage(){
     
 }
-Personnage::Personnage(entier x_v, entier y_v, entier x_init, entier y_init):Obj(x_init, y_init){
+Personnage::Personnage(int x_v, int y_v, int x_init, int y_init):Obj(x_init, y_init){
 
     vitesse.x = x_v;
     vitesse.y = y_v;
@@ -19,7 +19,7 @@ void Personnage::deplacement_gauche(){
     if (temp>=0)
         pos.x = temp;
 }
-void Personnage::deplacement_droite(coord x){
+void Personnage::deplacement_droite(int x){
     int temp = pos.x + vitesse.x;
     if (temp < x){
         pos.x = temp;
@@ -31,7 +31,7 @@ void Personnage::deplacement_haut(){
         if (temp>=0)
             pos.y = temp;
 }
-void Personnage::deplacement_bas(coord y){
+void Personnage::deplacement_bas(int y){
 
     int temp = pos.y + vitesse.y;
     if (temp < y){

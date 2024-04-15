@@ -42,12 +42,12 @@ public:
     int get_nbMinerai_actuel() const;
     type_Minerai get_idMinerai_actuel(int i) const;
 
-    entier get_mineraiHP_actuel(int i) const;
+    int get_mineraiHP_actuel(int i) const;
     Vect get_posMinerai_actuel(int i) const;
 
     int get_nbEnnemi_actuel() const;
     type_Ennemi get_idEnnemi_actuel(int i) const;
-    entier get_EnnemiHP_actuel(int i) const;
+    int get_EnnemiHP_actuel(int i) const;
     Vect get_posEnnemi_actuel(int i) const;
     bool est_mort(int i) const;
     bool tous_mort();
@@ -60,7 +60,7 @@ public:
     Vect get_tailleEtage_actuel() const;
 
     void prenddmg(int dmg, int i);
-    void se_detruit_Minerai(entier deg, coord i);
+    void se_detruit_Minerai(int deg, int i);
     bool est_detruit_Minerai(int i) const;
 
     void revenirRacine();

@@ -14,7 +14,7 @@ public:
     bool mort;
     
     Ennemi();
-    Ennemi(type_Ennemi ide, entier posx, entier posy);
+    Ennemi(type_Ennemi ide, int posx, int posy);
     
     type_Ennemi get_idEnnemi()const;
     void prenddmg( int dmg);

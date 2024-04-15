@@ -14,11 +14,11 @@ public:
     Vect vitesse;
     
     Personnage();
-    Personnage(entier x_v, entier y_v, entier x_init, entier y_init);
+    Personnage(int x_v, int y_v, int x_init, int y_init);
     void deplacement_gauche();
-    void deplacement_droite(coord x);
+    void deplacement_droite(int x);
     void deplacement_haut();
-    void deplacement_bas(coord y);
+    void deplacement_bas(int y);
     
     bool detect_gauche(Vect posm);
     bool detect_droite(Vect posm);

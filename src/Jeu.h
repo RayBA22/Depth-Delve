@@ -27,14 +27,14 @@ public:
     bool get_start()const;
 
     type_Minerai get_idMinerai(int i)const;
-    entier get_MineraiHP_actuel(int i = 0)const;
+    int get_MineraiHP_actuel(int i = 0)const;
     unsigned int get_nbMinerai_actuel()const ;
     type_Minerai miner(int indice);
 
     
     
     Vect get_posMinerai_actuel(int i)const;
-    void se_detruit_Minerai(entier deg, coord i);
+    void se_detruit_Minerai(int deg, int i);
     bool est_detruit_Minerai(int i)const;
     int get_nbMineraidispos()const;
 

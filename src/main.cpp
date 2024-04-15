@@ -12,7 +12,7 @@ int main()
    IHM ihm(1080, 1080);
    ihm.boucleJeu();
    
-    
+
 
     return 0;
 }

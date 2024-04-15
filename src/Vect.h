@@ -1,21 +1,39 @@
 #ifndef _VECT_
 #define _VECT_
 
-typedef int coord;
-typedef int entier;
 
 #include <iostream> 
 using namespace std;
 
+/**
+ * @class Vect
+ * Un vecteur stockant deux composantes (x, y) pour positionner les différents éléments
+*/
 
 class Vect
 {
 
 public:
     
-    coord x, y;
+    /**
+     * @param x, y: entiers
+     * représentent les composantes
+     * 
+    */
+    int x, y;
+
+    /**
+     * @brief Constructeur qui met les composantes à zéro
+    */
     Vect();
-    Vect(coord xi, coord yi);
+
+    /**
+     * @brief Constructeur qui initialise les composantes avec les vals passées en parametres
+     * @param xi, yi: entier
+     * @return 
+     * 
+    */
+    Vect(int xi, int yi);
     
     
     

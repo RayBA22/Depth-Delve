@@ -12,14 +12,14 @@ class Obj
 public: //mettre en privé
     
     Vect pos;
-    entier HP;
+    int HP;
 
     Obj();
-    Obj(entier x_init, entier y_init);
+    Obj(int x_init, int y_init);
     
     Vect get_position()const;
 
-    entier get_HP()const;
+    int get_HP()const;
     
 };
 

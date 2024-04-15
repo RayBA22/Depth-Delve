@@ -119,12 +119,12 @@ int Etage::get_profondeur() const
     return profondeur;
 }
 
-entier Etage::get_MineraiHP(int i) const
+int Etage::get_MineraiHP(int i) const
 {
     return tabMinerai[i].get_HP();
 }
 
-void Etage::se_detruit(entier deg, coord i)
+void Etage::se_detruit(int deg, int i)
 {
     tabMinerai[i].se_detruit(deg);
 }
@@ -157,7 +157,7 @@ Vect Etage::get_posEnnemi(int i) const
 {
     return tabEnnemi[i].get_position();
 }
-entier Etage::get_EnnemiHP(int i) const
+int Etage::get_EnnemiHP(int i) const
 {
     return tabEnnemi[i].get_HP();
 }

@@ -13,10 +13,10 @@ public:
     bool detruit;
 
     Minerai();
-    Minerai(type_Minerai idm,  entier x_init, entier y_init);
+    Minerai(type_Minerai idm,  int x_init, int y_init);
     type_Minerai get_idMinerai()const;
 
-    void se_detruit(entier deg);
+    void se_detruit(int deg);
     bool est_detruit()const;
 
 };

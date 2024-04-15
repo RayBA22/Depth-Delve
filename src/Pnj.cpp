@@ -4,6 +4,6 @@
 Pnj::Pnj(){
     
 }
-Pnj::Pnj(entier vitessex, entier vitessy, entier posx, entier posy):Personnage(vitessex, vitessy, posx, posy){
+Pnj::Pnj(int vitessex, int vitessy, int posx, int posy):Personnage(vitessex, vitessy, posx, posy){
     
 }

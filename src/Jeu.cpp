@@ -27,13 +27,13 @@ Vect Jeu::get_posMinerai_actuel(int i) const
     return mine.get_posMinerai_actuel(i);
 }
 
-entier Jeu::get_MineraiHP_actuel(int i) const
+int Jeu::get_MineraiHP_actuel(int i) const
 {
 
     return mine.get_mineraiHP_actuel(i);
 }
 
-void Jeu::se_detruit_Minerai(entier deg, coord i)
+void Jeu::se_detruit_Minerai(int deg, int i)
 {
 
     mine.se_detruit_Minerai(deg, i);

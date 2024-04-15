@@ -4,7 +4,7 @@ Obj::Obj(){
 
 }
 
-Obj::Obj(entier x_init, entier y_init){
+Obj::Obj(int x_init, int y_init){
 
     pos.x = x_init;
     pos.y = y_init;
@@ -18,6 +18,6 @@ Vect Obj::get_position()const{
     return pos;
 }
 
-entier Obj::get_HP()const{
+int Obj::get_HP()const{
     return HP;
 }
