@@ -10,7 +10,7 @@ Ce projet est un jeu vidéo 2D en vue isonométrique dans lequel l'objectif est 
 ```
 git clone https://forge.univ-lyon1.fr/p2210996/depths-delve-project.git
 ```
-2.  Aller à la racine du git et tapez la commande 
+2.  Allez à la racine du git et tapez la commande 
 ```
 make
 ```
