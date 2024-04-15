@@ -151,10 +151,10 @@ public:
     int get_nbEnnemi()const;
 
     /**
-     * @brief Fonction qui retire des points de vie à un certain ennemi selon les valeurs entrées en paramètre
+     * @brief Fonction qui retire des points de vie à l'ennemi d'indice entré en paramètre selon les dégats entrés en paramètre
      * @param dmg, i : entiers
     */
-    void prenddmg( int dmg, int i);
+    void prenddmg(int dmg, int i);
 
     /**
      * @brief Fonction booléenne qui renvoie vrai si l'ennemi d'indice entré en paramètre est suffisament proche du joueur pour le suivre
@@ -199,7 +199,8 @@ public:
     type_Etage get_typeEtage()const;
 
     /**
-     * @brief Fonction qui n'est pas dans le .cpp
+     * @brief Fonction qui retire des points de vie au minerai d'indice entré en paramètre selon les dégats entrés en paramètre
+     * @param deg, i : entiers
     */
     void se_detruit(int deg, int i);
     
