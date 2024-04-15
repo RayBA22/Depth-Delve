@@ -1,0 +1,477 @@
+\hypertarget{classJeu}{}\doxysection{Jeu Class Reference}
+\label{classJeu}\index{Jeu@{Jeu}}
+
+
+{\ttfamily \#include $<$Jeu.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}\label{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}} 
+\mbox{\hyperlink{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}{Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut qui crée un joueur. \end{DoxyCompactList}\item 
+type\+\_\+\+Minerai \mbox{\hyperlink{classJeu_a272ab98c49c3b84c8ac0850956bb9076}{get\+\_\+id\+Minerai}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie l\textquotesingle{}identifiant d\textquotesingle{}un minerai d\textquotesingle{}indice entré en paramètre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_aeb1b8e064c8dab2d0739987affb3c98e}{get\+\_\+\+Minerai\+HP\+\_\+actuel}} (int i=0) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la quantité de points de vie d\textquotesingle{}un minerai. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classJeu_aca24de9b08a2560ace60d1335cf9b2c7}{get\+\_\+nb\+Minerai\+\_\+actuel}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui retourne le nombre de minerai. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classJeu_a24e1836f56f6b2ca8cec8138bd6966fb}{get\+\_\+pos\+Minerai\+\_\+actuel}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la position d\textquotesingle{}un minerai. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_a40d28b43881aa240ca7e7384ba076e9e}{est\+\_\+detruit\+\_\+\+Minerai}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur booléen qui renvoie vrai si un minerai d\textquotesingle{}indice entré en paramètre est détruit, faux sinon. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_a788c12e15841068d34d202231bcd912e}{get\+\_\+nb\+Mineraidispos}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le nombre de minerais disponibles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_a23a155cbee20413ffd79a0138a122235}\label{classJeu_a23a155cbee20413ffd79a0138a122235}} 
+int {\bfseries get\+\_\+nbminerai\+\_\+\+Inventaire} (int i) const
+\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classJeu_a5b9ba25c7d422b1be1f57b6c306eaf30}{get\+\_\+pos\+Ennemi\+\_\+actuel}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la position d\textquotesingle{}un minerai. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_af0fc47adec707b11057a81dd8def9034}{est\+\_\+mort}} (int i) const
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si les points de vie de l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre valent zéro. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classJeu_aeea0d571747129d5cc7983b1d3c943d9}{get\+\_\+nb\+Ennemi\+\_\+actuel}} () const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le nombre total d\textquotesingle{}ennemis dans l\textquotesingle{}étage où se situe le joueur. \end{DoxyCompactList}\item 
+type\+\_\+\+Ennemi \mbox{\hyperlink{classJeu_a278974d898506cb2dc92e5700435028b}{get\+\_\+id\+Ennemi}} (int i) const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le type de l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_a71187a261206bfdcbd36b1b59ca19872}{tous\+\_\+mort}} ()
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si tous les ennemis de l\textquotesingle{}étage ont été vaincus, faux sinon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_aa4611905df5cf48d9a877af177d79238}{piocher}} (bool(Personnage\+::$\ast$fonc)(\mbox{\hyperlink{classVect}{Vect}}))
+\begin{DoxyCompactList}\small\item\em Fonction qui modélise l\textquotesingle{}utilisation de la pioche par le joueur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_a0d4937cad28ae66146261e62fbe1b134}\label{classJeu_a0d4937cad28ae66146261e62fbe1b134}} 
+void \mbox{\hyperlink{classJeu_a0d4937cad28ae66146261e62fbe1b134}{mouvement\+Ennemi}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui fait avancer les ennemis vers le joueur lorsque celui-\/ci est suffisamment proche. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_aaf17b0efae60e585002b800a0f129cb0}{get\+\_\+statut\+\_\+\+Inventaire}} () const
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si l\textquotesingle{}inventaire est ouvert, faux sinon. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_a8fa25b3969e6d82f15606b5d23efc871}{nbmort\+\_\+\+Inventaire}} () const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le nombre d\textquotesingle{}ennemis que le joueur a vaincus lors de la partie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_aea46249c8f4ac407513432d62d1618c0}{get\+\_\+nbmission\+\_\+accomplie}} () const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le nombre de missions accomplies par le joueur. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classJeu_ade9e40db1ebf147765704aa63b4d5935}{formuler\+\_\+mission}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le texte affiché dans l\textquotesingle{}inventaire indiquant les objectifs de la mission. \end{DoxyCompactList}\item 
+type\+\_\+\+Etage \mbox{\hyperlink{classJeu_a170b82917b62d3ec76d21fa231ab0c5a}{get\+\_\+type\+Etage\+\_\+actuel}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le type d\textquotesingle{}étage de l\textquotesingle{}étage actuel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classJeu_a0b47418c91a391c09f9e6387c67a7948}{get\+\_\+taille\+Etagact}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la taille de l\textquotesingle{}étage dans lequel se trouve le \mbox{\hyperlink{classJoueur}{Joueur}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classJeu_a0bc456828cf5642f7e8a8c3147994b28}{get\+\_\+\+Joueurpos}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la position du joueur dans l\textquotesingle{}étage. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classJeu_ad6772836af0e28910e16be99a3679395}{get\+\_\+frame\+\_\+\+Joueur}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie l\textquotesingle{}indice du sprite actuel du joueur. \end{DoxyCompactList}\item 
+direction \mbox{\hyperlink{classJeu_a4f7696f5b1aa0c039cc4b16faa0e7ce6}{get\+\_\+direction\+\_\+\+Joueur}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la direction dans laquelle le joueur est tourné \end{DoxyCompactList}\item 
+action \mbox{\hyperlink{classJeu_a64c3499dfe7ed7e04198c588625fceb5}{get\+\_\+action\+\_\+\+Joueur}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie l\textquotesingle{}action que le joueur est en train d\textquotesingle{}effectuer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_aec4e545383d41b10f2c2a1e14e95d71d}\label{classJeu_aec4e545383d41b10f2c2a1e14e95d71d}} 
+void \mbox{\hyperlink{classJeu_aec4e545383d41b10f2c2a1e14e95d71d}{repos\+\_\+joueur}} ()
+\begin{DoxyCompactList}\small\item\em Fonction pour mettre le joueur en repos lorsqu\textquotesingle{}il est immobile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJeu_a17630d2ef5394ab4f1064128b4e50168}{mouvement\+\_\+\+Joueur}} (int mouv)
+\begin{DoxyCompactList}\small\item\em Fonction qui choisit les sprites du joueur à montrer selon son la direction dans laquelle il se déplace. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJeu_a86ca75bb003d86d2257898c236d8c10c}{get\+\_\+\+Joueur\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la quantité de points de vie du joueur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_a13f161bec23aa0f2e7e7d25dbc68571b}{joueur\+\_\+estmort}} ()
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si les points de vie du joueur valent zéro, faux sinon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_aca051b223046daac75992857f8b833cb}{get\+\_\+start}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur booléen qui renvoie vrai si le jeu a commencé, faux sinon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJeu_a7a5ac399fea7c8d6b5e497c43f7980f5}{Quitter}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur booléen qui renvoie vrai si le jeu doit etre fermé, faux sinon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modélise tout le fonctionnement du jeu 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJeu_a40d28b43881aa240ca7e7384ba076e9e}\label{classJeu_a40d28b43881aa240ca7e7384ba076e9e}} 
+\index{Jeu@{Jeu}!est\_detruit\_Minerai@{est\_detruit\_Minerai}}
+\index{est\_detruit\_Minerai@{est\_detruit\_Minerai}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{est\_detruit\_Minerai()}{est\_detruit\_Minerai()}}
+{\footnotesize\ttfamily bool Jeu\+::est\+\_\+detruit\+\_\+\+Minerai (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur booléen qui renvoie vrai si un minerai d\textquotesingle{}indice entré en paramètre est détruit, faux sinon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_af0fc47adec707b11057a81dd8def9034}\label{classJeu_af0fc47adec707b11057a81dd8def9034}} 
+\index{Jeu@{Jeu}!est\_mort@{est\_mort}}
+\index{est\_mort@{est\_mort}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{est\_mort()}{est\_mort()}}
+{\footnotesize\ttfamily bool Jeu\+::est\+\_\+mort (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Fonction booléenne qui renvoie vrai si les points de vie de l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre valent zéro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_ade9e40db1ebf147765704aa63b4d5935}\label{classJeu_ade9e40db1ebf147765704aa63b4d5935}} 
+\index{Jeu@{Jeu}!formuler\_mission@{formuler\_mission}}
+\index{formuler\_mission@{formuler\_mission}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{formuler\_mission()}{formuler\_mission()}}
+{\footnotesize\ttfamily string Jeu\+::formuler\+\_\+mission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui renvoie le texte affiché dans l\textquotesingle{}inventaire indiquant les objectifs de la mission. 
+
+\begin{DoxyReturn}{Returns}
+chaîne de caractères 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a64c3499dfe7ed7e04198c588625fceb5}\label{classJeu_a64c3499dfe7ed7e04198c588625fceb5}} 
+\index{Jeu@{Jeu}!get\_action\_Joueur@{get\_action\_Joueur}}
+\index{get\_action\_Joueur@{get\_action\_Joueur}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_action\_Joueur()}{get\_action\_Joueur()}}
+{\footnotesize\ttfamily action Jeu\+::get\+\_\+action\+\_\+\+Joueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie l\textquotesingle{}action que le joueur est en train d\textquotesingle{}effectuer. 
+
+\begin{DoxyReturn}{Returns}
+action 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a4f7696f5b1aa0c039cc4b16faa0e7ce6}\label{classJeu_a4f7696f5b1aa0c039cc4b16faa0e7ce6}} 
+\index{Jeu@{Jeu}!get\_direction\_Joueur@{get\_direction\_Joueur}}
+\index{get\_direction\_Joueur@{get\_direction\_Joueur}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_direction\_Joueur()}{get\_direction\_Joueur()}}
+{\footnotesize\ttfamily direction Jeu\+::get\+\_\+direction\+\_\+\+Joueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la direction dans laquelle le joueur est tourné 
+
+\begin{DoxyReturn}{Returns}
+direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_ad6772836af0e28910e16be99a3679395}\label{classJeu_ad6772836af0e28910e16be99a3679395}} 
+\index{Jeu@{Jeu}!get\_frame\_Joueur@{get\_frame\_Joueur}}
+\index{get\_frame\_Joueur@{get\_frame\_Joueur}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_frame\_Joueur()}{get\_frame\_Joueur()}}
+{\footnotesize\ttfamily unsigned int Jeu\+::get\+\_\+frame\+\_\+\+Joueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie l\textquotesingle{}indice du sprite actuel du joueur. 
+
+\begin{DoxyReturn}{Returns}
+entier positif 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a278974d898506cb2dc92e5700435028b}\label{classJeu_a278974d898506cb2dc92e5700435028b}} 
+\index{Jeu@{Jeu}!get\_idEnnemi@{get\_idEnnemi}}
+\index{get\_idEnnemi@{get\_idEnnemi}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_idEnnemi()}{get\_idEnnemi()}}
+{\footnotesize\ttfamily type\+\_\+\+Ennemi Jeu\+::get\+\_\+id\+Ennemi (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le type de l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Ennemi 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a272ab98c49c3b84c8ac0850956bb9076}\label{classJeu_a272ab98c49c3b84c8ac0850956bb9076}} 
+\index{Jeu@{Jeu}!get\_idMinerai@{get\_idMinerai}}
+\index{get\_idMinerai@{get\_idMinerai}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_idMinerai()}{get\_idMinerai()}}
+{\footnotesize\ttfamily type\+\_\+\+Minerai Jeu\+::get\+\_\+id\+Minerai (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie l\textquotesingle{}identifiant d\textquotesingle{}un minerai d\textquotesingle{}indice entré en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Minerai 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a86ca75bb003d86d2257898c236d8c10c}\label{classJeu_a86ca75bb003d86d2257898c236d8c10c}} 
+\index{Jeu@{Jeu}!get\_JoueurHP@{get\_JoueurHP}}
+\index{get\_JoueurHP@{get\_JoueurHP}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_JoueurHP()}{get\_JoueurHP()}}
+{\footnotesize\ttfamily int Jeu\+::get\+\_\+\+Joueur\+HP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la quantité de points de vie du joueur. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a0bc456828cf5642f7e8a8c3147994b28}\label{classJeu_a0bc456828cf5642f7e8a8c3147994b28}} 
+\index{Jeu@{Jeu}!get\_Joueurpos@{get\_Joueurpos}}
+\index{get\_Joueurpos@{get\_Joueurpos}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_Joueurpos()}{get\_Joueurpos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Jeu\+::get\+\_\+\+Joueurpos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la position du joueur dans l\textquotesingle{}étage. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aeb1b8e064c8dab2d0739987affb3c98e}\label{classJeu_aeb1b8e064c8dab2d0739987affb3c98e}} 
+\index{Jeu@{Jeu}!get\_MineraiHP\_actuel@{get\_MineraiHP\_actuel}}
+\index{get\_MineraiHP\_actuel@{get\_MineraiHP\_actuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_MineraiHP\_actuel()}{get\_MineraiHP\_actuel()}}
+{\footnotesize\ttfamily int Jeu\+::get\+\_\+\+Minerai\+HP\+\_\+actuel (\begin{DoxyParamCaption}\item[{int}]{i = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la quantité de points de vie d\textquotesingle{}un minerai. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aeea0d571747129d5cc7983b1d3c943d9}\label{classJeu_aeea0d571747129d5cc7983b1d3c943d9}} 
+\index{Jeu@{Jeu}!get\_nbEnnemi\_actuel@{get\_nbEnnemi\_actuel}}
+\index{get\_nbEnnemi\_actuel@{get\_nbEnnemi\_actuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_nbEnnemi\_actuel()}{get\_nbEnnemi\_actuel()}}
+{\footnotesize\ttfamily unsigned int Jeu\+::get\+\_\+nb\+Ennemi\+\_\+actuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le nombre total d\textquotesingle{}ennemis dans l\textquotesingle{}étage où se situe le joueur. 
+
+\begin{DoxyReturn}{Returns}
+entier positif 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aca24de9b08a2560ace60d1335cf9b2c7}\label{classJeu_aca24de9b08a2560ace60d1335cf9b2c7}} 
+\index{Jeu@{Jeu}!get\_nbMinerai\_actuel@{get\_nbMinerai\_actuel}}
+\index{get\_nbMinerai\_actuel@{get\_nbMinerai\_actuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_nbMinerai\_actuel()}{get\_nbMinerai\_actuel()}}
+{\footnotesize\ttfamily unsigned int Jeu\+::get\+\_\+nb\+Minerai\+\_\+actuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui retourne le nombre de minerai. 
+
+\begin{DoxyReturn}{Returns}
+entier positif 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a788c12e15841068d34d202231bcd912e}\label{classJeu_a788c12e15841068d34d202231bcd912e}} 
+\index{Jeu@{Jeu}!get\_nbMineraidispos@{get\_nbMineraidispos}}
+\index{get\_nbMineraidispos@{get\_nbMineraidispos}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_nbMineraidispos()}{get\_nbMineraidispos()}}
+{\footnotesize\ttfamily int Jeu\+::get\+\_\+nb\+Mineraidispos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le nombre de minerais disponibles. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aea46249c8f4ac407513432d62d1618c0}\label{classJeu_aea46249c8f4ac407513432d62d1618c0}} 
+\index{Jeu@{Jeu}!get\_nbmission\_accomplie@{get\_nbmission\_accomplie}}
+\index{get\_nbmission\_accomplie@{get\_nbmission\_accomplie}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_nbmission\_accomplie()}{get\_nbmission\_accomplie()}}
+{\footnotesize\ttfamily int Jeu\+::get\+\_\+nbmission\+\_\+accomplie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le nombre de missions accomplies par le joueur. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a5b9ba25c7d422b1be1f57b6c306eaf30}\label{classJeu_a5b9ba25c7d422b1be1f57b6c306eaf30}} 
+\index{Jeu@{Jeu}!get\_posEnnemi\_actuel@{get\_posEnnemi\_actuel}}
+\index{get\_posEnnemi\_actuel@{get\_posEnnemi\_actuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_posEnnemi\_actuel()}{get\_posEnnemi\_actuel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Jeu\+::get\+\_\+pos\+Ennemi\+\_\+actuel (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la position d\textquotesingle{}un minerai. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a24e1836f56f6b2ca8cec8138bd6966fb}\label{classJeu_a24e1836f56f6b2ca8cec8138bd6966fb}} 
+\index{Jeu@{Jeu}!get\_posMinerai\_actuel@{get\_posMinerai\_actuel}}
+\index{get\_posMinerai\_actuel@{get\_posMinerai\_actuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_posMinerai\_actuel()}{get\_posMinerai\_actuel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Jeu\+::get\+\_\+pos\+Minerai\+\_\+actuel (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la position d\textquotesingle{}un minerai. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aca051b223046daac75992857f8b833cb}\label{classJeu_aca051b223046daac75992857f8b833cb}} 
+\index{Jeu@{Jeu}!get\_start@{get\_start}}
+\index{get\_start@{get\_start}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_start()}{get\_start()}}
+{\footnotesize\ttfamily bool Jeu\+::get\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur booléen qui renvoie vrai si le jeu a commencé, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aaf17b0efae60e585002b800a0f129cb0}\label{classJeu_aaf17b0efae60e585002b800a0f129cb0}} 
+\index{Jeu@{Jeu}!get\_statut\_Inventaire@{get\_statut\_Inventaire}}
+\index{get\_statut\_Inventaire@{get\_statut\_Inventaire}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_statut\_Inventaire()}{get\_statut\_Inventaire()}}
+{\footnotesize\ttfamily bool Jeu\+::get\+\_\+statut\+\_\+\+Inventaire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction booléenne qui renvoie vrai si l\textquotesingle{}inventaire est ouvert, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a0b47418c91a391c09f9e6387c67a7948}\label{classJeu_a0b47418c91a391c09f9e6387c67a7948}} 
+\index{Jeu@{Jeu}!get\_tailleEtagact@{get\_tailleEtagact}}
+\index{get\_tailleEtagact@{get\_tailleEtagact}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_tailleEtagact()}{get\_tailleEtagact()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Jeu\+::get\+\_\+taille\+Etagact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la taille de l\textquotesingle{}étage dans lequel se trouve le \mbox{\hyperlink{classJoueur}{Joueur}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a170b82917b62d3ec76d21fa231ab0c5a}\label{classJeu_a170b82917b62d3ec76d21fa231ab0c5a}} 
+\index{Jeu@{Jeu}!get\_typeEtage\_actuel@{get\_typeEtage\_actuel}}
+\index{get\_typeEtage\_actuel@{get\_typeEtage\_actuel}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{get\_typeEtage\_actuel()}{get\_typeEtage\_actuel()}}
+{\footnotesize\ttfamily type\+\_\+\+Etage Jeu\+::get\+\_\+type\+Etage\+\_\+actuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le type d\textquotesingle{}étage de l\textquotesingle{}étage actuel. 
+
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Etage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a13f161bec23aa0f2e7e7d25dbc68571b}\label{classJeu_a13f161bec23aa0f2e7e7d25dbc68571b}} 
+\index{Jeu@{Jeu}!joueur\_estmort@{joueur\_estmort}}
+\index{joueur\_estmort@{joueur\_estmort}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{joueur\_estmort()}{joueur\_estmort()}}
+{\footnotesize\ttfamily bool Jeu\+::joueur\+\_\+estmort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction booléenne qui renvoie vrai si les points de vie du joueur valent zéro, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a17630d2ef5394ab4f1064128b4e50168}\label{classJeu_a17630d2ef5394ab4f1064128b4e50168}} 
+\index{Jeu@{Jeu}!mouvement\_Joueur@{mouvement\_Joueur}}
+\index{mouvement\_Joueur@{mouvement\_Joueur}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{mouvement\_Joueur()}{mouvement\_Joueur()}}
+{\footnotesize\ttfamily void Jeu\+::mouvement\+\_\+\+Joueur (\begin{DoxyParamCaption}\item[{int}]{mouv }\end{DoxyParamCaption})}
+
+
+
+Fonction qui choisit les sprites du joueur à montrer selon son la direction dans laquelle il se déplace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouv} & \+: entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a8fa25b3969e6d82f15606b5d23efc871}\label{classJeu_a8fa25b3969e6d82f15606b5d23efc871}} 
+\index{Jeu@{Jeu}!nbmort\_Inventaire@{nbmort\_Inventaire}}
+\index{nbmort\_Inventaire@{nbmort\_Inventaire}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{nbmort\_Inventaire()}{nbmort\_Inventaire()}}
+{\footnotesize\ttfamily int Jeu\+::nbmort\+\_\+\+Inventaire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le nombre d\textquotesingle{}ennemis que le joueur a vaincus lors de la partie. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aa4611905df5cf48d9a877af177d79238}\label{classJeu_aa4611905df5cf48d9a877af177d79238}} 
+\index{Jeu@{Jeu}!piocher@{piocher}}
+\index{piocher@{piocher}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{piocher()}{piocher()}}
+{\footnotesize\ttfamily void Jeu\+::piocher (\begin{DoxyParamCaption}\item[{bool(Personnage\+::$\ast$)(\mbox{\hyperlink{classVect}{Vect}})}]{fonc }\end{DoxyParamCaption})}
+
+
+
+Fonction qui modélise l\textquotesingle{}utilisation de la pioche par le joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonc} & unr fonction du personnage qui permet la detection à partir d\textquotesingle{}un vecteur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a7a5ac399fea7c8d6b5e497c43f7980f5}\label{classJeu_a7a5ac399fea7c8d6b5e497c43f7980f5}} 
+\index{Jeu@{Jeu}!Quitter@{Quitter}}
+\index{Quitter@{Quitter}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{Quitter()}{Quitter()}}
+{\footnotesize\ttfamily bool Jeu\+::\+Quitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur booléen qui renvoie vrai si le jeu doit etre fermé, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a71187a261206bfdcbd36b1b59ca19872}\label{classJeu_a71187a261206bfdcbd36b1b59ca19872}} 
+\index{Jeu@{Jeu}!tous\_mort@{tous\_mort}}
+\index{tous\_mort@{tous\_mort}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{tous\_mort()}{tous\_mort()}}
+{\footnotesize\ttfamily bool Jeu\+::tous\+\_\+mort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction booléenne qui renvoie vrai si tous les ennemis de l\textquotesingle{}étage ont été vaincus, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Jeu.\+h\item 
+src/Jeu.\+cpp\end{DoxyCompactItemize}

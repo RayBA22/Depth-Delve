@@ -1,0 +1,114 @@
+\hypertarget{classMinerai}{}\doxysection{Minerai Class Reference}
+\label{classMinerai}\index{Minerai@{Minerai}}
+
+
+{\ttfamily \#include $<$Minerai.\+h$>$}
+
+
+
+Inheritance diagram for Minerai\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classMinerai__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Minerai\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classMinerai__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMinerai_a411d338f220b72cbdc9d4cec2f58fc4e}\label{classMinerai_a411d338f220b72cbdc9d4cec2f58fc4e}} 
+\mbox{\hyperlink{classMinerai_a411d338f220b72cbdc9d4cec2f58fc4e}{Minerai}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMinerai_a52947be40c4a65a1cc780a281f373b2d}{Minerai}} (type\+\_\+\+Minerai idm, int x\+\_\+init, int y\+\_\+init)
+\begin{DoxyCompactList}\small\item\em Constructeur qui initialise les composantes avec les valeurs passées en paramètre. \end{DoxyCompactList}\item 
+type\+\_\+\+Minerai \mbox{\hyperlink{classMinerai_a3eecc769675c30b3f44e7529a4557683}{get\+\_\+id\+Minerai}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le type du minerai. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMinerai_ac5908f5e2b3af1e9a6657e571ec95100}{se\+\_\+detruit}} (int deg)
+\begin{DoxyCompactList}\small\item\em Fonction qui réduit les points de vie du minerai lorsque celui-\/ci est miné selon les dégats infligés entrés en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMinerai_a0a3d1391076154108fb093257d37188d}{est\+\_\+detruit}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur booléen qui retourne vrai si le minerai a été détruit, c\textquotesingle{}est à dire si ses points de vie sont à 0, et faux sinon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Modélise les minerais récoltables par le joueur 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMinerai_a52947be40c4a65a1cc780a281f373b2d}\label{classMinerai_a52947be40c4a65a1cc780a281f373b2d}} 
+\index{Minerai@{Minerai}!Minerai@{Minerai}}
+\index{Minerai@{Minerai}!Minerai@{Minerai}}
+\doxysubsubsection{\texorpdfstring{Minerai()}{Minerai()}}
+{\footnotesize\ttfamily Minerai\+::\+Minerai (\begin{DoxyParamCaption}\item[{type\+\_\+\+Minerai}]{idm,  }\item[{int}]{x\+\_\+init,  }\item[{int}]{y\+\_\+init }\end{DoxyParamCaption})}
+
+
+
+Constructeur qui initialise les composantes avec les valeurs passées en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idm} & \+: type\+\_\+\+Minerai \\
+\hline
+{\em x\+\_\+init,y\+\_\+init} & \+: entiers \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMinerai_a0a3d1391076154108fb093257d37188d}\label{classMinerai_a0a3d1391076154108fb093257d37188d}} 
+\index{Minerai@{Minerai}!est\_detruit@{est\_detruit}}
+\index{est\_detruit@{est\_detruit}!Minerai@{Minerai}}
+\doxysubsubsection{\texorpdfstring{est\_detruit()}{est\_detruit()}}
+{\footnotesize\ttfamily bool Minerai\+::est\+\_\+detruit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur booléen qui retourne vrai si le minerai a été détruit, c\textquotesingle{}est à dire si ses points de vie sont à 0, et faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMinerai_a3eecc769675c30b3f44e7529a4557683}\label{classMinerai_a3eecc769675c30b3f44e7529a4557683}} 
+\index{Minerai@{Minerai}!get\_idMinerai@{get\_idMinerai}}
+\index{get\_idMinerai@{get\_idMinerai}!Minerai@{Minerai}}
+\doxysubsubsection{\texorpdfstring{get\_idMinerai()}{get\_idMinerai()}}
+{\footnotesize\ttfamily type\+\_\+\+Minerai Minerai\+::get\+\_\+id\+Minerai (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le type du minerai. 
+
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Minerai 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMinerai_ac5908f5e2b3af1e9a6657e571ec95100}\label{classMinerai_ac5908f5e2b3af1e9a6657e571ec95100}} 
+\index{Minerai@{Minerai}!se\_detruit@{se\_detruit}}
+\index{se\_detruit@{se\_detruit}!Minerai@{Minerai}}
+\doxysubsubsection{\texorpdfstring{se\_detruit()}{se\_detruit()}}
+{\footnotesize\ttfamily void Minerai\+::se\+\_\+detruit (\begin{DoxyParamCaption}\item[{int}]{deg }\end{DoxyParamCaption})}
+
+
+
+Fonction qui réduit les points de vie du minerai lorsque celui-\/ci est miné selon les dégats infligés entrés en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deg} & \+: entier \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Minerai.\+h\item 
+src/Minerai.\+cpp\end{DoxyCompactItemize}

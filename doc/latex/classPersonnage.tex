@@ -1,0 +1,183 @@
+\hypertarget{classPersonnage}{}\doxysection{Personnage Class Reference}
+\label{classPersonnage}\index{Personnage@{Personnage}}
+
+
+{\ttfamily \#include $<$Personnage.\+h$>$}
+
+
+
+Inheritance diagram for Personnage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classPersonnage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Personnage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classPersonnage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPersonnage_abec36eb0310adc71f3375297fc590c65}\label{classPersonnage_abec36eb0310adc71f3375297fc590c65}} 
+\mbox{\hyperlink{classPersonnage_abec36eb0310adc71f3375297fc590c65}{Personnage}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPersonnage_a1cacf1729ecdc9d0044e4dfd965e2cf0}{Personnage}} (int x\+\_\+v, int y\+\_\+v, int x\+\_\+init, int y\+\_\+init)
+\begin{DoxyCompactList}\small\item\em Constructeur qui initialise les composantes avec les valeurs passées en paramètre. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPersonnage_a47666d5620972882fc811b70cd6873b1}\label{classPersonnage_a47666d5620972882fc811b70cd6873b1}} 
+void \mbox{\hyperlink{classPersonnage_a47666d5620972882fc811b70cd6873b1}{deplacement\+\_\+gauche}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant au personnage de se déplacer vers la gauche sauf si le bord se trouve à gauche. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPersonnage_abb705f16a37d93c2c935320ff9ed849b}{deplacement\+\_\+droite}} (int x)
+\begin{DoxyCompactList}\small\item\em Fonction permettant au personnage de se déplacer vers la droite sauf si le bord entré en paramètre se trouve à droite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPersonnage_a1499ea21637b7f316c52be5cc6014cb5}\label{classPersonnage_a1499ea21637b7f316c52be5cc6014cb5}} 
+void \mbox{\hyperlink{classPersonnage_a1499ea21637b7f316c52be5cc6014cb5}{deplacement\+\_\+haut}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant au personnage de se déplacer vers le haut si le bord ne se trouve pas en haut. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPersonnage_abdb05975515405cac0693e9e43176acc}{deplacement\+\_\+bas}} (int y)
+\begin{DoxyCompactList}\small\item\em Fonction permettant au personnage de se déplacer vers le bas si le bord entré en paramètre ne se trouve pas en bas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPersonnage_a63c4909f506358ff6dcb719fc522d551}{detect\+\_\+gauche}} (\mbox{\hyperlink{classVect}{Vect}} posm)
+\begin{DoxyCompactList}\small\item\em Fonction qui détecte la présence d\textquotesingle{}un Objet à gauche du personnage selon un vecteur pris en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPersonnage_ae3f4f3d28e709def3a8adc7bbb54a0a9}{detect\+\_\+droite}} (\mbox{\hyperlink{classVect}{Vect}} posm)
+\begin{DoxyCompactList}\small\item\em Fonction qui détecte la présence d\textquotesingle{}un Objet à droite du personnage selon un vecteur pris en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPersonnage_a14fae892c334c3f6529e8d52416ab41d}{detect\+\_\+haut}} (\mbox{\hyperlink{classVect}{Vect}} posm)
+\begin{DoxyCompactList}\small\item\em Fonction qui détecte la présence d\textquotesingle{}un Objet au-\/dessus du personnage selon un vecteur pris en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPersonnage_af69527680d755c2a8b98b4f0fa3632c3}{detect\+\_\+bas}} (\mbox{\hyperlink{classVect}{Vect}} posm)
+\begin{DoxyCompactList}\small\item\em Fonction qui détecte la présence d\textquotesingle{}un Objet en dessous du personnage selon un vecteur pris en paramètre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classPersonnage_adb9bf4c4addd16b1924fca497e64e7ee}{vitesse}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modélise certaines données nécessaires pour les classes \mbox{\hyperlink{classJoueur}{Joueur}}, \mbox{\hyperlink{classPnj}{Pnj}}, et \mbox{\hyperlink{classEnnemi}{Ennemi}}, en utilisant la classe \mbox{\hyperlink{classObj}{Obj}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPersonnage_a1cacf1729ecdc9d0044e4dfd965e2cf0}\label{classPersonnage_a1cacf1729ecdc9d0044e4dfd965e2cf0}} 
+\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{Personnage()}{Personnage()}}
+{\footnotesize\ttfamily Personnage\+::\+Personnage (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+v,  }\item[{int}]{y\+\_\+v,  }\item[{int}]{x\+\_\+init,  }\item[{int}]{y\+\_\+init }\end{DoxyParamCaption})}
+
+
+
+Constructeur qui initialise les composantes avec les valeurs passées en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+v,y\+\_\+v,x\+\_\+init,y\+\_\+init} & \+: entiers \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPersonnage_abdb05975515405cac0693e9e43176acc}\label{classPersonnage_abdb05975515405cac0693e9e43176acc}} 
+\index{Personnage@{Personnage}!deplacement\_bas@{deplacement\_bas}}
+\index{deplacement\_bas@{deplacement\_bas}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{deplacement\_bas()}{deplacement\_bas()}}
+{\footnotesize\ttfamily void Personnage\+::deplacement\+\_\+bas (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant au personnage de se déplacer vers le bas si le bord entré en paramètre ne se trouve pas en bas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & \+: entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPersonnage_abb705f16a37d93c2c935320ff9ed849b}\label{classPersonnage_abb705f16a37d93c2c935320ff9ed849b}} 
+\index{Personnage@{Personnage}!deplacement\_droite@{deplacement\_droite}}
+\index{deplacement\_droite@{deplacement\_droite}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{deplacement\_droite()}{deplacement\_droite()}}
+{\footnotesize\ttfamily void Personnage\+::deplacement\+\_\+droite (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant au personnage de se déplacer vers la droite sauf si le bord entré en paramètre se trouve à droite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPersonnage_af69527680d755c2a8b98b4f0fa3632c3}\label{classPersonnage_af69527680d755c2a8b98b4f0fa3632c3}} 
+\index{Personnage@{Personnage}!detect\_bas@{detect\_bas}}
+\index{detect\_bas@{detect\_bas}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{detect\_bas()}{detect\_bas()}}
+{\footnotesize\ttfamily bool Personnage\+::detect\+\_\+bas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVect}{Vect}}}]{posm }\end{DoxyParamCaption})}
+
+
+
+Fonction qui détecte la présence d\textquotesingle{}un Objet en dessous du personnage selon un vecteur pris en paramètre. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPersonnage_ae3f4f3d28e709def3a8adc7bbb54a0a9}\label{classPersonnage_ae3f4f3d28e709def3a8adc7bbb54a0a9}} 
+\index{Personnage@{Personnage}!detect\_droite@{detect\_droite}}
+\index{detect\_droite@{detect\_droite}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{detect\_droite()}{detect\_droite()}}
+{\footnotesize\ttfamily bool Personnage\+::detect\+\_\+droite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVect}{Vect}}}]{posm }\end{DoxyParamCaption})}
+
+
+
+Fonction qui détecte la présence d\textquotesingle{}un Objet à droite du personnage selon un vecteur pris en paramètre. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPersonnage_a63c4909f506358ff6dcb719fc522d551}\label{classPersonnage_a63c4909f506358ff6dcb719fc522d551}} 
+\index{Personnage@{Personnage}!detect\_gauche@{detect\_gauche}}
+\index{detect\_gauche@{detect\_gauche}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{detect\_gauche()}{detect\_gauche()}}
+{\footnotesize\ttfamily bool Personnage\+::detect\+\_\+gauche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVect}{Vect}}}]{posm }\end{DoxyParamCaption})}
+
+
+
+Fonction qui détecte la présence d\textquotesingle{}un Objet à gauche du personnage selon un vecteur pris en paramètre. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPersonnage_a14fae892c334c3f6529e8d52416ab41d}\label{classPersonnage_a14fae892c334c3f6529e8d52416ab41d}} 
+\index{Personnage@{Personnage}!detect\_haut@{detect\_haut}}
+\index{detect\_haut@{detect\_haut}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{detect\_haut()}{detect\_haut()}}
+{\footnotesize\ttfamily bool Personnage\+::detect\+\_\+haut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVect}{Vect}}}]{posm }\end{DoxyParamCaption})}
+
+
+
+Fonction qui détecte la présence d\textquotesingle{}un Objet au-\/dessus du personnage selon un vecteur pris en paramètre. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPersonnage_adb9bf4c4addd16b1924fca497e64e7ee}\label{classPersonnage_adb9bf4c4addd16b1924fca497e64e7ee}} 
+\index{Personnage@{Personnage}!vitesse@{vitesse}}
+\index{vitesse@{vitesse}!Personnage@{Personnage}}
+\doxysubsubsection{\texorpdfstring{vitesse}{vitesse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Personnage\+::vitesse\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em vitesse} & \+: \mbox{\hyperlink{classVect}{Vect}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Personnage.\+h\item 
+src/Personnage.\+cpp\end{DoxyCompactItemize}

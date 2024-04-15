@@ -1,0 +1,109 @@
+\hypertarget{classObj}{}\doxysection{Obj Class Reference}
+\label{classObj}\index{Obj@{Obj}}
+
+
+{\ttfamily \#include $<$Obj.\+h$>$}
+
+
+
+Inheritance diagram for Obj\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classObj__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Obj\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=120pt]{classObj__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classObj_ae6d85a21719815c7bbb9cd68d609e0a0}\label{classObj_ae6d85a21719815c7bbb9cd68d609e0a0}} 
+\mbox{\hyperlink{classObj_ae6d85a21719815c7bbb9cd68d609e0a0}{Obj}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObj_ac25de8d4a87731623de0192f62f133f8}\label{classObj_ac25de8d4a87731623de0192f62f133f8}} 
+\mbox{\hyperlink{classObj_ac25de8d4a87731623de0192f62f133f8}{Obj}} (int x\+\_\+init, int y\+\_\+init)
+\begin{DoxyCompactList}\small\item\em Constructeur qui initialise les composantes avec les valeurs passées en paramètre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classObj_a1fbde4de6aef431b8d1252f9a00de415}{get\+\_\+position}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la position de l\textquotesingle{}objet sous forme d\textquotesingle{}un objet de la classe \mbox{\hyperlink{classVect}{Vect}} (un vecteur) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObj_a7939260ac5123a2050491a9151b42dd6}{get\+\_\+\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la quantité de points de vie restants de l\textquotesingle{}objet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classObj_a1d3e5d27adaee9e2c89125e35f6fb53d}{pos}}
+\item 
+int \mbox{\hyperlink{classObj_a0f8d514aff2992b92de2a975e17f7bbc}{HP}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modélise tout objet dans le jeu qui possède une position et une quantité de points de vie 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classObj_a7939260ac5123a2050491a9151b42dd6}\label{classObj_a7939260ac5123a2050491a9151b42dd6}} 
+\index{Obj@{Obj}!get\_HP@{get\_HP}}
+\index{get\_HP@{get\_HP}!Obj@{Obj}}
+\doxysubsubsection{\texorpdfstring{get\_HP()}{get\_HP()}}
+{\footnotesize\ttfamily int Obj\+::get\+\_\+\+HP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la quantité de points de vie restants de l\textquotesingle{}objet. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classObj_a1fbde4de6aef431b8d1252f9a00de415}\label{classObj_a1fbde4de6aef431b8d1252f9a00de415}} 
+\index{Obj@{Obj}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Obj@{Obj}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Obj\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la position de l\textquotesingle{}objet sous forme d\textquotesingle{}un objet de la classe \mbox{\hyperlink{classVect}{Vect}} (un vecteur) 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classObj_a0f8d514aff2992b92de2a975e17f7bbc}\label{classObj_a0f8d514aff2992b92de2a975e17f7bbc}} 
+\index{Obj@{Obj}!HP@{HP}}
+\index{HP@{HP}!Obj@{Obj}}
+\doxysubsubsection{\texorpdfstring{HP}{HP}}
+{\footnotesize\ttfamily int Obj\+::\+HP\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em HP} & \+: entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classObj_a1d3e5d27adaee9e2c89125e35f6fb53d}\label{classObj_a1d3e5d27adaee9e2c89125e35f6fb53d}} 
+\index{Obj@{Obj}!pos@{pos}}
+\index{pos@{pos}!Obj@{Obj}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Obj\+::pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \+: \mbox{\hyperlink{classVect}{Vect}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Obj.\+h\item 
+src/Obj.\+cpp\end{DoxyCompactItemize}

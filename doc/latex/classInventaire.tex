@@ -1,0 +1,150 @@
+\hypertarget{classInventaire}{}\doxysection{Inventaire Class Reference}
+\label{classInventaire}\index{Inventaire@{Inventaire}}
+
+
+{\ttfamily \#include $<$Inventaire.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInventaire_af8a3d14c40a06b0f0687006f8355b5b1}\label{classInventaire_af8a3d14c40a06b0f0687006f8355b5b1}} 
+\mbox{\hyperlink{classInventaire_af8a3d14c40a06b0f0687006f8355b5b1}{Inventaire}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInventaire_a20da5e992b55c387bfd6840f290bb037}{ajouter\+\_\+\+Minerai}} (type\+\_\+\+Minerai minerai)
+\begin{DoxyCompactList}\small\item\em Fonction qui ajoute un minerai du type entré en paramètre à l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInventaire_af5b2d9b5d0edff20dbfb0ba623ae02f6}\label{classInventaire_af5b2d9b5d0edff20dbfb0ba623ae02f6}} 
+void \mbox{\hyperlink{classInventaire_af5b2d9b5d0edff20dbfb0ba623ae02f6}{ajouter\+\_\+\+Ennemi}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui incrémente de 1 le nombre d\textquotesingle{}ennemis vaincus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInventaire_ad6a9cb3bd645672141cfda9d53899554}{get\+\_\+nb\+Minerai}} (int indice) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le nombre de minerais d\textquotesingle{}indice entré en paramètre présent dans l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInventaire_a68a7dc2b98a8d371419cddb6eb718d94}{get\+\_\+nbmort}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le nombre d\textquotesingle{}ennemis que le joueur a vaincus. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classInventaire_a589e139d866703fff5ba00d198c1a94d}{formuler\+\_\+mission}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le texte affiché dans l\textquotesingle{}inventaire indiquant les objectifs de la mission. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classInventaire_a5501de4d36b91352e0f52730cc721c35}{get\+\_\+statut}} () const
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si l\textquotesingle{}inventaire est ouvert, faux sinon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInventaire_a26f734697a008e11f0200a3207f7e393}\label{classInventaire_a26f734697a008e11f0200a3207f7e393}} 
+void \mbox{\hyperlink{classInventaire_a26f734697a008e11f0200a3207f7e393}{changer\+\_\+statut}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui ouvre l\textquotesingle{}inventaire s\textquotesingle{}il est fermé et qui le ferme s\textquotesingle{}il est ouvert. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInventaire_ab16c48a69e8593fb7c86713aee7942a6}{get\+\_\+nbmission\+\_\+accomplie}} () const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le nombre de missions accomplies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInventaire_a1272cc22b8720843b09c36a4ab914720}{sauver}} (int HP)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de sauvegarder la partie en prenant en paramètre les points de vie du joueur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInventaire_a6c3e117ac5164a94f65ffe2df41d8b28}\label{classInventaire_a6c3e117ac5164a94f65ffe2df41d8b28}} 
+int \mbox{\hyperlink{classInventaire_a6c3e117ac5164a94f65ffe2df41d8b28}{charger}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de charger une partie sauvegardée. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInventaire_a382ef8f087e8e918d2f5afa8cc196b98}\label{classInventaire_a382ef8f087e8e918d2f5afa8cc196b98}} 
+void \mbox{\hyperlink{classInventaire_a382ef8f087e8e918d2f5afa8cc196b98}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui réinitialise l\textquotesingle{}inventaire si le joueur meurt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modélise l\textquotesingle{}inventaire du joueur durant la partie 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInventaire_a20da5e992b55c387bfd6840f290bb037}\label{classInventaire_a20da5e992b55c387bfd6840f290bb037}} 
+\index{Inventaire@{Inventaire}!ajouter\_Minerai@{ajouter\_Minerai}}
+\index{ajouter\_Minerai@{ajouter\_Minerai}!Inventaire@{Inventaire}}
+\doxysubsubsection{\texorpdfstring{ajouter\_Minerai()}{ajouter\_Minerai()}}
+{\footnotesize\ttfamily void Inventaire\+::ajouter\+\_\+\+Minerai (\begin{DoxyParamCaption}\item[{type\+\_\+\+Minerai}]{minerai }\end{DoxyParamCaption})}
+
+
+
+Fonction qui ajoute un minerai du type entré en paramètre à l\textquotesingle{}inventaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minerai} & \+: type\+\_\+\+Minerai \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInventaire_a589e139d866703fff5ba00d198c1a94d}\label{classInventaire_a589e139d866703fff5ba00d198c1a94d}} 
+\index{Inventaire@{Inventaire}!formuler\_mission@{formuler\_mission}}
+\index{formuler\_mission@{formuler\_mission}!Inventaire@{Inventaire}}
+\doxysubsubsection{\texorpdfstring{formuler\_mission()}{formuler\_mission()}}
+{\footnotesize\ttfamily string Inventaire\+::formuler\+\_\+mission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui renvoie le texte affiché dans l\textquotesingle{}inventaire indiquant les objectifs de la mission. 
+
+\begin{DoxyReturn}{Returns}
+chaîne de caractères 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventaire_ad6a9cb3bd645672141cfda9d53899554}\label{classInventaire_ad6a9cb3bd645672141cfda9d53899554}} 
+\index{Inventaire@{Inventaire}!get\_nbMinerai@{get\_nbMinerai}}
+\index{get\_nbMinerai@{get\_nbMinerai}!Inventaire@{Inventaire}}
+\doxysubsubsection{\texorpdfstring{get\_nbMinerai()}{get\_nbMinerai()}}
+{\footnotesize\ttfamily int Inventaire\+::get\+\_\+nb\+Minerai (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le nombre de minerais d\textquotesingle{}indice entré en paramètre présent dans l\textquotesingle{}inventaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indice} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventaire_ab16c48a69e8593fb7c86713aee7942a6}\label{classInventaire_ab16c48a69e8593fb7c86713aee7942a6}} 
+\index{Inventaire@{Inventaire}!get\_nbmission\_accomplie@{get\_nbmission\_accomplie}}
+\index{get\_nbmission\_accomplie@{get\_nbmission\_accomplie}!Inventaire@{Inventaire}}
+\doxysubsubsection{\texorpdfstring{get\_nbmission\_accomplie()}{get\_nbmission\_accomplie()}}
+{\footnotesize\ttfamily int Inventaire\+::get\+\_\+nbmission\+\_\+accomplie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le nombre de missions accomplies. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventaire_a68a7dc2b98a8d371419cddb6eb718d94}\label{classInventaire_a68a7dc2b98a8d371419cddb6eb718d94}} 
+\index{Inventaire@{Inventaire}!get\_nbmort@{get\_nbmort}}
+\index{get\_nbmort@{get\_nbmort}!Inventaire@{Inventaire}}
+\doxysubsubsection{\texorpdfstring{get\_nbmort()}{get\_nbmort()}}
+{\footnotesize\ttfamily int Inventaire\+::get\+\_\+nbmort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le nombre d\textquotesingle{}ennemis que le joueur a vaincus. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventaire_a5501de4d36b91352e0f52730cc721c35}\label{classInventaire_a5501de4d36b91352e0f52730cc721c35}} 
+\index{Inventaire@{Inventaire}!get\_statut@{get\_statut}}
+\index{get\_statut@{get\_statut}!Inventaire@{Inventaire}}
+\doxysubsubsection{\texorpdfstring{get\_statut()}{get\_statut()}}
+{\footnotesize\ttfamily bool Inventaire\+::get\+\_\+statut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction booléenne qui renvoie vrai si l\textquotesingle{}inventaire est ouvert, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventaire_a1272cc22b8720843b09c36a4ab914720}\label{classInventaire_a1272cc22b8720843b09c36a4ab914720}} 
+\index{Inventaire@{Inventaire}!sauver@{sauver}}
+\index{sauver@{sauver}!Inventaire@{Inventaire}}
+\doxysubsubsection{\texorpdfstring{sauver()}{sauver()}}
+{\footnotesize\ttfamily void Inventaire\+::sauver (\begin{DoxyParamCaption}\item[{int}]{HP }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de sauvegarder la partie en prenant en paramètre les points de vie du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HP} & entier \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Inventaire.\+h\item 
+src/Inventaire.\+cpp\end{DoxyCompactItemize}

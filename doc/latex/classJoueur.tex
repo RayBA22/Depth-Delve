@@ -1,0 +1,200 @@
+\hypertarget{classJoueur}{}\doxysection{Joueur Class Reference}
+\label{classJoueur}\index{Joueur@{Joueur}}
+
+
+{\ttfamily \#include $<$Joueur.\+h$>$}
+
+
+
+Inheritance diagram for Joueur\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classJoueur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Joueur\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classJoueur__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJoueur_add6c98be3020651d84f6d75ccc1d867e}\label{classJoueur_add6c98be3020651d84f6d75ccc1d867e}} 
+\mbox{\hyperlink{classJoueur_add6c98be3020651d84f6d75ccc1d867e}{Joueur}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJoueur_a82844b50698b4689188a4cc867d86da9}{Joueur}} (int posx, int posy)
+\begin{DoxyCompactList}\small\item\em Constructeur qui initialise les composantes avec les valeurs passées en paramètre. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJoueur_af1139756d68316e80aa749e340e7c80b}\label{classJoueur_af1139756d68316e80aa749e340e7c80b}} 
+void \mbox{\hyperlink{classJoueur_af1139756d68316e80aa749e340e7c80b}{changer\+\_\+vitesse}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant de changer la vitesse du joueur selon si celui-\/ci tient la pioche. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_a5bdded8f741ec99b74fa618283726e14}{set\+\_\+pos\+Joueur}} (int posx, int posy)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de modifier la position du joueur avec les coordonnées entrées en paramètre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_ab6113f74320d462adfc8fe3d187a6fda}{set\+\_\+\+HPJoueur}} (int HPs)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de modifier la quantité de points de vie du joueur selon une quantité entrée en paramètre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_a034aac5d2a29425c40442b6ecf3e3288}{get\+\_\+dmg\+Joueur}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie les dégâts infligés par le joueur lorsque celui-\/ci attaque un ennemi ou un minerai. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classJoueur_ad5bec6bc5363d68d1861b8fcaf8cf1dd}{get\+\_\+faim\+Joueur}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la valeur de satiété du joueur. \end{DoxyCompactList}\item 
+id\+Pioche \mbox{\hyperlink{classJoueur_a1daeb76c4593857272322d3f90f14fa3}{get\+\_\+id\+Pioche}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie l\textquotesingle{}identifiant de la pioche que le joueur a en sa possession. \end{DoxyCompactList}\item 
+action \mbox{\hyperlink{classJoueur_abb829657a612f12b4147d255ca184f6c}{get\+\_\+action}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie l\textquotesingle{}action que le joueur est en train d\textquotesingle{}effectuer (Marcher, Piocher ou simplement Respirer) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJoueur_a10b0c4aa9df784830021bfc8f963a8d9}\label{classJoueur_a10b0c4aa9df784830021bfc8f963a8d9}} 
+void \mbox{\hyperlink{classJoueur_a10b0c4aa9df784830021bfc8f963a8d9}{changer\+\_\+action}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant de modifier l\textquotesingle{}action que le joueur est en train d\textquotesingle{}effectuer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJoueur_ad5767594b566b586b899e52a4c180e51}{prenddmg}} (int dmg)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de réduire la quantité de points de vie du joueur lorsqu\textquotesingle{}il est attaqué selon une quantité entrée en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJoueur_a9c75bf9998fe9944549799347e019e8c}{joueur\+\_\+mort}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur booléen qui renvoie vrai si le joueur n\textquotesingle{}a plus de points de vie, faux sinon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJoueur_ad4f7425dabe12972e46a20f57da7abba}\label{classJoueur_ad4f7425dabe12972e46a20f57da7abba}} 
+void \mbox{\hyperlink{classJoueur_ad4f7425dabe12972e46a20f57da7abba}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant de remettre les composantes liées au joueur à leur valeur initiale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Modélise le \mbox{\hyperlink{classJoueur}{Joueur}} en utilisant la classe \mbox{\hyperlink{classPersonnage}{Personnage}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJoueur_a82844b50698b4689188a4cc867d86da9}\label{classJoueur_a82844b50698b4689188a4cc867d86da9}} 
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{Joueur()}{Joueur()}}
+{\footnotesize\ttfamily Joueur\+::\+Joueur (\begin{DoxyParamCaption}\item[{int}]{posx,  }\item[{int}]{posy }\end{DoxyParamCaption})}
+
+
+
+Constructeur qui initialise les composantes avec les valeurs passées en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em posx,posy} & \+: entiers \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJoueur_abb829657a612f12b4147d255ca184f6c}\label{classJoueur_abb829657a612f12b4147d255ca184f6c}} 
+\index{Joueur@{Joueur}!get\_action@{get\_action}}
+\index{get\_action@{get\_action}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{get\_action()}{get\_action()}}
+{\footnotesize\ttfamily action Joueur\+::get\+\_\+action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie l\textquotesingle{}action que le joueur est en train d\textquotesingle{}effectuer (Marcher, Piocher ou simplement Respirer) 
+
+\begin{DoxyReturn}{Returns}
+action 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_a034aac5d2a29425c40442b6ecf3e3288}\label{classJoueur_a034aac5d2a29425c40442b6ecf3e3288}} 
+\index{Joueur@{Joueur}!get\_dmgJoueur@{get\_dmgJoueur}}
+\index{get\_dmgJoueur@{get\_dmgJoueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{get\_dmgJoueur()}{get\_dmgJoueur()}}
+{\footnotesize\ttfamily int Joueur\+::get\+\_\+dmg\+Joueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie les dégâts infligés par le joueur lorsque celui-\/ci attaque un ennemi ou un minerai. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_ad5bec6bc5363d68d1861b8fcaf8cf1dd}\label{classJoueur_ad5bec6bc5363d68d1861b8fcaf8cf1dd}} 
+\index{Joueur@{Joueur}!get\_faimJoueur@{get\_faimJoueur}}
+\index{get\_faimJoueur@{get\_faimJoueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{get\_faimJoueur()}{get\_faimJoueur()}}
+{\footnotesize\ttfamily int Joueur\+::get\+\_\+faim\+Joueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la valeur de satiété du joueur. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_a1daeb76c4593857272322d3f90f14fa3}\label{classJoueur_a1daeb76c4593857272322d3f90f14fa3}} 
+\index{Joueur@{Joueur}!get\_idPioche@{get\_idPioche}}
+\index{get\_idPioche@{get\_idPioche}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{get\_idPioche()}{get\_idPioche()}}
+{\footnotesize\ttfamily id\+Pioche Joueur\+::get\+\_\+id\+Pioche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie l\textquotesingle{}identifiant de la pioche que le joueur a en sa possession. 
+
+\begin{DoxyReturn}{Returns}
+id\+Pioche 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_a9c75bf9998fe9944549799347e019e8c}\label{classJoueur_a9c75bf9998fe9944549799347e019e8c}} 
+\index{Joueur@{Joueur}!joueur\_mort@{joueur\_mort}}
+\index{joueur\_mort@{joueur\_mort}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{joueur\_mort()}{joueur\_mort()}}
+{\footnotesize\ttfamily bool Joueur\+::joueur\+\_\+mort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur booléen qui renvoie vrai si le joueur n\textquotesingle{}a plus de points de vie, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJoueur_ad5767594b566b586b899e52a4c180e51}\label{classJoueur_ad5767594b566b586b899e52a4c180e51}} 
+\index{Joueur@{Joueur}!prenddmg@{prenddmg}}
+\index{prenddmg@{prenddmg}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{prenddmg()}{prenddmg()}}
+{\footnotesize\ttfamily void Joueur\+::prenddmg (\begin{DoxyParamCaption}\item[{int}]{dmg }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de réduire la quantité de points de vie du joueur lorsqu\textquotesingle{}il est attaqué selon une quantité entrée en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & \+: entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_ab6113f74320d462adfc8fe3d187a6fda}\label{classJoueur_ab6113f74320d462adfc8fe3d187a6fda}} 
+\index{Joueur@{Joueur}!set\_HPJoueur@{set\_HPJoueur}}
+\index{set\_HPJoueur@{set\_HPJoueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{set\_HPJoueur()}{set\_HPJoueur()}}
+{\footnotesize\ttfamily void Joueur\+::set\+\_\+\+HPJoueur (\begin{DoxyParamCaption}\item[{int}]{HPs }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de modifier la quantité de points de vie du joueur selon une quantité entrée en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HPs} & \+: entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJoueur_a5bdded8f741ec99b74fa618283726e14}\label{classJoueur_a5bdded8f741ec99b74fa618283726e14}} 
+\index{Joueur@{Joueur}!set\_posJoueur@{set\_posJoueur}}
+\index{set\_posJoueur@{set\_posJoueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{set\_posJoueur()}{set\_posJoueur()}}
+{\footnotesize\ttfamily void Joueur\+::set\+\_\+pos\+Joueur (\begin{DoxyParamCaption}\item[{int}]{posx,  }\item[{int}]{posy }\end{DoxyParamCaption})}
+
+
+
+Fonction permettant de modifier la position du joueur avec les coordonnées entrées en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em posx,posy} & \+: entiers \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Joueur.\+h\item 
+src/Joueur.\+cpp\end{DoxyCompactItemize}
