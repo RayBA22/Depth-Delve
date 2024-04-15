@@ -6,7 +6,7 @@
 
 /**
  * @class Personnage
- * Modélise certaines données nécessaires pour les classes Joueur, Pnj, et Ennemi
+ * Modélise certaines données nécessaires pour les classes Joueur, Pnj, et Ennemi, en utilisant la classe Obj
 */
 
 class Personnage: public Obj
