@@ -70,12 +70,19 @@ $(function() {
 <li>ajouter_Minerai()
 : <a class="el" href="classInventaire.html#a20da5e992b55c387bfd6840f290bb037">Inventaire</a>
 </li>
+<li>Animation()
+: <a class="el" href="classAnimation.html#a83f0a16cef7117f187ad596de38dd9d6">Animation</a>
+</li>
+<li>animer_mouvement_joueur()
+: <a class="el" href="classAnimation.html#afe691afa01ea108321313d998cf30fef">Animation</a>
+</li>
 </ul>
 
 
 <h3><a id="index_b"></a>- b -</h3><ul>
 <li>boucleJeu()
 : <a class="el" href="classIHM.html#ab1de09fce4dbbedf5622516235b94e76">IHM</a>
+, <a class="el" href="classIHMterminal.html#af6da8c8c16c0f5f953c9013e3313d148">IHMterminal</a>
 </li>
 </ul>
 
@@ -124,18 +131,31 @@ $(function() {
 <li>detect_haut()
 : <a class="el" href="classPersonnage.html#a14fae892c334c3f6529e8d52416ab41d">Personnage</a>
 </li>
+<li>detecter()
+: <a class="el" href="classEnnemi.html#abadea6fffadbd47c79a418b766b9fc69">Ennemi</a>
+, <a class="el" href="classEtage.html#a952a89bfe7a6225b1dc5f8e1c86e6f14">Etage</a>
+</li>
 </ul>
 
 
 <h3><a id="index_e"></a>- e -</h3><ul>
+<li>Ennemi()
+: <a class="el" href="classEnnemi.html#a9c5eb7ca82848b97f3dcf262fe625b3a">Ennemi</a>
+</li>
 <li>est_detruit()
-: <a class="el" href="classMinerai.html#a0a3d1391076154108fb093257d37188d">Minerai</a>
+: <a class="el" href="classEtage.html#af2f119286585bb9a0ede60859d8207d5">Etage</a>
+, <a class="el" href="classMinerai.html#a0a3d1391076154108fb093257d37188d">Minerai</a>
 </li>
 <li>est_detruit_Minerai()
 : <a class="el" href="classJeu.html#a40d28b43881aa240ca7e7384ba076e9e">Jeu</a>
 </li>
 <li>est_mort()
-: <a class="el" href="classJeu.html#af0fc47adec707b11057a81dd8def9034">Jeu</a>
+: <a class="el" href="classEnnemi.html#aae311cd29c444f98b23fb3c22cd03ee8">Ennemi</a>
+, <a class="el" href="classEtage.html#a35798c8535d1ffe18651557e31b5589f">Etage</a>
+, <a class="el" href="classJeu.html#af0fc47adec707b11057a81dd8def9034">Jeu</a>
+</li>
+<li>Etage()
+: <a class="el" href="classEtage.html#a2f59b64fd769ab4f44bd4b96560ec17b">Etage</a>
 </li>
 </ul>
 
@@ -155,6 +175,9 @@ $(function() {
 <li>get_action_Joueur()
 : <a class="el" href="classJeu.html#a64c3499dfe7ed7e04198c588625fceb5">Jeu</a>
 </li>
+<li>get_direction_actuelle()
+: <a class="el" href="classAnimation.html#a1aac275dc1eb53a5b03fc9ae0dec9157">Animation</a>
+</li>
 <li>get_direction_Joueur()
 : <a class="el" href="classJeu.html#a4f7696f5b1aa0c039cc4b16faa0e7ce6">Jeu</a>
 </li>
@@ -164,8 +187,14 @@ $(function() {
 <li>get_dmgPioche()
 : <a class="el" href="classPioche.html#a23db748c2ae48e153224f2a4053aedde">Pioche</a>
 </li>
+<li>get_EnnemiHP()
+: <a class="el" href="classEtage.html#ad6026d9369c5c53b686c2052993cafc4">Etage</a>
+</li>
 <li>get_faimJoueur()
 : <a class="el" href="classJoueur.html#ad5bec6bc5363d68d1861b8fcaf8cf1dd">Joueur</a>
+</li>
+<li>get_frame_actuelle()
+: <a class="el" href="classAnimation.html#a5204f78f25447df804e3c380abe404c6">Animation</a>
 </li>
 <li>get_frame_Joueur()
 : <a class="el" href="classJeu.html#ad6772836af0e28910e16be99a3679395">Jeu</a>
@@ -174,10 +203,13 @@ $(function() {
 : <a class="el" href="classObj.html#a7939260ac5123a2050491a9151b42dd6">Obj</a>
 </li>
 <li>get_idEnnemi()
-: <a class="el" href="classJeu.html#a278974d898506cb2dc92e5700435028b">Jeu</a>
+: <a class="el" href="classEnnemi.html#a45f5774f15b55a4d890c3c0c28f79f3d">Ennemi</a>
+, <a class="el" href="classEtage.html#a4089100db463c8a07d6837d8e584426d">Etage</a>
+, <a class="el" href="classJeu.html#a278974d898506cb2dc92e5700435028b">Jeu</a>
 </li>
 <li>get_idMinerai()
-: <a class="el" href="classJeu.html#a272ab98c49c3b84c8ac0850956bb9076">Jeu</a>
+: <a class="el" href="classEtage.html#a155e11e050be3213bf0a740ea1a48bf5">Etage</a>
+, <a class="el" href="classJeu.html#a272ab98c49c3b84c8ac0850956bb9076">Jeu</a>
 , <a class="el" href="classMinerai.html#a3eecc769675c30b3f44e7529a4557683">Minerai</a>
 </li>
 <li>get_idPioche()
@@ -190,14 +222,21 @@ $(function() {
 <li>get_Joueurpos()
 : <a class="el" href="classJeu.html#a0bc456828cf5642f7e8a8c3147994b28">Jeu</a>
 </li>
+<li>get_MineraiHP()
+: <a class="el" href="classEtage.html#ae64eb0c567e00b490574bba772cefbf5">Etage</a>
+</li>
 <li>get_MineraiHP_actuel()
 : <a class="el" href="classJeu.html#aeb1b8e064c8dab2d0739987affb3c98e">Jeu</a>
+</li>
+<li>get_nbEnnemi()
+: <a class="el" href="classEtage.html#a169b6cf2c975aa059586f0b52e2b94d0">Etage</a>
 </li>
 <li>get_nbEnnemi_actuel()
 : <a class="el" href="classJeu.html#aeea0d571747129d5cc7983b1d3c943d9">Jeu</a>
 </li>
 <li>get_nbMinerai()
-: <a class="el" href="classInventaire.html#ad6a9cb3bd645672141cfda9d53899554">Inventaire</a>
+: <a class="el" href="classEtage.html#a88827b83de3abdaa7b0b8cc8b4166775">Etage</a>
+, <a class="el" href="classInventaire.html#ad6a9cb3bd645672141cfda9d53899554">Inventaire</a>
 </li>
 <li>get_nbMinerai_actuel()
 : <a class="el" href="classJeu.html#aca24de9b08a2560ace60d1335cf9b2c7">Jeu</a>
@@ -212,14 +251,23 @@ $(function() {
 <li>get_nbmort()
 : <a class="el" href="classInventaire.html#a68a7dc2b98a8d371419cddb6eb718d94">Inventaire</a>
 </li>
+<li>get_posEnnemi()
+: <a class="el" href="classEtage.html#a198e68b337a2a4db0590c11dba47d16a">Etage</a>
+</li>
 <li>get_posEnnemi_actuel()
 : <a class="el" href="classJeu.html#a5b9ba25c7d422b1be1f57b6c306eaf30">Jeu</a>
 </li>
 <li>get_position()
 : <a class="el" href="classObj.html#a1fbde4de6aef431b8d1252f9a00de415">Obj</a>
 </li>
+<li>get_posMinerai()
+: <a class="el" href="classEtage.html#aa7c75d0c952e9e1b623c04be31ba5af4">Etage</a>
+</li>
 <li>get_posMinerai_actuel()
 : <a class="el" href="classJeu.html#a24e1836f56f6b2ca8cec8138bd6966fb">Jeu</a>
+</li>
+<li>get_profondeur()
+: <a class="el" href="classEtage.html#a96f40261e60391157cc2b43efc8cb258">Etage</a>
 </li>
 <li>get_start()
 : <a class="el" href="classJeu.html#aca051b223046daac75992857f8b833cb">Jeu</a>
@@ -232,6 +280,12 @@ $(function() {
 </li>
 <li>get_tailleEtagact()
 : <a class="el" href="classJeu.html#a0b47418c91a391c09f9e6387c67a7948">Jeu</a>
+</li>
+<li>get_tailleEtage()
+: <a class="el" href="classEtage.html#a026bb2434181073cb5eb9a62e7a2846a">Etage</a>
+</li>
+<li>get_typeEtage()
+: <a class="el" href="classEtage.html#a1827b018934e91cfce5b19b033ed41d4">Etage</a>
 </li>
 <li>get_typeEtage_actuel()
 : <a class="el" href="classJeu.html#a170b82917b62d3ec76d21fa231ab0c5a">Jeu</a>
@@ -306,7 +360,9 @@ $(function() {
 : <a class="el" href="classPnj.html#ad9de1627e024e5f63858fa234722daef">Pnj</a>
 </li>
 <li>prenddmg()
-: <a class="el" href="classJoueur.html#ad5767594b566b586b899e52a4c180e51">Joueur</a>
+: <a class="el" href="classEnnemi.html#a5cd10198f9995e519421ab5b8707514e">Ennemi</a>
+, <a class="el" href="classEtage.html#a20e79c29e5a8c1185f72b4d083c70c6f">Etage</a>
+, <a class="el" href="classJoueur.html#ad5767594b566b586b899e52a4c180e51">Joueur</a>
 </li>
 </ul>
 
@@ -320,7 +376,8 @@ $(function() {
 
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>repos_joueur()
-: <a class="el" href="classJeu.html#aec4e545383d41b10f2c2a1e14e95d71d">Jeu</a>
+: <a class="el" href="classAnimation.html#a0a100cc830df687dd7340365aff3a27c">Animation</a>
+, <a class="el" href="classJeu.html#aec4e545383d41b10f2c2a1e14e95d71d">Jeu</a>
 </li>
 <li>reset()
 : <a class="el" href="classInventaire.html#a382ef8f087e8e918d2f5afa8cc196b98">Inventaire</a>
@@ -334,7 +391,8 @@ $(function() {
 : <a class="el" href="classInventaire.html#a1272cc22b8720843b09c36a4ab914720">Inventaire</a>
 </li>
 <li>se_detruit()
-: <a class="el" href="classMinerai.html#ac5908f5e2b3af1e9a6657e571ec95100">Minerai</a>
+: <a class="el" href="classEtage.html#a1724f0d42fd828e55c3e657b1ce5a7a1">Etage</a>
+, <a class="el" href="classMinerai.html#ac5908f5e2b3af1e9a6657e571ec95100">Minerai</a>
 </li>
 <li>set_HPJoueur()
 : <a class="el" href="classJoueur.html#ab6113f74320d462adfc8fe3d187a6fda">Joueur</a>
@@ -342,12 +400,21 @@ $(function() {
 <li>set_posJoueur()
 : <a class="el" href="classJoueur.html#a5bdded8f741ec99b74fa618283726e14">Joueur</a>
 </li>
+<li>suivre()
+: <a class="el" href="classEnnemi.html#a9762cd1e5347a5f59c80a761592142c8">Ennemi</a>
+, <a class="el" href="classEtage.html#a9372b29036d13471f90b9756ca03e876">Etage</a>
+</li>
 </ul>
 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
+<li>toucher()
+: <a class="el" href="classEnnemi.html#a70cff535ab228eabf943001a04fb972d">Ennemi</a>
+, <a class="el" href="classEtage.html#aac4e3ce31ac5731f3e3a7b5cd371aa57">Etage</a>
+</li>
 <li>tous_mort()
-: <a class="el" href="classJeu.html#a71187a261206bfdcbd36b1b59ca19872">Jeu</a>
+: <a class="el" href="classEtage.html#ae1bfe6b6a5f735e94ab5507270bff4ec">Etage</a>
+, <a class="el" href="classJeu.html#a71187a261206bfdcbd36b1b59ca19872">Jeu</a>
 </li>
 </ul>
 

@@ -76,69 +76,116 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Minerai.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Ennemi.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> maxMinerai=25,maxEnnemi=15, maxtaille=1000  ;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">enum</span> type_Etage {grotte, mine_gelee, pronfondeur_volcanique};</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classEtage.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEtage.html">Etage</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    type_Etage id;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classVect.html">Vect</a> tailleEtage;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classMinerai.html">Minerai</a> tabMinerai[150]; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classEnnemi.html">Ennemi</a> tabEnnemi[30];</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> nbMinerai, profondeur, nbEnnemi;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    type_Minerai randomiseurMinerai()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    type_Ennemi randomiseurEnnemi();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> initEtage();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classEtage.html">Etage</a>(<span class="keywordtype">int</span> prof);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classEtage.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEtage.html">Etage</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    type_Etage id;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classVect.html">Vect</a> tailleEtage;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    type_Minerai get_idMinerai(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> est_detruit(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classVect.html">Vect</a> get_posMinerai(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> get_MineraiHP(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;     <span class="keywordtype">int</span> get_nbMinerai()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    type_Ennemi get_idEnnemi(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> est_mort(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classVect.html">Vect</a> get_posEnnemi(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> get_EnnemiHP(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> get_nbEnnemi()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> prenddmg( <span class="keywordtype">int</span> dmg, <span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> detecter(<span class="keywordtype">int</span> i, <a class="code" href="classVect.html">Vect</a> position);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> suivre(<span class="keywordtype">int</span> i, <a class="code" href="classVect.html">Vect</a> position);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> toucher(<span class="keywordtype">int</span> i, <a class="code" href="classVect.html">Vect</a> position);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classMinerai.html">Minerai</a> tabMinerai[150];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classEnnemi.html">Ennemi</a> tabEnnemi[30];</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> nbMinerai, profondeur, nbEnnemi;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> initEtage();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classVect.html">Vect</a> get_tailleEtage()<span class="keyword">const</span>;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> get_profondeur()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    type_Etage get_typeEtage()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> se_detruit(<span class="keywordtype">int</span> deg, <span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> tous_mort();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    type_Minerai randomiseurMinerai()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassEnnemi_html"><div class="ttname"><a href="classEnnemi.html">Ennemi</a></div><div class="ttdef"><b>Definition:</b> Ennemi.h:10</div></div>
-<div class="ttc" id="aclassEtage_html"><div class="ttname"><a href="classEtage.html">Etage</a></div><div class="ttdef"><b>Definition:</b> Etage.h:13</div></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    type_Ennemi randomiseurEnnemi();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classEtage.html#a2f59b64fd769ab4f44bd4b96560ec17b">Etage</a>(<span class="keywordtype">int</span> prof);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    type_Minerai <a class="code" href="classEtage.html#a155e11e050be3213bf0a740ea1a48bf5">get_idMinerai</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEtage.html#af2f119286585bb9a0ede60859d8207d5">est_detruit</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classVect.html">Vect</a> <a class="code" href="classEtage.html#aa7c75d0c952e9e1b623c04be31ba5af4">get_posMinerai</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classEtage.html#ae64eb0c567e00b490574bba772cefbf5">get_MineraiHP</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classEtage.html#a88827b83de3abdaa7b0b8cc8b4166775">get_nbMinerai</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    type_Ennemi <a class="code" href="classEtage.html#a4089100db463c8a07d6837d8e584426d">get_idEnnemi</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEtage.html#a35798c8535d1ffe18651557e31b5589f">est_mort</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="classVect.html">Vect</a> <a class="code" href="classEtage.html#a198e68b337a2a4db0590c11dba47d16a">get_posEnnemi</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classEtage.html#ad6026d9369c5c53b686c2052993cafc4">get_EnnemiHP</a>(<span class="keywordtype">int</span> i)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classEtage.html#a169b6cf2c975aa059586f0b52e2b94d0">get_nbEnnemi</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEtage.html#a20e79c29e5a8c1185f72b4d083c70c6f">prenddmg</a>( <span class="keywordtype">int</span> dmg, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEtage.html#a952a89bfe7a6225b1dc5f8e1c86e6f14">detecter</a>(<span class="keywordtype">int</span> i, <a class="code" href="classVect.html">Vect</a> position);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEtage.html#a9372b29036d13471f90b9756ca03e876">suivre</a>(<span class="keywordtype">int</span> i, <a class="code" href="classVect.html">Vect</a> position);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEtage.html#aac4e3ce31ac5731f3e3a7b5cd371aa57">toucher</a>(<span class="keywordtype">int</span> i, <a class="code" href="classVect.html">Vect</a> position);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="classVect.html">Vect</a> <a class="code" href="classEtage.html#a026bb2434181073cb5eb9a62e7a2846a">get_tailleEtage</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classEtage.html#a96f40261e60391157cc2b43efc8cb258">get_profondeur</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    type_Etage <a class="code" href="classEtage.html#a1827b018934e91cfce5b19b033ed41d4">get_typeEtage</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEtage.html#a1724f0d42fd828e55c3e657b1ce5a7a1">se_detruit</a>(<span class="keywordtype">int</span> deg, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEtage.html#ae1bfe6b6a5f735e94ab5507270bff4ec">tous_mort</a>();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;};</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassEnnemi_html"><div class="ttname"><a href="classEnnemi.html">Ennemi</a></div><div class="ttdef"><b>Definition:</b> Ennemi.h:11</div></div>
+<div class="ttc" id="aclassEtage_html"><div class="ttname"><a href="classEtage.html">Etage</a></div><div class="ttdef"><b>Definition:</b> Etage.h:21</div></div>
+<div class="ttc" id="aclassEtage_html_a026bb2434181073cb5eb9a62e7a2846a"><div class="ttname"><a href="classEtage.html#a026bb2434181073cb5eb9a62e7a2846a">Etage::get_tailleEtage</a></div><div class="ttdeci">Vect get_tailleEtage() const</div><div class="ttdoc">Accesseur qui renvoie la taille de l'étage sous forme d'un objet de classe Vect.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:105</div></div>
+<div class="ttc" id="aclassEtage_html_a155e11e050be3213bf0a740ea1a48bf5"><div class="ttname"><a href="classEtage.html#a155e11e050be3213bf0a740ea1a48bf5">Etage::get_idMinerai</a></div><div class="ttdeci">type_Minerai get_idMinerai(int i) const</div><div class="ttdoc">Fonction qui renvoie le type du minerai d'indice entré en paramètre.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:88</div></div>
+<div class="ttc" id="aclassEtage_html_a169b6cf2c975aa059586f0b52e2b94d0"><div class="ttname"><a href="classEtage.html#a169b6cf2c975aa059586f0b52e2b94d0">Etage::get_nbEnnemi</a></div><div class="ttdeci">int get_nbEnnemi() const</div><div class="ttdoc">Fonction qui renvoie le nombre d'ennemis dans l'étage.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:165</div></div>
+<div class="ttc" id="aclassEtage_html_a1724f0d42fd828e55c3e657b1ce5a7a1"><div class="ttname"><a href="classEtage.html#a1724f0d42fd828e55c3e657b1ce5a7a1">Etage::se_detruit</a></div><div class="ttdeci">void se_detruit(int deg, int i)</div><div class="ttdoc">Fonction qui n'est pas dans le .cpp.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:127</div></div>
+<div class="ttc" id="aclassEtage_html_a1827b018934e91cfce5b19b033ed41d4"><div class="ttname"><a href="classEtage.html#a1827b018934e91cfce5b19b033ed41d4">Etage::get_typeEtage</a></div><div class="ttdeci">type_Etage get_typeEtage() const</div><div class="ttdoc">Accesseur qui renvoie le type de l'étage.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:30</div></div>
+<div class="ttc" id="aclassEtage_html_a198e68b337a2a4db0590c11dba47d16a"><div class="ttname"><a href="classEtage.html#a198e68b337a2a4db0590c11dba47d16a">Etage::get_posEnnemi</a></div><div class="ttdeci">Vect get_posEnnemi(int i) const</div><div class="ttdoc">Accesseur qui renvoie la position d'un ennemi d'indice entré en paramètre.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:156</div></div>
+<div class="ttc" id="aclassEtage_html_a20e79c29e5a8c1185f72b4d083c70c6f"><div class="ttname"><a href="classEtage.html#a20e79c29e5a8c1185f72b4d083c70c6f">Etage::prenddmg</a></div><div class="ttdeci">void prenddmg(int dmg, int i)</div><div class="ttdoc">Fonction qui retire des points de vie à un certain ennemi selon les valeurs entrées en paramètre.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:171</div></div>
+<div class="ttc" id="aclassEtage_html_a2f59b64fd769ab4f44bd4b96560ec17b"><div class="ttname"><a href="classEtage.html#a2f59b64fd769ab4f44bd4b96560ec17b">Etage::Etage</a></div><div class="ttdeci">Etage(int prof)</div><div class="ttdoc">Constructeur qui prend en paramètre la profondeur de l'étage.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:11</div></div>
+<div class="ttc" id="aclassEtage_html_a35798c8535d1ffe18651557e31b5589f"><div class="ttname"><a href="classEtage.html#a35798c8535d1ffe18651557e31b5589f">Etage::est_mort</a></div><div class="ttdeci">bool est_mort(int i) const</div><div class="ttdoc">Fonction booléenne qui renvoie vrai si l'ennemi d'indice entré en paramètre a été vaincu,...</div><div class="ttdef"><b>Definition:</b> Etage.cpp:152</div></div>
+<div class="ttc" id="aclassEtage_html_a4089100db463c8a07d6837d8e584426d"><div class="ttname"><a href="classEtage.html#a4089100db463c8a07d6837d8e584426d">Etage::get_idEnnemi</a></div><div class="ttdeci">type_Ennemi get_idEnnemi(int i) const</div><div class="ttdoc">Accesseur qui renvoie le type d'un ennemi d'indice passé en paramètre.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:148</div></div>
+<div class="ttc" id="aclassEtage_html_a88827b83de3abdaa7b0b8cc8b4166775"><div class="ttname"><a href="classEtage.html#a88827b83de3abdaa7b0b8cc8b4166775">Etage::get_nbMinerai</a></div><div class="ttdeci">int get_nbMinerai() const</div><div class="ttdoc">Fonction qui renvoie le nombre de minerai présents dans l'étage dans lequel se trouve le joueur.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:111</div></div>
+<div class="ttc" id="aclassEtage_html_a9372b29036d13471f90b9756ca03e876"><div class="ttname"><a href="classEtage.html#a9372b29036d13471f90b9756ca03e876">Etage::suivre</a></div><div class="ttdeci">void suivre(int i, Vect position)</div><div class="ttdoc">Fonction qui indique à un ennemi suffisamment proche du joueur de le suivre selon des valeurs entrées...</div><div class="ttdef"><b>Definition:</b> Etage.cpp:179</div></div>
+<div class="ttc" id="aclassEtage_html_a952a89bfe7a6225b1dc5f8e1c86e6f14"><div class="ttname"><a href="classEtage.html#a952a89bfe7a6225b1dc5f8e1c86e6f14">Etage::detecter</a></div><div class="ttdeci">bool detecter(int i, Vect position)</div><div class="ttdoc">Fonction booléenne qui renvoie vrai si l'ennemi d'indice entré en paramètre est suffisament proche du...</div><div class="ttdef"><b>Definition:</b> Etage.cpp:175</div></div>
+<div class="ttc" id="aclassEtage_html_a96f40261e60391157cc2b43efc8cb258"><div class="ttname"><a href="classEtage.html#a96f40261e60391157cc2b43efc8cb258">Etage::get_profondeur</a></div><div class="ttdeci">int get_profondeur() const</div><div class="ttdoc">Accesseur qui renvoie la profondeur de l'étage.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:116</div></div>
+<div class="ttc" id="aclassEtage_html_aa7c75d0c952e9e1b623c04be31ba5af4"><div class="ttname"><a href="classEtage.html#aa7c75d0c952e9e1b623c04be31ba5af4">Etage::get_posMinerai</a></div><div class="ttdeci">Vect get_posMinerai(int i) const</div><div class="ttdoc">Accesseur qui renvoie la position du minerai d'indice entré en paramètre sous forme d'objet de la cla...</div><div class="ttdef"><b>Definition:</b> Etage.cpp:99</div></div>
+<div class="ttc" id="aclassEtage_html_aac4e3ce31ac5731f3e3a7b5cd371aa57"><div class="ttname"><a href="classEtage.html#aac4e3ce31ac5731f3e3a7b5cd371aa57">Etage::toucher</a></div><div class="ttdeci">bool toucher(int i, Vect position)</div><div class="ttdoc">Fonction qui renvoie vrai si l'ennemi d'indice entré en paramètre est en contact avec le joueur,...</div><div class="ttdef"><b>Definition:</b> Etage.cpp:184</div></div>
+<div class="ttc" id="aclassEtage_html_ad6026d9369c5c53b686c2052993cafc4"><div class="ttname"><a href="classEtage.html#ad6026d9369c5c53b686c2052993cafc4">Etage::get_EnnemiHP</a></div><div class="ttdeci">int get_EnnemiHP(int i) const</div><div class="ttdoc">Fonction qui renvoie les points de vie de l'ennemi d'indice entré en paramètre.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:160</div></div>
+<div class="ttc" id="aclassEtage_html_ae1bfe6b6a5f735e94ab5507270bff4ec"><div class="ttname"><a href="classEtage.html#ae1bfe6b6a5f735e94ab5507270bff4ec">Etage::tous_mort</a></div><div class="ttdeci">bool tous_mort()</div><div class="ttdoc">Fonction qui renvoie vrai si tous les ennemis de l'étage ont été vaincus, faux sinon.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:190</div></div>
+<div class="ttc" id="aclassEtage_html_ae64eb0c567e00b490574bba772cefbf5"><div class="ttname"><a href="classEtage.html#ae64eb0c567e00b490574bba772cefbf5">Etage::get_MineraiHP</a></div><div class="ttdeci">int get_MineraiHP(int i) const</div><div class="ttdoc">Accesseur qui renvoie les points de vie restants d'un minerai d'indice entré en paramètre.</div><div class="ttdef"><b>Definition:</b> Etage.cpp:122</div></div>
+<div class="ttc" id="aclassEtage_html_af2f119286585bb9a0ede60859d8207d5"><div class="ttname"><a href="classEtage.html#af2f119286585bb9a0ede60859d8207d5">Etage::est_detruit</a></div><div class="ttdeci">bool est_detruit(int i) const</div><div class="ttdoc">Accesseur booléen qui renvoie vrai si le minerai d'indice entré en paramètre est détruit,...</div><div class="ttdef"><b>Definition:</b> Etage.cpp:93</div></div>
 <div class="ttc" id="aclassMinerai_html"><div class="ttname"><a href="classMinerai.html">Minerai</a></div><div class="ttdef"><b>Definition:</b> Minerai.h:15</div></div>
 <div class="ttc" id="aclassVect_html"><div class="ttname"><a href="classVect.html">Vect</a></div><div class="ttdef"><b>Definition:</b> Vect.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->

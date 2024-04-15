@@ -1,68 +1,371 @@
 \hypertarget{classEtage}{}\doxysection{Etage Class Reference}
 \label{classEtage}\index{Etage@{Etage}}
+
+
+{\ttfamily \#include $<$Etage.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEtage_a2f59b64fd769ab4f44bd4b96560ec17b}\label{classEtage_a2f59b64fd769ab4f44bd4b96560ec17b}} 
-{\bfseries Etage} (int prof)
-\item 
-\mbox{\Hypertarget{classEtage_a155e11e050be3213bf0a740ea1a48bf5}\label{classEtage_a155e11e050be3213bf0a740ea1a48bf5}} 
-type\+\_\+\+Minerai {\bfseries get\+\_\+id\+Minerai} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_af2f119286585bb9a0ede60859d8207d5}\label{classEtage_af2f119286585bb9a0ede60859d8207d5}} 
-bool {\bfseries est\+\_\+detruit} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_aa7c75d0c952e9e1b623c04be31ba5af4}\label{classEtage_aa7c75d0c952e9e1b623c04be31ba5af4}} 
-\mbox{\hyperlink{classVect}{Vect}} {\bfseries get\+\_\+pos\+Minerai} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_ae64eb0c567e00b490574bba772cefbf5}\label{classEtage_ae64eb0c567e00b490574bba772cefbf5}} 
-int {\bfseries get\+\_\+\+Minerai\+HP} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_a88827b83de3abdaa7b0b8cc8b4166775}\label{classEtage_a88827b83de3abdaa7b0b8cc8b4166775}} 
-int {\bfseries get\+\_\+nb\+Minerai} () const
-\item 
-\mbox{\Hypertarget{classEtage_a4089100db463c8a07d6837d8e584426d}\label{classEtage_a4089100db463c8a07d6837d8e584426d}} 
-type\+\_\+\+Ennemi {\bfseries get\+\_\+id\+Ennemi} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_a35798c8535d1ffe18651557e31b5589f}\label{classEtage_a35798c8535d1ffe18651557e31b5589f}} 
-bool {\bfseries est\+\_\+mort} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_a198e68b337a2a4db0590c11dba47d16a}\label{classEtage_a198e68b337a2a4db0590c11dba47d16a}} 
-\mbox{\hyperlink{classVect}{Vect}} {\bfseries get\+\_\+pos\+Ennemi} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_ad6026d9369c5c53b686c2052993cafc4}\label{classEtage_ad6026d9369c5c53b686c2052993cafc4}} 
-int {\bfseries get\+\_\+\+Ennemi\+HP} (int i) const
-\item 
-\mbox{\Hypertarget{classEtage_a169b6cf2c975aa059586f0b52e2b94d0}\label{classEtage_a169b6cf2c975aa059586f0b52e2b94d0}} 
-int {\bfseries get\+\_\+nb\+Ennemi} () const
-\item 
-\mbox{\Hypertarget{classEtage_a20e79c29e5a8c1185f72b4d083c70c6f}\label{classEtage_a20e79c29e5a8c1185f72b4d083c70c6f}} 
-void {\bfseries prenddmg} (int dmg, int i)
-\item 
-\mbox{\Hypertarget{classEtage_a952a89bfe7a6225b1dc5f8e1c86e6f14}\label{classEtage_a952a89bfe7a6225b1dc5f8e1c86e6f14}} 
-bool {\bfseries detecter} (int i, \mbox{\hyperlink{classVect}{Vect}} position)
-\item 
-\mbox{\Hypertarget{classEtage_a9372b29036d13471f90b9756ca03e876}\label{classEtage_a9372b29036d13471f90b9756ca03e876}} 
-void {\bfseries suivre} (int i, \mbox{\hyperlink{classVect}{Vect}} position)
-\item 
-\mbox{\Hypertarget{classEtage_aac4e3ce31ac5731f3e3a7b5cd371aa57}\label{classEtage_aac4e3ce31ac5731f3e3a7b5cd371aa57}} 
-bool {\bfseries toucher} (int i, \mbox{\hyperlink{classVect}{Vect}} position)
-\item 
-\mbox{\Hypertarget{classEtage_a026bb2434181073cb5eb9a62e7a2846a}\label{classEtage_a026bb2434181073cb5eb9a62e7a2846a}} 
-\mbox{\hyperlink{classVect}{Vect}} {\bfseries get\+\_\+taille\+Etage} () const
-\item 
-\mbox{\Hypertarget{classEtage_a96f40261e60391157cc2b43efc8cb258}\label{classEtage_a96f40261e60391157cc2b43efc8cb258}} 
-int {\bfseries get\+\_\+profondeur} () const
-\item 
-\mbox{\Hypertarget{classEtage_a1827b018934e91cfce5b19b033ed41d4}\label{classEtage_a1827b018934e91cfce5b19b033ed41d4}} 
-type\+\_\+\+Etage {\bfseries get\+\_\+type\+Etage} () const
-\item 
+\mbox{\hyperlink{classEtage_a2f59b64fd769ab4f44bd4b96560ec17b}{Etage}} (int prof)
+\begin{DoxyCompactList}\small\item\em Constructeur qui prend en paramètre la profondeur de l\textquotesingle{}étage. \end{DoxyCompactList}\item 
+type\+\_\+\+Minerai \mbox{\hyperlink{classEtage_a155e11e050be3213bf0a740ea1a48bf5}{get\+\_\+id\+Minerai}} (int i) const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le type du minerai d\textquotesingle{}indice entré en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEtage_af2f119286585bb9a0ede60859d8207d5}{est\+\_\+detruit}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur booléen qui renvoie vrai si le minerai d\textquotesingle{}indice entré en paramètre est détruit, faux sinon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classEtage_aa7c75d0c952e9e1b623c04be31ba5af4}{get\+\_\+pos\+Minerai}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la position du minerai d\textquotesingle{}indice entré en paramètre sous forme d\textquotesingle{}objet de la classe \mbox{\hyperlink{classVect}{Vect}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEtage_ae64eb0c567e00b490574bba772cefbf5}{get\+\_\+\+Minerai\+HP}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie les points de vie restants d\textquotesingle{}un minerai d\textquotesingle{}indice entré en paramètre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEtage_a88827b83de3abdaa7b0b8cc8b4166775}{get\+\_\+nb\+Minerai}} () const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le nombre de minerai présents dans l\textquotesingle{}étage dans lequel se trouve le joueur. \end{DoxyCompactList}\item 
+type\+\_\+\+Ennemi \mbox{\hyperlink{classEtage_a4089100db463c8a07d6837d8e584426d}{get\+\_\+id\+Ennemi}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le type d\textquotesingle{}un ennemi d\textquotesingle{}indice passé en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEtage_a35798c8535d1ffe18651557e31b5589f}{est\+\_\+mort}} (int i) const
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre a été vaincu, faux sinon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classEtage_a198e68b337a2a4db0590c11dba47d16a}{get\+\_\+pos\+Ennemi}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la position d\textquotesingle{}un ennemi d\textquotesingle{}indice entré en paramètre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEtage_ad6026d9369c5c53b686c2052993cafc4}{get\+\_\+\+Ennemi\+HP}} (int i) const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie les points de vie de l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEtage_a169b6cf2c975aa059586f0b52e2b94d0}{get\+\_\+nb\+Ennemi}} () const
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie le nombre d\textquotesingle{}ennemis dans l\textquotesingle{}étage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEtage_a20e79c29e5a8c1185f72b4d083c70c6f}{prenddmg}} (int dmg, int i)
+\begin{DoxyCompactList}\small\item\em Fonction qui retire des points de vie à un certain ennemi selon les valeurs entrées en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEtage_a952a89bfe7a6225b1dc5f8e1c86e6f14}{detecter}} (int i, \mbox{\hyperlink{classVect}{Vect}} position)
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre est suffisament proche du joueur pour le suivre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEtage_a9372b29036d13471f90b9756ca03e876}{suivre}} (int i, \mbox{\hyperlink{classVect}{Vect}} position)
+\begin{DoxyCompactList}\small\item\em Fonction qui indique à un ennemi suffisamment proche du joueur de le suivre selon des valeurs entrées en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEtage_aac4e3ce31ac5731f3e3a7b5cd371aa57}{toucher}} (int i, \mbox{\hyperlink{classVect}{Vect}} position)
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie vrai si l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre est en contact avec le joueur, faux sinon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVect}{Vect}} \mbox{\hyperlink{classEtage_a026bb2434181073cb5eb9a62e7a2846a}{get\+\_\+taille\+Etage}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la taille de l\textquotesingle{}étage sous forme d\textquotesingle{}un objet de classe \mbox{\hyperlink{classVect}{Vect}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEtage_a96f40261e60391157cc2b43efc8cb258}{get\+\_\+profondeur}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la profondeur de l\textquotesingle{}étage. \end{DoxyCompactList}\item 
+type\+\_\+\+Etage \mbox{\hyperlink{classEtage_a1827b018934e91cfce5b19b033ed41d4}{get\+\_\+type\+Etage}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le type de l\textquotesingle{}étage. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classEtage_a1724f0d42fd828e55c3e657b1ce5a7a1}\label{classEtage_a1724f0d42fd828e55c3e657b1ce5a7a1}} 
-void {\bfseries se\+\_\+detruit} (int deg, int i)
-\item 
+void \mbox{\hyperlink{classEtage_a1724f0d42fd828e55c3e657b1ce5a7a1}{se\+\_\+detruit}} (int deg, int i)
+\begin{DoxyCompactList}\small\item\em Fonction qui n\textquotesingle{}est pas dans le .cpp. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEtage_ae1bfe6b6a5f735e94ab5507270bff4ec}{tous\+\_\+mort}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoie vrai si tous les ennemis de l\textquotesingle{}étage ont été vaincus, faux sinon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modélise un étage du jeu 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEtage_a2f59b64fd769ab4f44bd4b96560ec17b}\label{classEtage_a2f59b64fd769ab4f44bd4b96560ec17b}} 
+\index{Etage@{Etage}!Etage@{Etage}}
+\index{Etage@{Etage}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{Etage()}{Etage()}}
+{\footnotesize\ttfamily Etage\+::\+Etage (\begin{DoxyParamCaption}\item[{int}]{prof }\end{DoxyParamCaption})}
+
+
+
+Constructeur qui prend en paramètre la profondeur de l\textquotesingle{}étage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prof} & \+: entier \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEtage_a952a89bfe7a6225b1dc5f8e1c86e6f14}\label{classEtage_a952a89bfe7a6225b1dc5f8e1c86e6f14}} 
+\index{Etage@{Etage}!detecter@{detecter}}
+\index{detecter@{detecter}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{detecter()}{detecter()}}
+{\footnotesize\ttfamily bool Etage\+::detecter (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{\mbox{\hyperlink{classVect}{Vect}}}]{position }\end{DoxyParamCaption})}
+
+
+
+Fonction booléenne qui renvoie vrai si l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre est suffisament proche du joueur pour le suivre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+{\em position} & \+: \mbox{\hyperlink{classVect}{Vect}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_af2f119286585bb9a0ede60859d8207d5}\label{classEtage_af2f119286585bb9a0ede60859d8207d5}} 
+\index{Etage@{Etage}!est\_detruit@{est\_detruit}}
+\index{est\_detruit@{est\_detruit}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{est\_detruit()}{est\_detruit()}}
+{\footnotesize\ttfamily bool Etage\+::est\+\_\+detruit (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur booléen qui renvoie vrai si le minerai d\textquotesingle{}indice entré en paramètre est détruit, faux sinon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a35798c8535d1ffe18651557e31b5589f}\label{classEtage_a35798c8535d1ffe18651557e31b5589f}} 
+\index{Etage@{Etage}!est\_mort@{est\_mort}}
+\index{est\_mort@{est\_mort}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{est\_mort()}{est\_mort()}}
+{\footnotesize\ttfamily bool Etage\+::est\+\_\+mort (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Fonction booléenne qui renvoie vrai si l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre a été vaincu, faux sinon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_ad6026d9369c5c53b686c2052993cafc4}\label{classEtage_ad6026d9369c5c53b686c2052993cafc4}} 
+\index{Etage@{Etage}!get\_EnnemiHP@{get\_EnnemiHP}}
+\index{get\_EnnemiHP@{get\_EnnemiHP}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_EnnemiHP()}{get\_EnnemiHP()}}
+{\footnotesize\ttfamily int Etage\+::get\+\_\+\+Ennemi\+HP (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie les points de vie de l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a4089100db463c8a07d6837d8e584426d}\label{classEtage_a4089100db463c8a07d6837d8e584426d}} 
+\index{Etage@{Etage}!get\_idEnnemi@{get\_idEnnemi}}
+\index{get\_idEnnemi@{get\_idEnnemi}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_idEnnemi()}{get\_idEnnemi()}}
+{\footnotesize\ttfamily type\+\_\+\+Ennemi Etage\+::get\+\_\+id\+Ennemi (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le type d\textquotesingle{}un ennemi d\textquotesingle{}indice passé en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Ennemi 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a155e11e050be3213bf0a740ea1a48bf5}\label{classEtage_a155e11e050be3213bf0a740ea1a48bf5}} 
+\index{Etage@{Etage}!get\_idMinerai@{get\_idMinerai}}
+\index{get\_idMinerai@{get\_idMinerai}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_idMinerai()}{get\_idMinerai()}}
+{\footnotesize\ttfamily type\+\_\+\+Minerai Etage\+::get\+\_\+id\+Minerai (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le type du minerai d\textquotesingle{}indice entré en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Minerai 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_ae64eb0c567e00b490574bba772cefbf5}\label{classEtage_ae64eb0c567e00b490574bba772cefbf5}} 
+\index{Etage@{Etage}!get\_MineraiHP@{get\_MineraiHP}}
+\index{get\_MineraiHP@{get\_MineraiHP}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_MineraiHP()}{get\_MineraiHP()}}
+{\footnotesize\ttfamily int Etage\+::get\+\_\+\+Minerai\+HP (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie les points de vie restants d\textquotesingle{}un minerai d\textquotesingle{}indice entré en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a169b6cf2c975aa059586f0b52e2b94d0}\label{classEtage_a169b6cf2c975aa059586f0b52e2b94d0}} 
+\index{Etage@{Etage}!get\_nbEnnemi@{get\_nbEnnemi}}
+\index{get\_nbEnnemi@{get\_nbEnnemi}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_nbEnnemi()}{get\_nbEnnemi()}}
+{\footnotesize\ttfamily int Etage\+::get\+\_\+nb\+Ennemi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le nombre d\textquotesingle{}ennemis dans l\textquotesingle{}étage. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a88827b83de3abdaa7b0b8cc8b4166775}\label{classEtage_a88827b83de3abdaa7b0b8cc8b4166775}} 
+\index{Etage@{Etage}!get\_nbMinerai@{get\_nbMinerai}}
+\index{get\_nbMinerai@{get\_nbMinerai}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_nbMinerai()}{get\_nbMinerai()}}
+{\footnotesize\ttfamily int Etage\+::get\+\_\+nb\+Minerai (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction qui renvoie le nombre de minerai présents dans l\textquotesingle{}étage dans lequel se trouve le joueur. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a198e68b337a2a4db0590c11dba47d16a}\label{classEtage_a198e68b337a2a4db0590c11dba47d16a}} 
+\index{Etage@{Etage}!get\_posEnnemi@{get\_posEnnemi}}
+\index{get\_posEnnemi@{get\_posEnnemi}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_posEnnemi()}{get\_posEnnemi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Etage\+::get\+\_\+pos\+Ennemi (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la position d\textquotesingle{}un ennemi d\textquotesingle{}indice entré en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_aa7c75d0c952e9e1b623c04be31ba5af4}\label{classEtage_aa7c75d0c952e9e1b623c04be31ba5af4}} 
+\index{Etage@{Etage}!get\_posMinerai@{get\_posMinerai}}
+\index{get\_posMinerai@{get\_posMinerai}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_posMinerai()}{get\_posMinerai()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Etage\+::get\+\_\+pos\+Minerai (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la position du minerai d\textquotesingle{}indice entré en paramètre sous forme d\textquotesingle{}objet de la classe \mbox{\hyperlink{classVect}{Vect}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a96f40261e60391157cc2b43efc8cb258}\label{classEtage_a96f40261e60391157cc2b43efc8cb258}} 
+\index{Etage@{Etage}!get\_profondeur@{get\_profondeur}}
+\index{get\_profondeur@{get\_profondeur}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_profondeur()}{get\_profondeur()}}
+{\footnotesize\ttfamily int Etage\+::get\+\_\+profondeur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la profondeur de l\textquotesingle{}étage. 
+
+\begin{DoxyReturn}{Returns}
+entier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a026bb2434181073cb5eb9a62e7a2846a}\label{classEtage_a026bb2434181073cb5eb9a62e7a2846a}} 
+\index{Etage@{Etage}!get\_tailleEtage@{get\_tailleEtage}}
+\index{get\_tailleEtage@{get\_tailleEtage}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_tailleEtage()}{get\_tailleEtage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVect}{Vect}} Etage\+::get\+\_\+taille\+Etage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la taille de l\textquotesingle{}étage sous forme d\textquotesingle{}un objet de classe \mbox{\hyperlink{classVect}{Vect}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVect}{Vect}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a1827b018934e91cfce5b19b033ed41d4}\label{classEtage_a1827b018934e91cfce5b19b033ed41d4}} 
+\index{Etage@{Etage}!get\_typeEtage@{get\_typeEtage}}
+\index{get\_typeEtage@{get\_typeEtage}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{get\_typeEtage()}{get\_typeEtage()}}
+{\footnotesize\ttfamily type\+\_\+\+Etage Etage\+::get\+\_\+type\+Etage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le type de l\textquotesingle{}étage. 
+
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Etage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEtage_a20e79c29e5a8c1185f72b4d083c70c6f}\label{classEtage_a20e79c29e5a8c1185f72b4d083c70c6f}} 
+\index{Etage@{Etage}!prenddmg@{prenddmg}}
+\index{prenddmg@{prenddmg}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{prenddmg()}{prenddmg()}}
+{\footnotesize\ttfamily void Etage\+::prenddmg (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retire des points de vie à un certain ennemi selon les valeurs entrées en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg,i} & \+: entiers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEtage_a9372b29036d13471f90b9756ca03e876}\label{classEtage_a9372b29036d13471f90b9756ca03e876}} 
+\index{Etage@{Etage}!suivre@{suivre}}
+\index{suivre@{suivre}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{suivre()}{suivre()}}
+{\footnotesize\ttfamily void Etage\+::suivre (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{\mbox{\hyperlink{classVect}{Vect}}}]{position }\end{DoxyParamCaption})}
+
+
+
+Fonction qui indique à un ennemi suffisamment proche du joueur de le suivre selon des valeurs entrées en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+{\em position} & \+: \mbox{\hyperlink{classVect}{Vect}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEtage_aac4e3ce31ac5731f3e3a7b5cd371aa57}\label{classEtage_aac4e3ce31ac5731f3e3a7b5cd371aa57}} 
+\index{Etage@{Etage}!toucher@{toucher}}
+\index{toucher@{toucher}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{toucher()}{toucher()}}
+{\footnotesize\ttfamily bool Etage\+::toucher (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{\mbox{\hyperlink{classVect}{Vect}}}]{position }\end{DoxyParamCaption})}
+
+
+
+Fonction qui renvoie vrai si l\textquotesingle{}ennemi d\textquotesingle{}indice entré en paramètre est en contact avec le joueur, faux sinon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: entier \\
+\hline
+{\em position} & \+: \mbox{\hyperlink{classVect}{Vect}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classEtage_ae1bfe6b6a5f735e94ab5507270bff4ec}\label{classEtage_ae1bfe6b6a5f735e94ab5507270bff4ec}} 
-bool {\bfseries tous\+\_\+mort} ()
-\end{DoxyCompactItemize}
+\index{Etage@{Etage}!tous\_mort@{tous\_mort}}
+\index{tous\_mort@{tous\_mort}!Etage@{Etage}}
+\doxysubsubsection{\texorpdfstring{tous\_mort()}{tous\_mort()}}
+{\footnotesize\ttfamily bool Etage\+::tous\+\_\+mort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui renvoie vrai si tous les ennemis de l\textquotesingle{}étage ont été vaincus, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

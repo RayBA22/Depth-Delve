@@ -68,22 +68,109 @@ $(function() {
 <div class="title">Animation Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Animation_8h_source.html">Animation.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afe691afa01ea108321313d998cf30fef"><td class="memItemLeft" align="right" valign="top"><a id="afe691afa01ea108321313d998cf30fef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>animer_mouvement_joueur</b> (direction dir, unsigned int act)</td></tr>
+<tr class="memitem:a83f0a16cef7117f187ad596de38dd9d6"><td class="memItemLeft" align="right" valign="top"><a id="a83f0a16cef7117f187ad596de38dd9d6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a83f0a16cef7117f187ad596de38dd9d6">Animation</a> ()</td></tr>
+<tr class="memdesc:a83f0a16cef7117f187ad596de38dd9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut. <br /></td></tr>
+<tr class="separator:a83f0a16cef7117f187ad596de38dd9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe691afa01ea108321313d998cf30fef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#afe691afa01ea108321313d998cf30fef">animer_mouvement_joueur</a> (direction dir, unsigned int act)</td></tr>
+<tr class="memdesc:afe691afa01ea108321313d998cf30fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui gère l'animation du joueur lorsque celui-ci se déplace.  <a href="classAnimation.html#afe691afa01ea108321313d998cf30fef">More...</a><br /></td></tr>
 <tr class="separator:afe691afa01ea108321313d998cf30fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a100cc830df687dd7340365aff3a27c"><td class="memItemLeft" align="right" valign="top"><a id="a0a100cc830df687dd7340365aff3a27c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>repos_joueur</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a0a100cc830df687dd7340365aff3a27c">repos_joueur</a> ()</td></tr>
+<tr class="memdesc:a0a100cc830df687dd7340365aff3a27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui gère l'animation du joueur lorsqu'il est immobile. <br /></td></tr>
 <tr class="separator:a0a100cc830df687dd7340365aff3a27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5204f78f25447df804e3c380abe404c6"><td class="memItemLeft" align="right" valign="top"><a id="a5204f78f25447df804e3c380abe404c6"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>get_frame_actuelle</b> () const</td></tr>
+<tr class="memitem:a5204f78f25447df804e3c380abe404c6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a5204f78f25447df804e3c380abe404c6">get_frame_actuelle</a> () const</td></tr>
+<tr class="memdesc:a5204f78f25447df804e3c380abe404c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseur qui renvoie la frame actuelle de l'animation du joueur.  <a href="classAnimation.html#a5204f78f25447df804e3c380abe404c6">More...</a><br /></td></tr>
 <tr class="separator:a5204f78f25447df804e3c380abe404c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aac275dc1eb53a5b03fc9ae0dec9157"><td class="memItemLeft" align="right" valign="top"><a id="a1aac275dc1eb53a5b03fc9ae0dec9157"></a>
-direction&#160;</td><td class="memItemRight" valign="bottom"><b>get_direction_actuelle</b> () const</td></tr>
+<tr class="memitem:a1aac275dc1eb53a5b03fc9ae0dec9157"><td class="memItemLeft" align="right" valign="top">direction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimation.html#a1aac275dc1eb53a5b03fc9ae0dec9157">get_direction_actuelle</a> () const</td></tr>
+<tr class="memdesc:a1aac275dc1eb53a5b03fc9ae0dec9157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesseur qui renvoie la direction dans laquelle le personnage regarde.  <a href="classAnimation.html#a1aac275dc1eb53a5b03fc9ae0dec9157">More...</a><br /></td></tr>
 <tr class="separator:a1aac275dc1eb53a5b03fc9ae0dec9157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Gère les animations des sprites du joueur </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afe691afa01ea108321313d998cf30fef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe691afa01ea108321313d998cf30fef">&#9670;&nbsp;</a></span>animer_mouvement_joueur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::animer_mouvement_joueur </td>
+          <td>(</td>
+          <td class="paramtype">direction&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui gère l'animation du joueur lorsque celui-ci se déplace. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>: direction </td></tr>
+    <tr><td class="paramname">act</td><td>: entier positif </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1aac275dc1eb53a5b03fc9ae0dec9157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aac275dc1eb53a5b03fc9ae0dec9157">&#9670;&nbsp;</a></span>get_direction_actuelle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">direction Animation::get_direction_actuelle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accesseur qui renvoie la direction dans laquelle le personnage regarde. </p>
+<dl class="section return"><dt>Returns</dt><dd>direction </dd></dl>
+
+</div>
+</div>
+<a id="a5204f78f25447df804e3c380abe404c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5204f78f25447df804e3c380abe404c6">&#9670;&nbsp;</a></span>get_frame_actuelle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Animation::get_frame_actuelle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accesseur qui renvoie la frame actuelle de l'animation du joueur. </p>
+<dl class="section return"><dt>Returns</dt><dd>entier positif </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Animation_8h_source.html">Animation.h</a></li>
 <li>src/Animation.cpp</li>

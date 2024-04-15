@@ -69,44 +69,62 @@ $(function() {
 <div class="title">Ennemi.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _ENNEMI_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _ENNEMI_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Personnage.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">enum</span> type_Ennemi{pierro, ferro, argento=3};</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef _ENNEMI_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define _ENNEMI_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Personnage.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">enum</span> type_Ennemi{pierro, ferro, argento=3};</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classEnnemi.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEnnemi.html">Ennemi</a>: <span class="keyword">public</span> <a class="code" href="classPersonnage.html">Personnage</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    type_Ennemi id;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dmg;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> mort;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classEnnemi.html">Ennemi</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classEnnemi.html">Ennemi</a>(type_Ennemi ide, <span class="keywordtype">int</span> posx, <span class="keywordtype">int</span> posy);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    type_Ennemi get_idEnnemi()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> prenddmg( <span class="keywordtype">int</span> dmg);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> est_mort()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> detecter(<a class="code" href="classVect.html">Vect</a> position);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> suivre(<a class="code" href="classVect.html">Vect</a> position, <a class="code" href="classVect.html">Vect</a> tailleEtage);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> toucher(<a class="code" href="classVect.html">Vect</a> position);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classEnnemi.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEnnemi.html">Ennemi</a>: <span class="keyword">public</span> <a class="code" href="classPersonnage.html">Personnage</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    type_Ennemi id;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dmg;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> mort;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classEnnemi.html#a9c5eb7ca82848b97f3dcf262fe625b3a">Ennemi</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassEnnemi_html"><div class="ttname"><a href="classEnnemi.html">Ennemi</a></div><div class="ttdef"><b>Definition:</b> Ennemi.h:10</div></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classEnnemi.html#a9c5eb7ca82848b97f3dcf262fe625b3a">Ennemi</a>(type_Ennemi ide, <span class="keywordtype">int</span> posx, <span class="keywordtype">int</span> posy);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    type_Ennemi <a class="code" href="classEnnemi.html#a45f5774f15b55a4d890c3c0c28f79f3d">get_idEnnemi</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEnnemi.html#a5cd10198f9995e519421ab5b8707514e">prenddmg</a>( <span class="keywordtype">int</span> dmg);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEnnemi.html#aae311cd29c444f98b23fb3c22cd03ee8">est_mort</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEnnemi.html#abadea6fffadbd47c79a418b766b9fc69">detecter</a>(<a class="code" href="classVect.html">Vect</a> position);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEnnemi.html#a9762cd1e5347a5f59c80a761592142c8">suivre</a>(<a class="code" href="classVect.html">Vect</a> position, <a class="code" href="classVect.html">Vect</a> tailleEtage);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classEnnemi.html#a70cff535ab228eabf943001a04fb972d">toucher</a>(<a class="code" href="classVect.html">Vect</a> position);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassEnnemi_html"><div class="ttname"><a href="classEnnemi.html">Ennemi</a></div><div class="ttdef"><b>Definition:</b> Ennemi.h:11</div></div>
+<div class="ttc" id="aclassEnnemi_html_a45f5774f15b55a4d890c3c0c28f79f3d"><div class="ttname"><a href="classEnnemi.html#a45f5774f15b55a4d890c3c0c28f79f3d">Ennemi::get_idEnnemi</a></div><div class="ttdeci">type_Ennemi get_idEnnemi() const</div><div class="ttdoc">Accesseur qui renvoie le type de l'ennemi.</div><div class="ttdef"><b>Definition:</b> Ennemi.cpp:18</div></div>
+<div class="ttc" id="aclassEnnemi_html_a5cd10198f9995e519421ab5b8707514e"><div class="ttname"><a href="classEnnemi.html#a5cd10198f9995e519421ab5b8707514e">Ennemi::prenddmg</a></div><div class="ttdeci">void prenddmg(int dmg)</div><div class="ttdoc">Fonction qui retire des points de vie à l'ennemi lorsqu'il est attaqué</div><div class="ttdef"><b>Definition:</b> Ennemi.cpp:23</div></div>
+<div class="ttc" id="aclassEnnemi_html_a70cff535ab228eabf943001a04fb972d"><div class="ttname"><a href="classEnnemi.html#a70cff535ab228eabf943001a04fb972d">Ennemi::toucher</a></div><div class="ttdeci">bool toucher(Vect position)</div><div class="ttdoc">Fonction booléenne qui renvoie vrai si le joueur est en contact avec l'ennemi, faux sinon.</div><div class="ttdef"><b>Definition:</b> Ennemi.cpp:53</div></div>
+<div class="ttc" id="aclassEnnemi_html_a9762cd1e5347a5f59c80a761592142c8"><div class="ttname"><a href="classEnnemi.html#a9762cd1e5347a5f59c80a761592142c8">Ennemi::suivre</a></div><div class="ttdeci">void suivre(Vect position, Vect tailleEtage)</div><div class="ttdoc">Fonction qui fait avancer l'ennemi vers le joueur.</div><div class="ttdef"><b>Definition:</b> Ennemi.cpp:39</div></div>
+<div class="ttc" id="aclassEnnemi_html_a9c5eb7ca82848b97f3dcf262fe625b3a"><div class="ttname"><a href="classEnnemi.html#a9c5eb7ca82848b97f3dcf262fe625b3a">Ennemi::Ennemi</a></div><div class="ttdeci">Ennemi()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> Ennemi.cpp:5</div></div>
+<div class="ttc" id="aclassEnnemi_html_aae311cd29c444f98b23fb3c22cd03ee8"><div class="ttname"><a href="classEnnemi.html#aae311cd29c444f98b23fb3c22cd03ee8">Ennemi::est_mort</a></div><div class="ttdeci">bool est_mort() const</div><div class="ttdoc">Accesseur booléen qui renvoie vrai si l'ennemi n'a plus de points de vie, faux sinon.</div><div class="ttdef"><b>Definition:</b> Ennemi.cpp:29</div></div>
+<div class="ttc" id="aclassEnnemi_html_abadea6fffadbd47c79a418b766b9fc69"><div class="ttname"><a href="classEnnemi.html#abadea6fffadbd47c79a418b766b9fc69">Ennemi::detecter</a></div><div class="ttdeci">bool detecter(Vect position)</div><div class="ttdoc">Fonction booléenne qui renvoie vrai si le joueur est suffisamment proche pour que l'ennemi le suive,...</div><div class="ttdef"><b>Definition:</b> Ennemi.cpp:33</div></div>
 <div class="ttc" id="aclassPersonnage_html"><div class="ttname"><a href="classPersonnage.html">Personnage</a></div><div class="ttdef"><b>Definition:</b> Personnage.h:13</div></div>
 <div class="ttc" id="aclassVect_html"><div class="ttname"><a href="classVect.html">Vect</a></div><div class="ttdef"><b>Definition:</b> Vect.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->

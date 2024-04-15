@@ -2,8 +2,7 @@
 \label{classEnnemi}\index{Ennemi@{Ennemi}}
 
 
-Inheritance diagram for Ennemi\+:
-\nopagebreak
+Inheritance diagram for Ennemi\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Ennemi\+:
 \end{figure}
 
 
-Collaboration diagram for Ennemi\+:
-\nopagebreak
+Collaboration diagram for Ennemi\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,28 +21,129 @@ Collaboration diagram for Ennemi\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEnnemi_a7bbcc3da1119b56e270c23b1d6c64a28}\label{classEnnemi_a7bbcc3da1119b56e270c23b1d6c64a28}} 
-{\bfseries Ennemi} (type\+\_\+\+Ennemi ide, int posx, int posy)
-\item 
-\mbox{\Hypertarget{classEnnemi_a45f5774f15b55a4d890c3c0c28f79f3d}\label{classEnnemi_a45f5774f15b55a4d890c3c0c28f79f3d}} 
-type\+\_\+\+Ennemi {\bfseries get\+\_\+id\+Ennemi} () const
-\item 
-\mbox{\Hypertarget{classEnnemi_a5cd10198f9995e519421ab5b8707514e}\label{classEnnemi_a5cd10198f9995e519421ab5b8707514e}} 
-void {\bfseries prenddmg} (int dmg)
-\item 
-\mbox{\Hypertarget{classEnnemi_aae311cd29c444f98b23fb3c22cd03ee8}\label{classEnnemi_aae311cd29c444f98b23fb3c22cd03ee8}} 
-bool {\bfseries est\+\_\+mort} () const
-\item 
-\mbox{\Hypertarget{classEnnemi_abadea6fffadbd47c79a418b766b9fc69}\label{classEnnemi_abadea6fffadbd47c79a418b766b9fc69}} 
-bool {\bfseries detecter} (\mbox{\hyperlink{classVect}{Vect}} position)
-\item 
-\mbox{\Hypertarget{classEnnemi_a9762cd1e5347a5f59c80a761592142c8}\label{classEnnemi_a9762cd1e5347a5f59c80a761592142c8}} 
-void {\bfseries suivre} (\mbox{\hyperlink{classVect}{Vect}} position, \mbox{\hyperlink{classVect}{Vect}} taille\+Etage)
-\item 
-\mbox{\Hypertarget{classEnnemi_a70cff535ab228eabf943001a04fb972d}\label{classEnnemi_a70cff535ab228eabf943001a04fb972d}} 
-bool {\bfseries toucher} (\mbox{\hyperlink{classVect}{Vect}} position)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classEnnemi_a9c5eb7ca82848b97f3dcf262fe625b3a}\label{classEnnemi_a9c5eb7ca82848b97f3dcf262fe625b3a}} 
+\mbox{\hyperlink{classEnnemi_a9c5eb7ca82848b97f3dcf262fe625b3a}{Ennemi}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEnnemi_a7bbcc3da1119b56e270c23b1d6c64a28}{Ennemi}} (type\+\_\+\+Ennemi ide, int posx, int posy)
+\begin{DoxyCompactList}\small\item\em Constructeur qui prend pour paramètre le type de l\textquotesingle{}ennemi, et ses coordonnées. \end{DoxyCompactList}\item 
+type\+\_\+\+Ennemi \mbox{\hyperlink{classEnnemi_a45f5774f15b55a4d890c3c0c28f79f3d}{get\+\_\+id\+Ennemi}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie le type de l\textquotesingle{}ennemi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEnnemi_a5cd10198f9995e519421ab5b8707514e}{prenddmg}} (int dmg)
+\begin{DoxyCompactList}\small\item\em Fonction qui retire des points de vie à l\textquotesingle{}ennemi lorsqu\textquotesingle{}il est attaqué \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEnnemi_aae311cd29c444f98b23fb3c22cd03ee8}{est\+\_\+mort}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur booléen qui renvoie vrai si l\textquotesingle{}ennemi n\textquotesingle{}a plus de points de vie, faux sinon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEnnemi_abadea6fffadbd47c79a418b766b9fc69}{detecter}} (\mbox{\hyperlink{classVect}{Vect}} position)
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si le joueur est suffisamment proche pour que l\textquotesingle{}ennemi le suive, faux sinon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEnnemi_a9762cd1e5347a5f59c80a761592142c8}{suivre}} (\mbox{\hyperlink{classVect}{Vect}} position, \mbox{\hyperlink{classVect}{Vect}} taille\+Etage)
+\begin{DoxyCompactList}\small\item\em Fonction qui fait avancer l\textquotesingle{}ennemi vers le joueur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEnnemi_a70cff535ab228eabf943001a04fb972d}{toucher}} (\mbox{\hyperlink{classVect}{Vect}} position)
+\begin{DoxyCompactList}\small\item\em Fonction booléenne qui renvoie vrai si le joueur est en contact avec l\textquotesingle{}ennemi, faux sinon. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEnnemi_a7bbcc3da1119b56e270c23b1d6c64a28}\label{classEnnemi_a7bbcc3da1119b56e270c23b1d6c64a28}} 
+\index{Ennemi@{Ennemi}!Ennemi@{Ennemi}}
+\index{Ennemi@{Ennemi}!Ennemi@{Ennemi}}
+\doxysubsubsection{\texorpdfstring{Ennemi()}{Ennemi()}}
+{\footnotesize\ttfamily Ennemi\+::\+Ennemi (\begin{DoxyParamCaption}\item[{type\+\_\+\+Ennemi}]{ide,  }\item[{int}]{posx,  }\item[{int}]{posy }\end{DoxyParamCaption})}
+
+
+
+Constructeur qui prend pour paramètre le type de l\textquotesingle{}ennemi, et ses coordonnées. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ide} & \+: type\+\_\+\+Ennemi \\
+\hline
+{\em posx,posy} & \+: entiers \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEnnemi_abadea6fffadbd47c79a418b766b9fc69}\label{classEnnemi_abadea6fffadbd47c79a418b766b9fc69}} 
+\index{Ennemi@{Ennemi}!detecter@{detecter}}
+\index{detecter@{detecter}!Ennemi@{Ennemi}}
+\doxysubsubsection{\texorpdfstring{detecter()}{detecter()}}
+{\footnotesize\ttfamily bool Ennemi\+::detecter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVect}{Vect}}}]{position }\end{DoxyParamCaption})}
+
+
+
+Fonction booléenne qui renvoie vrai si le joueur est suffisamment proche pour que l\textquotesingle{}ennemi le suive, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEnnemi_aae311cd29c444f98b23fb3c22cd03ee8}\label{classEnnemi_aae311cd29c444f98b23fb3c22cd03ee8}} 
+\index{Ennemi@{Ennemi}!est\_mort@{est\_mort}}
+\index{est\_mort@{est\_mort}!Ennemi@{Ennemi}}
+\doxysubsubsection{\texorpdfstring{est\_mort()}{est\_mort()}}
+{\footnotesize\ttfamily bool Ennemi\+::est\+\_\+mort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur booléen qui renvoie vrai si l\textquotesingle{}ennemi n\textquotesingle{}a plus de points de vie, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEnnemi_a45f5774f15b55a4d890c3c0c28f79f3d}\label{classEnnemi_a45f5774f15b55a4d890c3c0c28f79f3d}} 
+\index{Ennemi@{Ennemi}!get\_idEnnemi@{get\_idEnnemi}}
+\index{get\_idEnnemi@{get\_idEnnemi}!Ennemi@{Ennemi}}
+\doxysubsubsection{\texorpdfstring{get\_idEnnemi()}{get\_idEnnemi()}}
+{\footnotesize\ttfamily type\+\_\+\+Ennemi Ennemi\+::get\+\_\+id\+Ennemi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie le type de l\textquotesingle{}ennemi. 
+
+\begin{DoxyReturn}{Returns}
+type\+\_\+\+Ennemi 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEnnemi_a5cd10198f9995e519421ab5b8707514e}\label{classEnnemi_a5cd10198f9995e519421ab5b8707514e}} 
+\index{Ennemi@{Ennemi}!prenddmg@{prenddmg}}
+\index{prenddmg@{prenddmg}!Ennemi@{Ennemi}}
+\doxysubsubsection{\texorpdfstring{prenddmg()}{prenddmg()}}
+{\footnotesize\ttfamily void Ennemi\+::prenddmg (\begin{DoxyParamCaption}\item[{int}]{dmg }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retire des points de vie à l\textquotesingle{}ennemi lorsqu\textquotesingle{}il est attaqué 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & \+: entier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEnnemi_a9762cd1e5347a5f59c80a761592142c8}\label{classEnnemi_a9762cd1e5347a5f59c80a761592142c8}} 
+\index{Ennemi@{Ennemi}!suivre@{suivre}}
+\index{suivre@{suivre}!Ennemi@{Ennemi}}
+\doxysubsubsection{\texorpdfstring{suivre()}{suivre()}}
+{\footnotesize\ttfamily void Ennemi\+::suivre (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVect}{Vect}}}]{position,  }\item[{\mbox{\hyperlink{classVect}{Vect}}}]{taille\+Etage }\end{DoxyParamCaption})}
+
+
+
+Fonction qui fait avancer l\textquotesingle{}ennemi vers le joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position,taille\+Etage} & \+: \mbox{\hyperlink{classVect}{Vect}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEnnemi_a70cff535ab228eabf943001a04fb972d}\label{classEnnemi_a70cff535ab228eabf943001a04fb972d}} 
+\index{Ennemi@{Ennemi}!toucher@{toucher}}
+\index{toucher@{toucher}!Ennemi@{Ennemi}}
+\doxysubsubsection{\texorpdfstring{toucher()}{toucher()}}
+{\footnotesize\ttfamily bool Ennemi\+::toucher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVect}{Vect}}}]{position }\end{DoxyParamCaption})}
+
+
+
+Fonction booléenne qui renvoie vrai si le joueur est en contact avec l\textquotesingle{}ennemi, faux sinon. 
+
+\begin{DoxyReturn}{Returns}
+booléen 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

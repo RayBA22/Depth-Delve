@@ -1,20 +1,73 @@
 \hypertarget{classAnimation}{}\doxysection{Animation Class Reference}
 \label{classAnimation}\index{Animation@{Animation}}
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAnimation_afe691afa01ea108321313d998cf30fef}\label{classAnimation_afe691afa01ea108321313d998cf30fef}} 
-void {\bfseries animer\+\_\+mouvement\+\_\+joueur} (direction dir, unsigned int act)
-\item 
+\mbox{\Hypertarget{classAnimation_a83f0a16cef7117f187ad596de38dd9d6}\label{classAnimation_a83f0a16cef7117f187ad596de38dd9d6}} 
+\mbox{\hyperlink{classAnimation_a83f0a16cef7117f187ad596de38dd9d6}{Animation}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAnimation_afe691afa01ea108321313d998cf30fef}{animer\+\_\+mouvement\+\_\+joueur}} (direction dir, unsigned int act)
+\begin{DoxyCompactList}\small\item\em Fonction qui gère l\textquotesingle{}animation du joueur lorsque celui-\/ci se déplace. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAnimation_a0a100cc830df687dd7340365aff3a27c}\label{classAnimation_a0a100cc830df687dd7340365aff3a27c}} 
-void {\bfseries repos\+\_\+joueur} ()
-\item 
-\mbox{\Hypertarget{classAnimation_a5204f78f25447df804e3c380abe404c6}\label{classAnimation_a5204f78f25447df804e3c380abe404c6}} 
-unsigned int {\bfseries get\+\_\+frame\+\_\+actuelle} () const
-\item 
+void \mbox{\hyperlink{classAnimation_a0a100cc830df687dd7340365aff3a27c}{repos\+\_\+joueur}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui gère l\textquotesingle{}animation du joueur lorsqu\textquotesingle{}il est immobile. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classAnimation_a5204f78f25447df804e3c380abe404c6}{get\+\_\+frame\+\_\+actuelle}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la frame actuelle de l\textquotesingle{}animation du joueur. \end{DoxyCompactList}\item 
+direction \mbox{\hyperlink{classAnimation_a1aac275dc1eb53a5b03fc9ae0dec9157}{get\+\_\+direction\+\_\+actuelle}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur qui renvoie la direction dans laquelle le personnage regarde. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gère les animations des sprites du joueur 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAnimation_afe691afa01ea108321313d998cf30fef}\label{classAnimation_afe691afa01ea108321313d998cf30fef}} 
+\index{Animation@{Animation}!animer\_mouvement\_joueur@{animer\_mouvement\_joueur}}
+\index{animer\_mouvement\_joueur@{animer\_mouvement\_joueur}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{animer\_mouvement\_joueur()}{animer\_mouvement\_joueur()}}
+{\footnotesize\ttfamily void Animation\+::animer\+\_\+mouvement\+\_\+joueur (\begin{DoxyParamCaption}\item[{direction}]{dir,  }\item[{unsigned int}]{act }\end{DoxyParamCaption})}
+
+
+
+Fonction qui gère l\textquotesingle{}animation du joueur lorsque celui-\/ci se déplace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & \+: direction \\
+\hline
+{\em act} & \+: entier positif \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classAnimation_a1aac275dc1eb53a5b03fc9ae0dec9157}\label{classAnimation_a1aac275dc1eb53a5b03fc9ae0dec9157}} 
-direction {\bfseries get\+\_\+direction\+\_\+actuelle} () const
-\end{DoxyCompactItemize}
+\index{Animation@{Animation}!get\_direction\_actuelle@{get\_direction\_actuelle}}
+\index{get\_direction\_actuelle@{get\_direction\_actuelle}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{get\_direction\_actuelle()}{get\_direction\_actuelle()}}
+{\footnotesize\ttfamily direction Animation\+::get\+\_\+direction\+\_\+actuelle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la direction dans laquelle le personnage regarde. 
+
+\begin{DoxyReturn}{Returns}
+direction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimation_a5204f78f25447df804e3c380abe404c6}\label{classAnimation_a5204f78f25447df804e3c380abe404c6}} 
+\index{Animation@{Animation}!get\_frame\_actuelle@{get\_frame\_actuelle}}
+\index{get\_frame\_actuelle@{get\_frame\_actuelle}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{get\_frame\_actuelle()}{get\_frame\_actuelle()}}
+{\footnotesize\ttfamily unsigned int Animation\+::get\+\_\+frame\+\_\+actuelle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur qui renvoie la frame actuelle de l\textquotesingle{}animation du joueur. 
+
+\begin{DoxyReturn}{Returns}
+entier positif 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
