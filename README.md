@@ -20,7 +20,9 @@ make
 Au lancement du jeu, le menu s'affiche.
 Dans le menu, vous pouvez appuyer sur C pour charger une partie sauvegardée. Appuyez ensuite sur entrée pour lancer une partie.
 
-Utilisez les touches ZQSD pour vous déplacer respectivement en haut, à gauche, en bas et à droite. Équipez ou déséquipez la pioche avec la touche ctrl gauche et empruntez les échelles avec la touche E. La touche Echap permet d'ouvrir l'inventaire et C de sauvegarder l'état de la partie.
+Utilisez les touches ZQSD pour vous déplacer respectivement en haut, à gauche, en bas et à droite. Équipez ou déséquipez la pioche avec la touche ctrl gauche et empruntez les échelles avec la touche E.
+La touche Echap permet d'ouvrir l'inventaire. 
+la touche C permet de charger la dernière partie sauvegardée si on au menu de démarrage ou de sauvegarder l'état de la partie en cours.
 
 ### Doxygen
 ---
