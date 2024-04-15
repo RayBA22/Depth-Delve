@@ -65,12 +65,45 @@ public:
      * @brief Fonction qui remet le nombre de minerais de chaque type à 0
     */
     void reset_Minerai();
+
+    /**
+     * @brief Fonction qui relance une mission
+    */
     void reset_Mission();
+
+    /**
+     * @brief Accesseur qui renvoie le nombre de minerais d'indice entré en paramètre présent dans l'inventaire
+     * @param indice : entier
+     * @return entier
+    */
     int get_nbMinerai(int indice)const;
+
+    /**
+     * @brief Accesseur qui renvoie le nombre d'ennemis que le joueur a vaincus
+     * @return entier
+    */
     int get_nbmort()const;
+
+    /**
+     * @brief Fonction booléenne qui renvoie vrai si tous les objectifs de la mission en cours sont remplis, faux sinon
+     * @return booléen
+    */
     bool est_accomplie();
+
+    /**
+     * @brief Fonction qui remet à zéro certaines valeurs lorqu'une mission est réussie
+    */
     void valider_mission();
+
+    /**
+     * @brief Fonction qui renvoie le texte affiché dans l'inventaire indiquant les objectifs de la mission
+     * @return chaîne de caractères
+    */
     string formuler_mission();
+
+    /**
+     * @brief
+    */
     bool get_statut()const;
     void changer_statut();
     int get_nbmission_accomplie()const;
