@@ -43,16 +43,16 @@ void Personnage::deplacement_bas(int y){
 
     
 bool Personnage::detect_gauche(Vect posm){
-    return (posm.x < pos.x-8 && posm.x > pos.x - 100 && (unsigned int)(posm.y-pos.y) < 50);
+    return (posm.x < pos.x-8 && posm.x > pos.x - 80 && (unsigned int)(posm.y-pos.y) < 50);
 }
 
 
 bool Personnage::detect_droite(Vect posm){
-    return (posm.x > pos.x+8 && posm.x < pos.x + 100 && (unsigned int)(posm.y - pos.y) < 50);
+    return (posm.x > pos.x+8 && posm.x < pos.x + 80 && (unsigned int)(posm.y - pos.y) < 50);
 }
 bool Personnage::detect_haut(Vect posm){
-    return (posm.y < pos.y-8 && posm.y > pos.y - 50 && (unsigned int)(posm.x - pos.x) < 100);
+    return (posm.y < pos.y+8 && posm.y > pos.y - 50 && (unsigned int)(posm.x - pos.x) < 100);
 }
 bool Personnage::detect_bas(Vect posm){
-    return (posm.y > pos.y+8 && posm.y < pos.y + 50 && (unsigned int)(posm.x - pos.x) < 100);
+    return (posm.y > pos.y-8 && posm.y < pos.y + 50 && (unsigned int)(posm.x - pos.x) < 100);
 }
